@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+// Code modified from https://github.com/Brackeys/2D-Character-Controller/blob/master/CharacterController2D.cs
 public class PlayerController : MonoBehaviour
 {
 

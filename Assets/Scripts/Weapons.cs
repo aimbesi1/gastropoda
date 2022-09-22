@@ -14,10 +14,10 @@ public class Weapons : MonoBehaviour
         Instantiate(gun, holdposition.position, holdposition.rotation);
     }
 
-    public void addClip()
+    public void addClip(int num_clip)
     {
-        Debug.Log("Weapons called addClip");
-        gun.addClip();
+        Debug.Log("Weapons called addClip --- Weapons --> Gun.addClip()");
+        gun.addClip(num_clip);
     }
 
 }

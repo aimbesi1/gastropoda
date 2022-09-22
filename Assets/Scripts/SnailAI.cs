@@ -15,6 +15,8 @@ public class SnailAI : MonoBehaviour
 
     private float distance;
 
+    private bool m_FacingRight = true;
+
     [SerializeField] private bool grounded;
 
     [SerializeField] private bool inPipe;
@@ -72,6 +74,16 @@ public class SnailAI : MonoBehaviour
 
         // Move the snail
         rigidbody2D.velocity = new Vector2(direction.x * speed, rigidbody2D.velocity.y);
+        float velocity = rigidbody2D.velocity.x;
+
+        if (velocity > 0f && !m_FacingRight)
+			{
+				Flip();
+			}
+			else if (velocity < 0f && m_FacingRight)
+			{
+				Flip();
+			}
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -145,5 +157,12 @@ public class SnailAI : MonoBehaviour
         {
             c.isTrigger = false;
         }
+    }
+
+    private void Flip()
+    {
+        m_FacingRight = !m_FacingRight;
+
+		transform.Rotate(0f, 180f, 0f);
     }
 }

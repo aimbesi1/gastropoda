@@ -57,11 +57,11 @@ public class Gun : MonoBehaviour
     }
 
     //NOT WORKING AS INTENDED --- Variable not update ("clip")  ???????
-    public void addClip()
+    public void addClip(int num_clip)
     {
-        clip++;
+        clip += num_clip;
         printText();
-        Debug.Log("Gun called addClip");
+        Debug.Log("Gun called addClip -- variable (clip) + 1");
     }
 
     void Shoot()

@@ -5,6 +5,7 @@ using UnityEngine;
 public class ClipSpawn : MonoBehaviour
 {
     private float time = 2f;
+    private int num_clip = 1;
 
     void Update()
     {
@@ -22,9 +23,9 @@ public class ClipSpawn : MonoBehaviour
         Weapons player = hitInfo.GetComponent<Weapons>();
         if(player != null)
         {
-            Debug.Log("Player touch ClipSpawn");
+            Debug.Log("Player touch ClipSpawn --- ClipSpawn --> Weapons.addClip()");
             Destroy(gameObject);
-            player.addClip();
+            player.addClip(num_clip);
         }
     }
 }

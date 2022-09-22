@@ -16,6 +16,8 @@ public class playerHealth : MonoBehaviour
     public TMP_Text text;
     public TMP_Text text2;
 
+    public Rigidbody2D rb;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +29,7 @@ public class playerHealth : MonoBehaviour
     
     public void takeDamage(int dmg)
     {
+        rb.velocity = transform.right * 30 + transform.up * 30;
         currentHealth -= dmg - currentShield;
         currentShield -= dmg;
         if(currentShield < 0)

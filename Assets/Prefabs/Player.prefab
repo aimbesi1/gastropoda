@@ -252,6 +252,7 @@ MonoBehaviour:
   currentShield: 0
   text: {fileID: 6775003557608430843}
   text2: {fileID: 6950906518162343666}
+  rb: {fileID: 430055643906229072}
 --- !u!114 &4981475424355252446
 MonoBehaviour:
   m_ObjectHideFlags: 0

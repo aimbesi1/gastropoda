@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class HeartSpawn : MonoBehaviour
 {
-    public int health = 20;
-    public float time = 2f;
+    private int health = 20;
+    private float time = 2f;
 
     void Update()
     {

@@ -17,7 +17,7 @@ public class Weapons : MonoBehaviour
     public void addClip()
     {
         Debug.Log("Weapons called addClip");
-        gun.GetComponent<Gun>().addClip();
+        gun.addClip();
     }
 
 }

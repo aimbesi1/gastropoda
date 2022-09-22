@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ShieldSpawn : MonoBehaviour
 {
-    public int amount = 50;
-    public float time = 2f;
+    private int amount = 50;
+    private float time = 2f;
 
     void Update()
     {

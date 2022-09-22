@@ -33,7 +33,7 @@ public class Spawner : MonoBehaviour
 
     void Spawn()
     {
-        rand = Random.Range(3, 4);
+        rand = Random.Range(1, 4);
         if (rand == 1)
         {
             Instantiate(shield, transform.position, transform.rotation);

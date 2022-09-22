@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ClipSpawn : MonoBehaviour
 {
-    public float time = 2f;
+    private float time = 2f;
 
     void Update()
     {
@@ -19,11 +19,11 @@ public class ClipSpawn : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        Weapons gun = hitInfo.GetComponent<Weapons>();
-        if(gun != null)
+        Weapons player = hitInfo.GetComponent<Weapons>();
+        if(player != null)
         {
             Destroy(gameObject);
-            gun.addClip();
+            player.addClip();
         }
     }
 }

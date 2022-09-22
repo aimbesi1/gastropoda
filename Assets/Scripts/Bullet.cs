@@ -4,14 +4,28 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public int speed = 20;
-    public int dmg = 50;
+    private int speed = 20;
+    private int dmg = 50;
+
+    private float fly_time = 2f;
     
     public Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
         rb.velocity = transform.right * speed;
+    }
+
+    void Update()
+    {
+        if(fly_time > 0f)
+        {
+            fly_time -= Time.deltaTime;
+        }
+        if(fly_time <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     // Update is called once per frame
@@ -27,6 +41,7 @@ public class Bullet : MonoBehaviour
         if(snail != null)
         {
             snail.takeDamage(dmg);
+            Destroy(gameObject);
         }
     }
     

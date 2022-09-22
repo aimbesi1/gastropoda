@@ -167,7 +167,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: OUT OF AMMO
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -369,8 +369,4 @@ MonoBehaviour:
   firepoint: {fileID: 1493413281529385223}
   Bullet: {fileID: 5460686505802124873, guid: d2551b973c078514cacb963c9b920564, type: 3}
   text: {fileID: 1178717291159267706}
-  player: {fileID: 0}
-  bullet: 12
-  ammo: 0
-  clip: 3
-  reload_timer: 2
+  player: {fileID: 430055643906229074, guid: bcd9d58d1381b1a428debbd23de9f9b2, type: 3}

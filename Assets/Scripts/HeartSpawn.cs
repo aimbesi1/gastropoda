@@ -7,6 +7,8 @@ public class HeartSpawn : MonoBehaviour
     private int health = 20;
     private float time = 2f;
 
+    private bool hasCollide = false;
+
     void Update()
     {
         if(time > 0)
@@ -21,8 +23,9 @@ public class HeartSpawn : MonoBehaviour
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
         playerHealth player = hitInfo.GetComponent<playerHealth>();
-        if(player != null)
+        if(player != null && !hasCollide)
         {
+            hasCollide = !hasCollide;
             Destroy(gameObject);
             player.Heal(health);
         }

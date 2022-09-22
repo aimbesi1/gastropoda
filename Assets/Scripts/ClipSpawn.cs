@@ -5,7 +5,8 @@ using UnityEngine;
 public class ClipSpawn : MonoBehaviour
 {
     private float time = 2f;
-    private int num_clip = 1;
+
+    private bool hasCollide = false;
 
     void Update()
     {
@@ -20,12 +21,13 @@ public class ClipSpawn : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        Weapons player = hitInfo.GetComponent<Weapons>();
-        if(player != null)
+        Gun gun = GameObject.FindWithTag("Gun").GetComponent<Gun>();
+        if(gun != null && !hasCollide)
         {
+            hasCollide = !hasCollide;
             Debug.Log("Player touch ClipSpawn --- ClipSpawn --> Weapons.addClip()");
             Destroy(gameObject);
-            player.addClip(num_clip);
+            gun.addClip();
         }
     }
 }

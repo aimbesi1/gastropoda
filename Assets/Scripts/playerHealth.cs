@@ -29,7 +29,7 @@ public class playerHealth : MonoBehaviour
     
     public void takeDamage(int dmg)
     {
-        rb.velocity = transform.right * 30 + transform.up * 30;
+        rb.velocity = transform.right * 20 + transform.up * 20;
         currentHealth -= dmg - currentShield;
         currentShield -= dmg;
         if(currentShield < 0)

@@ -8,7 +8,7 @@ public class Gun : MonoBehaviour
     public Transform firepoint;
     public GameObject Bullet;
     public TMP_Text text;
-    public GameObject player;
+    private GameObject player;
 
     private int bullet = 12;
     private int ammo;
@@ -56,10 +56,9 @@ public class Gun : MonoBehaviour
         Parent(player);
     }
 
-    //NOT WORKING AS INTENDED --- Variable not update ("clip")  ???????
-    public void addClip(int num_clip)
+    public void addClip()
     {
-        clip += num_clip;
+        clip++;
         printText();
         Debug.Log("Gun called addClip -- variable (clip) + 1");
     }

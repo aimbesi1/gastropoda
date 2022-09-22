@@ -22,6 +22,7 @@ public class ClipSpawn : MonoBehaviour
         Weapons player = hitInfo.GetComponent<Weapons>();
         if(player != null)
         {
+            Debug.Log("Player touch ClipSpawn");
             Destroy(gameObject);
             player.addClip();
         }

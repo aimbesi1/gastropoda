@@ -79,7 +79,7 @@ public class Gun : MonoBehaviour
     {
         if(is_reload)
         {
-            text.text = "Reloading...";
+            text.text = "Reloading... " + Mathf.RoundToInt(reload_timer) + "s";
         }
         else if(!is_reload && ammo > 0)
         {

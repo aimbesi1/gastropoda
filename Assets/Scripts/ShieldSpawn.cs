@@ -27,4 +27,5 @@ public class ShieldSpawn : MonoBehaviour
             player.Shield(amount);
         }
     }
+
 }

@@ -65,14 +65,10 @@ public class Spawner : MonoBehaviour
         else if (rand1 == 4 && gun_limit > 0)
         {
             Instantiate(gun, pts[rand2].position, pts[rand2].rotation);
-            gun_spawn = true;
-            gun_limit--;
         }
         else if (rand1 == 5 && sword_limit > 0)
         {
             Instantiate(sword, pts[rand2].position, pts[rand2].rotation);
-            sword_spawn = true;
-            sword_limit--;
         }
     }
 

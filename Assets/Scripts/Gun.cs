@@ -40,6 +40,7 @@ public class Gun : MonoBehaviour
         else if(Input.GetButtonDown("Fire2"))
         {
             Destroy(gameObject);
+            spawn.gun_spawn = false;
             spawn.gun_limit++;
         }
 

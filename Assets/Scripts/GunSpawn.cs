@@ -6,7 +6,14 @@ public class GunSpawn : MonoBehaviour
 {
     private bool hasCollide = false;
 
+    private Spawner spawn;
+
     private float time = 2f;
+
+    void Start()
+    {
+        spawn = GameObject.FindWithTag("Spawn").GetComponent<Spawner>();
+    }
 
     void Update()
     {
@@ -28,6 +35,9 @@ public class GunSpawn : MonoBehaviour
             hasCollide = !hasCollide;
             Destroy(gameObject);
             player.getGun();
+            spawn.gun_spawn = true;
+            spawn.gun_limit = 0;
         }
+
     }
 }

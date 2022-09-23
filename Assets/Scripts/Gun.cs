@@ -10,6 +10,8 @@ public class Gun : MonoBehaviour
     public TMP_Text text;
     private GameObject player;
 
+    private Spawner spawn;
+
     private int bullet = 12;
     private int ammo;
     private int clip;
@@ -24,6 +26,7 @@ public class Gun : MonoBehaviour
         clip = 3;
         printText();
         player = GameObject.FindWithTag("Player");
+        spawn = GameObject.FindWithTag("Spawn").GetComponent<Spawner>();
     }
 
     // Update is called once per frame
@@ -37,6 +40,7 @@ public class Gun : MonoBehaviour
         else if(Input.GetButtonDown("Fire2"))
         {
             Destroy(gameObject);
+            spawn.gun_limit++;
         }
 
         if(reload_timer > 0 && ((ammo <= 0 && clip > 1) || Input.GetButtonDown("Reload")))

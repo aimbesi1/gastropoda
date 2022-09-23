@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8725328275329072211}
   m_Layer: 0
   m_Name: ClipSpawn
-  m_TagString: Spawn
+  m_TagString: SpawnObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

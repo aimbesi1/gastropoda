@@ -266,6 +266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gun: {fileID: 1493413282969026958, guid: 62ae35126b8c46c4e9957457498850f4, type: 3}
+  sword: {fileID: 7796658506531112092, guid: 533549e6c2f8bcd42abc6e6518e770dd, type: 3}
   holdposition: {fileID: 1977092878452129627}
 --- !u!1 &1056848482388824583
 GameObject:

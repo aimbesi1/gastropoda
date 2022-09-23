@@ -5,17 +5,32 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
 
+    public bool gun_spawn = false;
+    public int gun_limit = 1;
+
+    public bool sword_spawn = false;
+    public int sword_limit = 1;
+
     public float time = 3f;
-    public int rand;
+    public int rand1;
+    public int rand2;
+
+    public Transform pt1;
+    public Transform pt2;
+    public Transform pt3;
+
+    List<Transform> pts = new List<Transform>();
 
     public GunSpawn gun ;
     public ClipSpawn clip;
     public HeartSpawn heart;
     public ShieldSpawn shield;
+    public SwordSpawn sword;
 
     void Start()
     {
-        Instantiate(gun, transform.position, transform.rotation);
+        addPoint();
+        Spawn();
     }
 
     void Update()
@@ -33,19 +48,39 @@ public class Spawner : MonoBehaviour
 
     void Spawn()
     {
-        rand = Random.Range(1, 4);
-        if (rand == 1)
+        rand1 = Random.Range(1, 5);
+        rand2 = Random.Range(0, 3);
+        if (rand1 == 1)
         {
-            Instantiate(shield, transform.position, transform.rotation);
+            Instantiate(shield, pts[rand2].position, pts[rand2].rotation);
         }
-        if(rand == 2)
+        else if (rand1 == 2)
         {
-            Instantiate(heart, transform.position, transform.rotation);
+            Instantiate(heart, pts[rand2].position, pts[rand2].rotation);
         }
-        if(rand == 3)
+        else if (rand1 == 3 && gun_spawn)
         {
-            Instantiate(clip, transform.position, transform.rotation);
+            Instantiate(clip, pts[rand2].position, pts[rand2].rotation);
         }
+        else if (rand1 == 4 && gun_limit > 0)
+        {
+            Instantiate(gun, pts[rand2].position, pts[rand2].rotation);
+            gun_spawn = true;
+            gun_limit--;
+        }
+        else if (rand1 == 5 && sword_limit > 0)
+        {
+            Instantiate(sword, pts[rand2].position, pts[rand2].rotation);
+            sword_spawn = true;
+            sword_limit--;
+        }
+    }
+
+    void addPoint()
+    {
+        pts.Add(pt1);
+        pts.Add(pt2);
+        pts.Add(pt3);
     }
 
 

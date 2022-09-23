@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class Fly_Sword : MonoBehaviour
 {
     private int speed = 20;
     private int dmg = 50;
@@ -47,6 +47,6 @@ public class Bullet : MonoBehaviour
         {
             Physics2D.IgnoreCollision(gameObject.GetComponent<Collider2D>(), obj.GetComponent<Collider2D>());
         }
+
     }
-    
 }

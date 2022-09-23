@@ -6,12 +6,18 @@ public class Weapons : MonoBehaviour
 {
 
     public Gun gun;
+    public sword sword;
 
     public Transform holdposition;
 
-    public void getWeapons()
+    public void getGun()
     {
         Instantiate(gun, holdposition.position, holdposition.rotation);
+    }
+
+    public void getSword()
+    {
+        Instantiate(sword, holdposition.position, sword.transform.rotation);
     }
 
 }

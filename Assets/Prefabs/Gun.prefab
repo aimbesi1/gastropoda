@@ -293,8 +293,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1493413282969026995}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.96, y: -2.71, z: 0}
-  m_LocalScale: {x: 1.7796869, y: 0.4061, z: 1}
+  m_LocalPosition: {x: -4.8139, y: -2.7692, z: 0}
+  m_LocalScale: {x: 1.517539, y: 0.25767046, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1493413281529385223}
@@ -369,4 +369,3 @@ MonoBehaviour:
   firepoint: {fileID: 1493413281529385223}
   Bullet: {fileID: 5460686505802124873, guid: d2551b973c078514cacb963c9b920564, type: 3}
   text: {fileID: 1178717291159267706}
-  player: {fileID: 430055643906229074, guid: bcd9d58d1381b1a428debbd23de9f9b2, type: 3}

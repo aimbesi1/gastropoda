@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GunSpawn : MonoBehaviour
+public class SwordSpawn : MonoBehaviour
 {
     private bool hasCollide = false;
 
@@ -27,7 +27,7 @@ public class GunSpawn : MonoBehaviour
         {
             hasCollide = !hasCollide;
             Destroy(gameObject);
-            player.getGun();
+            player.getSword();
         }
     }
 }

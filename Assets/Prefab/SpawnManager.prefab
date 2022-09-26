@@ -44,6 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04919352b2da621428e22db4924351d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SpawnPoint: []
-  m_Snail: {fileID: 7990830773186446708, guid: b37b5b5da0160174d987b24d6ed8120f, type: 3}
+  m_SpawnPoint: {fileID: 0}
+  m_Snail: {fileID: 7990830773186446708, guid: 7d0fbd9380f22b040a7e81a40845e8f7, type: 3}
   graceTimer: 1

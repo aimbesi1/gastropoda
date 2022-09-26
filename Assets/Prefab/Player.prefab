@@ -12,12 +12,11 @@ GameObject:
   - component: {fileID: 430055643906229073}
   - component: {fileID: 430055643906229072}
   - component: {fileID: 430055643906229079}
-  - component: {fileID: 6006345089154952252}
   - component: {fileID: 1024312744}
   - component: {fileID: 1024312749}
-  - component: {fileID: 8646376351281192525}
   - component: {fileID: 6329778144913399214}
   - component: {fileID: 4981475424355252446}
+  - component: {fileID: 3047749463024499065}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -118,7 +117,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &430055643906229079
 BoxCollider2D:
@@ -145,32 +144,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!61 &6006345089154952252
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430055643906229074}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.28024727}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.4395055}
   m_EdgeRadius: 0
 --- !u!114 &1024312744
 MonoBehaviour:
@@ -219,22 +192,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1024312744}
   runSpeed: 40
---- !u!58 &8646376351281192525
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430055643906229074}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.25}
-  serializedVersion: 2
-  m_Radius: 0.25
 --- !u!114 &6329778144913399214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,6 +230,32 @@ MonoBehaviour:
   theSword: {fileID: 4508630401414313707}
   has_gun: 0
   has_sword: 0
+--- !u!61 &3047749463024499065
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430055643906229074}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1056848482388824583
 GameObject:
   m_ObjectHideFlags: 0

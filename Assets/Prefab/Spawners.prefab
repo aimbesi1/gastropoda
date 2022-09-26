@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7341724491378535640}
   m_Layer: 0
   m_Name: Spawners
-  m_TagString: Untagged
+  m_TagString: Spawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,9 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9e0e94cdb549654b8399d8882184e4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gun_spawn: 0
   gun_limit: 1
-  sword_spawn: 0
   sword_limit: 1
   time: 3
   rand1: 0

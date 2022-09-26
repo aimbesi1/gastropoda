@@ -49,11 +49,11 @@ public class Spawner : MonoBehaviour
     {
         rand1 = Random.Range(1, 6);
         rand2 = Random.Range(0, 3);
-        if (rand1 == 1 && player.currentHealth != player.maxHealth)
+        if (rand1 == 1 && player.currentShield != player.maxShield)
         {
             Instantiate(shield, pts[rand2].position, pts[rand2].rotation);
         }
-        else if (rand1 == 2 && player.currentShield != player.maxShield)
+        else if (rand1 == 2 && player.currentHealth != player.maxHealth)
         {
             Instantiate(heart, pts[rand2].position, pts[rand2].rotation);
         }

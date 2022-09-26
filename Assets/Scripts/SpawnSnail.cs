@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SpawnSnail : MonoBehaviour
 {
-    public Transform m_SpawnPoint;
     public GameObject m_Snail;
 
     public float graceTimer = 5f; //How many seconds until snail spawns
@@ -19,6 +18,6 @@ public class SpawnSnail : MonoBehaviour
     void SpawnEnemySnail()
     {
         //Spawn your impending doom
-        Instantiate(m_Snail, m_SpawnPoint.transform.position, Quaternion.identity);
+        Instantiate(m_Snail,transform.position, transform.rotation);
     }
 }

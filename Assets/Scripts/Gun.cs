@@ -11,6 +11,9 @@ public class Gun : MonoBehaviour
     private GameObject player;
 
     private Spawner spawn;
+    public Weapons weapons;
+
+    private RaycastHit2D raycast;
 
     private int bullet = 12;
     private int ammo;
@@ -39,8 +42,8 @@ public class Gun : MonoBehaviour
         }
         else if(Input.GetButtonDown("Fire2"))
         {
-            Destroy(gameObject);
-            spawn.gun_spawn = false;
+            gameObject.SetActive(false);
+            weapons.has_gun = false;
             spawn.gun_limit++;
         }
 
@@ -64,8 +67,6 @@ public class Gun : MonoBehaviour
     public void addClip()
     {
         clip++;
-        printText();
-        Debug.Log("Gun called addClip -- variable (clip) + 1");
     }
 
     void Shoot()

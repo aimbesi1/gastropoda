@@ -19,10 +19,16 @@ public class ShieldSpawn : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
     }
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
         playerHealth player = hitInfo.GetComponent<playerHealth>();
+        GameObject obj = GameObject.FindWithTag("Bullet");
+        if(obj != null && gameObject.GetComponent<Collider2D>().IsTouching(obj.GetComponent<Collider2D>()))
+        {
+            Physics2D.IgnoreCollision(gameObject.GetComponent<Collider2D>(), obj.GetComponent<Collider2D>());
+        }
         if(player != null && !hasCollide)
         {
             hasCollide = !hasCollide;

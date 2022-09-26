@@ -35,8 +35,7 @@ public class GunSpawn : MonoBehaviour
             hasCollide = !hasCollide;
             Destroy(gameObject);
             player.getGun();
-            spawn.gun_spawn = true;
-            spawn.gun_limit = 0;
+            spawn.gun_limit--;
         }
 
     }

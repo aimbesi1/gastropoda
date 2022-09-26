@@ -10,6 +10,8 @@ public class snailHealth : MonoBehaviour
     public int dmg = 100;
     public TMP_Text text;
 
+    private bool has_Collide = false;
+
     public snailHealthbar healthbar;
     // Start is called before the first frame update
     void Start()
@@ -39,9 +41,11 @@ public class snailHealth : MonoBehaviour
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
         playerHealth player = hitInfo.GetComponent<playerHealth>();
-        if(player != null)
+        if(player != null && !has_Collide)
         {
+            has_Collide = !has_Collide;
             player.takeDamage(dmg);
+            has_Collide = !has_Collide;
         }
     }
 

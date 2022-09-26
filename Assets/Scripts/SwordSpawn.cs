@@ -8,6 +8,13 @@ public class SwordSpawn : MonoBehaviour
 
     private float time = 2f;
 
+    private Spawner spawn;
+
+    void Start()
+    {
+        spawn = GameObject.FindWithTag("Spawn").GetComponent<Spawner>();
+    }
+
     void Update()
     {
         if(time > 0)
@@ -28,6 +35,7 @@ public class SwordSpawn : MonoBehaviour
             hasCollide = !hasCollide;
             Destroy(gameObject);
             player.getSword();
+            spawn.sword_limit--;
         }
     }
 }

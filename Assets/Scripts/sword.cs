@@ -4,75 +4,77 @@ using UnityEngine;
 
 public class sword : MonoBehaviour
 {
-    private int throw_time = 2;
-    private int time_left;
+    public int throw_time = 0;
 
-    private float hit_timer = 0.5f;
-
-    private int dmg = 100;
-
-    private bool is_throwing = false;
     private bool can_hit = true;
+    public bool is_flying = false;
 
-    public Transform fly_point;
+    private float hit_timer = 1f;
+    private float fly_timer = 2f;
+
     private GameObject player;
+    public Transform flyPoint;
     public Fly_Sword flysword;
+    public GameObject swingsword;
+
+    private Spawner spawn;
+
+    public Weapons weapons;
 
     void Start()
     {
-        time_left = throw_time;
         player = GameObject.FindWithTag("Player");
+        spawn = GameObject.FindWithTag("Spawn").GetComponent<Spawner>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Fire1") && can_hit)
+        if(Input.GetButtonDown("Fire1") && can_hit && !is_flying)
         {
-            transform.eulerAngles = new Vector3(0,0,-60);
-            can_hit = false;
+            GetComponent<Renderer>().enabled = false;
+            swingsword.SetActive(true);
+            can_hit = !can_hit;
         }
-        if(hit_timer > 0)
+        if(hit_timer > 0 && !can_hit)
         {
             hit_timer -= Time.deltaTime;
         }
         if(hit_timer <= 0)
         {
-            transform.eulerAngles = new Vector3(0,0,-30);
-            can_hit = true;
-            hit_timer = 0.5f;
-        }
-        else if (Input.GetButtonDown("Fire2"))
-        {
-            Instantiate(flysword, fly_point.position, fly_point.rotation);
+            can_hit = !can_hit;
+            hit_timer = 1f;
+            GetComponent<Renderer>().enabled = true;
+            swingsword.SetActive(false);
         }
 
-        if(time_left <= 0)
+        else if (Input.GetButtonDown("Fire2") && !is_flying)
         {
-            Destroy(gameObject);
+            GetComponent<Renderer>().enabled = false;
+            Instantiate(flysword, flyPoint.position, flysword.transform.rotation);
+            is_flying = !is_flying;
+        }
+        if(fly_timer > 0 && is_flying)
+        {
+            fly_timer -= Time.deltaTime;
+        }
+        if(fly_timer <= 0)
+        {
+            is_flying = !is_flying;
+            fly_timer = 2f;
+            GetComponent<Renderer>().enabled = true;
+            throw_time--;
+        }
+
+        if(throw_time <= 0)
+        {
+            gameObject.SetActive(false);
+            weapons.has_sword = false;
+            spawn.sword_limit++;
+            throw_time = 2;
         }
 
         Parent(player);
-    }
-
-    void OnTriggerEnter2D(Collider2D hitInfo)
-    {
-        GameObject obj = GameObject.FindWithTag("SpawnObj");
-        snailHealth snail = hitInfo.GetComponent<snailHealth>();
-        if(snail != null)
-        {
-            snail.takeDamage(dmg);
-            /*
-            if(is_throwing)
-            {
-                time_left--;
-            }
-            */
-        }
-        if(obj != null)
-        {
-            Physics2D.IgnoreCollision(gameObject.GetComponent<Collider2D>(), obj.GetComponent<Collider2D>());
-        }
     }
 
     void Parent(GameObject parent)
@@ -80,8 +82,4 @@ public class sword : MonoBehaviour
         gameObject.transform.parent = parent.transform;
     }
 
-    void deParent()
-    {
-        gameObject.transform.parent = null;
-    }
 }

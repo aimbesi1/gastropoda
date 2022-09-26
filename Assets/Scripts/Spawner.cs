@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-
-    public bool gun_spawn = false;
     public int gun_limit = 1;
 
-    public bool sword_spawn = false;
     public int sword_limit = 1;
 
     public float time = 3f;
@@ -26,6 +23,8 @@ public class Spawner : MonoBehaviour
     public HeartSpawn heart;
     public ShieldSpawn shield;
     public SwordSpawn sword;
+
+    public playerHealth player;
 
     void Start()
     {
@@ -48,23 +47,24 @@ public class Spawner : MonoBehaviour
 
     void Spawn()
     {
-        rand1 = Random.Range(1, 5);
+        rand1 = Random.Range(1, 6);
         rand2 = Random.Range(0, 3);
-        if (rand1 == 1)
+        if (rand1 == 1 && player.currentHealth != player.maxHealth)
         {
             Instantiate(shield, pts[rand2].position, pts[rand2].rotation);
         }
-        else if (rand1 == 2)
+        else if (rand1 == 2 && player.currentShield != player.maxShield)
         {
             Instantiate(heart, pts[rand2].position, pts[rand2].rotation);
         }
-        else if (rand1 == 3 && gun_spawn)
+        else if (rand1 == 3 && gun_limit <= 0)
         {
             Instantiate(clip, pts[rand2].position, pts[rand2].rotation);
         }
         else if (rand1 == 4 && gun_limit > 0)
         {
             Instantiate(gun, pts[rand2].position, pts[rand2].rotation);
+
         }
         else if (rand1 == 5 && sword_limit > 0)
         {

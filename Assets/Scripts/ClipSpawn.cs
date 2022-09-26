@@ -21,11 +21,11 @@ public class ClipSpawn : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
+        Weapons player = hitInfo.GetComponent<Weapons>();
         Gun gun = GameObject.FindWithTag("Gun").GetComponent<Gun>();
-        if(gun != null && !hasCollide)
+        if(player != null && gun != null && !hasCollide)
         {
             hasCollide = !hasCollide;
-            Debug.Log("Player touch ClipSpawn --- ClipSpawn --> Weapons.addClip()");
             Destroy(gameObject);
             gun.addClip();
         }

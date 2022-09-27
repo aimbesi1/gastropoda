@@ -22,12 +22,12 @@ public class ClipSpawn : MonoBehaviour
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
         Weapons player = hitInfo.GetComponent<Weapons>();
-        Gun gun = GameObject.FindWithTag("Gun").GetComponent<Gun>();
-        if(player != null && gun != null && !hasCollide)
+        if(player != null && !hasCollide)
         {
             hasCollide = !hasCollide;
             Destroy(gameObject);
-            gun.addClip();
+            player.storeClip();
         }
+
     }
 }

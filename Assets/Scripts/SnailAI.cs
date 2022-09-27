@@ -21,9 +21,9 @@ public class SnailAI : MonoBehaviour
 
     [SerializeField] private bool inPipe;
     [SerializeField] private PipeSystem pipeSystem;
-    [SerializeField] private Transform currentPoint;
-    [SerializeField] private Transform nextPoint;
-    [SerializeField] private int nextPointIndex;
+    private Transform currentPoint;
+    private Transform nextPoint;
+    private int nextPointIndex;
 
     //Snail will get faster with increments
     [SerializeField] private float increaseSpeedTimer = 5f; // After a set timer of seconds

@@ -10,6 +10,8 @@ public class Weapons : MonoBehaviour
     public bool has_gun = false;
     public bool has_sword = false;
 
+    public int num_clip = 0;
+
     private int weaponSelection = 0;
 
     public void getGun()
@@ -20,6 +22,12 @@ public class Weapons : MonoBehaviour
         }
         theGun.SetActive(true);
         has_gun = !has_gun;
+    }
+
+    public void storeClip()
+    {
+        theGun.GetComponent<Gun>().addClip();
+            
     }
 
     public void getSword()

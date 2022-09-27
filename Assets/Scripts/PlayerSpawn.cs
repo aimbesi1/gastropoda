@@ -8,6 +8,6 @@ public class PlayerSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Instantiate(player, transform.position, transform.rotation);
+        player.transform.position = transform.position;
     }
 }

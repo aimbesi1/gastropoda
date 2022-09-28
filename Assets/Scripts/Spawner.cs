@@ -24,8 +24,6 @@ public class Spawner : MonoBehaviour
     public ShieldSpawn shield;
     public SwordSpawn sword;
 
-    public playerHealth player;
-
     void Start()
     {
         addPoint();
@@ -49,11 +47,11 @@ public class Spawner : MonoBehaviour
     {
         rand1 = Random.Range(1, 6);
         rand2 = Random.Range(0, 3);
-        if (rand1 == 1 && player.currentShield != player.maxShield)
+        if (rand1 == 1)
         {
             Instantiate(shield, pts[rand2].position, pts[rand2].rotation);
         }
-        else if (rand1 == 2 && player.currentHealth != player.maxHealth)
+        else if (rand1 == 2)
         {
             Instantiate(heart, pts[rand2].position, pts[rand2].rotation);
         }

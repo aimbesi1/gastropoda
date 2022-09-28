@@ -13,6 +13,11 @@ public class snailHealth : MonoBehaviour
     private bool has_Collide = false;
 
     public snailHealthbar healthbar;
+
+    void Awake()
+    {
+        DontDestroyOnLoad(this);
+    }
     // Start is called before the first frame update
     void Start()
     {

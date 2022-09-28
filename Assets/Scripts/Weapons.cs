@@ -7,6 +7,11 @@ public class Weapons : MonoBehaviour
     public GameObject theGun;
     public GameObject theSword;
 
+    public GameObject gun_Image;
+    public GameObject gun_Border;
+    public GameObject sword_Image;
+    public GameObject sword_Border;
+
     public bool has_gun = false;
     public bool has_sword = false;
 
@@ -19,8 +24,11 @@ public class Weapons : MonoBehaviour
         if(theSword.activeSelf)
         {
             theSword.SetActive(false);
+            sword_Border.SetActive(false);
         }
         theGun.SetActive(true);
+        gun_Image.SetActive(true);
+        gun_Border.SetActive(true);
         has_gun = !has_gun;
     }
 
@@ -35,8 +43,11 @@ public class Weapons : MonoBehaviour
         if(theGun.activeSelf)
         {
             theGun.SetActive(false);
+            gun_Border.SetActive(false);
         }
         theSword.SetActive(true);
+        sword_Image.SetActive(true);
+        sword_Border.SetActive(true);
         has_sword = !has_sword;
     }
 
@@ -61,11 +72,15 @@ public class Weapons : MonoBehaviour
         {
             case 1:
                 theGun.SetActive(true);
+                gun_Border.SetActive(true);
                 theSword.SetActive(false);
+                sword_Border.SetActive(false);
                 break;
             case 2:
                 theSword.SetActive(true);
+                sword_Border.SetActive(true);
                 theGun.SetActive(false);
+                gun_Border.SetActive(false);
                 break;
         }
     }

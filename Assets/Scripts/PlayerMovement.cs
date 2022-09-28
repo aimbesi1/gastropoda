@@ -5,12 +5,23 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public PlayerController controller;
+    private Transform spawn;
 
     public float runSpeed = 40f;
 
     float horizontalMove = 0f;
     bool jump = false;
     bool crouch = false;
+
+    void Awake()
+    {
+        spawn = GameObject.Find("PlayerSpawn").GetComponent<Transform>();
+    }
+
+    void Start()
+    {
+        transform.position = spawn.transform.position;
+    }
 
     // Update is called once per frame
     void Update()

@@ -30,7 +30,6 @@ public class SnailAI : MonoBehaviour
     [SerializeField] private float speedToIncreaseBy = 1f;  // Increase the snail speed by this
     [SerializeField] private float maxSpeed = 5f;           // The snail cannot get faster than this
 
-
     private void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();

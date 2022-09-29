@@ -14,10 +14,6 @@ public class snailHealth : MonoBehaviour
 
     public snailHealthbar healthbar;
 
-    void Awake()
-    {
-        DontDestroyOnLoad(this);
-    }
     // Start is called before the first frame update
     void Start()
     {

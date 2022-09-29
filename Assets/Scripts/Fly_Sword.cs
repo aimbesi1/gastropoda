@@ -29,6 +29,10 @@ public class Fly_Sword : MonoBehaviour
         {
             Physics2D.IgnoreCollision(GetComponent<Collider2D>(), GameObject.FindWithTag("SpawnObj").GetComponent<Collider2D>());
         }
+        if(raycast.collider.name == "Lever")
+        {
+            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), GameObject.Find("Lever").GetComponent<Collider2D>());
+        }
         Destroy(gameObject, fly_time);
         
     }

@@ -797,6 +797,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 7327995593328485802}
+--- !u!1 &7563169392617828103
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6515032266365546041}
+  m_Layer: 7
+  m_Name: rayposition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6515032266365546041
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7563169392617828103}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.596, y: -0.32, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2361498568172199349}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7990830773186446708
 GameObject:
   m_ObjectHideFlags: 0
@@ -833,6 +864,7 @@ Transform:
   - {fileID: 6482941566687999358}
   - {fileID: 4150114499492397886}
   - {fileID: 2128953821502686171}
+  - {fileID: 6515032266365546041}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -916,12 +948,10 @@ MonoBehaviour:
   grounded: 0
   inPipe: 0
   pipeSystem: {fileID: 516018254, guid: ba29ccbe1d8d25147bdb28e79471035e, type: 3}
-  currentPoint: {fileID: 7833877853297461611, guid: ba29ccbe1d8d25147bdb28e79471035e, type: 3}
-  nextPoint: {fileID: 7833877853297461611, guid: ba29ccbe1d8d25147bdb28e79471035e, type: 3}
-  nextPointIndex: 0
   increaseSpeedTimer: 5
   speedToIncreaseBy: 1
   maxSpeed: 5
+  rayposition: {fileID: 6515032266365546041}
 --- !u!114 &6922798628484808697
 MonoBehaviour:
   m_ObjectHideFlags: 0

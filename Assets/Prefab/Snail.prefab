@@ -951,7 +951,6 @@ MonoBehaviour:
   increaseSpeedTimer: 5
   speedToIncreaseBy: 1
   maxSpeed: 5
-  rayposition: {fileID: 6515032266365546041}
 --- !u!114 &6922798628484808697
 MonoBehaviour:
   m_ObjectHideFlags: 0

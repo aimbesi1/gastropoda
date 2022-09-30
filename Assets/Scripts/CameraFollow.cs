@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public Transform target;
+    //public Transform target;
+
+    [SerializeField] private GameObject player;
     //Bound camera to limits. Since these are public variables,     
     // make sure you ajust these values in Unity Editor to fit     
     // the boundry of your scene. Don't just use the default values here.      
@@ -21,16 +23,17 @@ public class CameraFollow : MonoBehaviour
     {
         // Get the camera component        
         _camera = GetComponent<Camera>();
+        player = GameObject.FindWithTag("Player");
     }
     // FixedUpdate is called every frame, when the physics are calculated    
     // You can also put the code in Update(), but putting it in FixedUpdate()    
     // make the camera motion slightly smoother.     
     void FixedUpdate()
     {
-        if (target != null)
+        if (player != null)
         {
             // Use the Lerp() function so that the camera is slighly behind the character.             
-            lerpedPosition = Vector3.Lerp(transform.position, target.position, Time.deltaTime * 10f);
+            lerpedPosition = Vector3.Lerp(transform.position, player.transform.position, Time.deltaTime * 10f);
             // The default Z position for camera in a 2D game is -10f.            
             lerpedPosition.z = -10f;
             // If you don't want the slighly delay, use this code.             
@@ -41,7 +44,7 @@ public class CameraFollow : MonoBehaviour
     // We update the camera position after the character has moved.     
     void LateUpdate()
     {
-        if (target != null)
+        if (player != null)
         {
             // Move the camera in the position found previously            
             transform.position = lerpedPosition;

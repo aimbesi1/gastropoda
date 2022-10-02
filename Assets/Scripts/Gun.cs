@@ -61,7 +61,7 @@ public class Gun : MonoBehaviour
             is_reload = false;
         }
         printText();
-        Parent(player);
+        SetParent(player.transform);
     }
 
     public void addClip()
@@ -96,9 +96,9 @@ public class Gun : MonoBehaviour
         }
     }
 
-    void Parent(GameObject parent)
+    void SetParent(Transform parent)
     {
-        gameObject.transform.parent = parent.transform;
+        gameObject.transform.SetParent(parent);
     }
 
 }

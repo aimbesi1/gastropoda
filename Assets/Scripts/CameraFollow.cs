@@ -34,6 +34,7 @@ public class CameraFollow : MonoBehaviour
             lerpedPosition = Vector3.Lerp(transform.position, player.position, Time.deltaTime * 10f);
             // The default Z position for camera in a 2D game is -10f.            
             lerpedPosition.z = -10f;
+            lerpedPosition.y += .3f;
             // If you don't want the slighly delay, use this code.             
             // lerpedPosition = new Vector3(target.position.x, target.position.y, -10f);        
         }

@@ -14,6 +14,10 @@ public class playerHealth : MonoBehaviour
     public int maxShield = 100;
     public int currentShield = 0;
 
+    
+    public float invincibleTimer = 3f;
+    public bool isInvincible = false;
+
     public TMP_Text text;
     public TMP_Text text2;
 
@@ -40,14 +44,14 @@ public class playerHealth : MonoBehaviour
         rb.velocity = transform.right * 20 + transform.up * 20;
         currentHealth -= dmg - currentShield;
         currentShield -= dmg;
-        if(currentShield < 0)
+        if(currentShield < 0 && !isInvincible) //if player is not invincible, player takes damage to shield
         {
             currentShield = 0;
         }
         healthbar.setHealth(currentHealth);
         shieldbar.setShield(currentShield);
         printText();
-        if(currentHealth <= 0)
+        if(currentHealth <= 0 && !isInvincible) //if player is not invincible, player takes damage to health
         {
             Destroy(gameObject);
             LoadLevel();
@@ -60,6 +64,26 @@ public class playerHealth : MonoBehaviour
         text2.text = currentShield + "/" + maxShield;
     }
     
+    public void SetInvincible()
+    {
+        isInvincible = true;
+        CancelInvoke("SetDamageable");              //makes it so player can not get hurt
+        PlayParticles();
+        Invoke("SetDamageable", invincibleTimer);   // after a set timer, player will be able to get hurt
+    }
+
+    void SetDamageable()
+    {
+        isInvincible = false;
+    }
+
+    void PlayParticles()
+    {
+        ParticleSystem ps = GetComponent<ParticleSystem>();
+        ps.Play();
+
+    }
+
     public void Heal(int health)
     {
         if(currentHealth < maxHealth)

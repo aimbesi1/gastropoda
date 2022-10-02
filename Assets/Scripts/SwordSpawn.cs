@@ -5,14 +5,16 @@ using UnityEngine;
 public class SwordSpawn : MonoBehaviour
 {
     private bool hasCollide = false;
-
     private float time = 2f;
 
-    private Spawner spawn;
+    //Enable this if you still need the old script
+    //private Spawner spawn; Delete this when everything gets corrected.
+    private PowerUpSpawner spawn;
 
     void Start()
     {
-        spawn = GameObject.FindWithTag("Spawn").GetComponent<Spawner>();
+        //spawn = GameObject.FindWithTag("Spawn").GetComponent<Spawner>();          delete this
+        spawn = GameObject.FindWithTag("Spawn").GetComponent<PowerUpSpawner>();
     }
 
     void Update()

@@ -599,8 +599,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81fb2579dd33e6141adc543c930096a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firepoint: {fileID: 0}
-  Bullet: {fileID: 0}
+  firepoint: {fileID: 1506240372}
+  Bullet: {fileID: 7822663576192515398, guid: 60daca299ceb4e6478cba725e608060c, type: 3}
 --- !u!1001 &423558445
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -700,11 +700,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8636950692439785289, guid: edbf2586de1fff04a8236248cc52bfe2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.46
+      value: -11.41
       objectReference: {fileID: 0}
     - target: {fileID: 8636950692439785289, guid: edbf2586de1fff04a8236248cc52bfe2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.44
+      value: -1.42
       objectReference: {fileID: 0}
     - target: {fileID: 8636950692439785289, guid: edbf2586de1fff04a8236248cc52bfe2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1465,11 +1465,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 430055643906229078, guid: ba5be9f0e1032054aabbf595277913c5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.4384
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 430055643906229078, guid: ba5be9f0e1032054aabbf595277913c5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.2657
+      value: 1.64
       objectReference: {fileID: 0}
     - target: {fileID: 430055643906229078, guid: ba5be9f0e1032054aabbf595277913c5, type: 3}
       propertyPath: m_LocalPosition.z

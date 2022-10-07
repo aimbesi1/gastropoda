@@ -108,7 +108,7 @@ public class SnailAI : MonoBehaviour
             inPipe = true;
             pipeSystem = collision.transform.GetComponentInParent<PipeSystem>();
             currentPoint = collision.transform;
-            nextPointIndex = 1;
+            nextPointIndex = 0;
             nextPoint = pipeSystem.points[nextPointIndex];
             pipeSpeed = pipeSystem.pipeSpeed;
             rigidbody2D.gravityScale = 0;

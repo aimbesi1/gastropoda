@@ -106,7 +106,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0.3584906, g: 0.15354219, b: 0.15354219, a: 1}
   m_FlipX: 0
@@ -160,5 +160,5 @@ MonoBehaviour:
   is_flying: 0
   flyPoint: {fileID: 691409877930875846}
   flysword: {fileID: 3488234384715585183, guid: d25dce937dc656044af80651f0a560d1, type: 3}
-  swingsword: {fileID: 3269187196255543977, guid: 4fbad6d92dfc0b040b68eadeebea6d92, type: 3}
+  swingsword: {fileID: 3269187196255543977, guid: 4899bb7db233f2a4793c6f4cfbf647db, type: 3}
   weapons: {fileID: 4981475424355252446, guid: 115f96f00a6291c4b9972a86fb6cc3cd, type: 3}

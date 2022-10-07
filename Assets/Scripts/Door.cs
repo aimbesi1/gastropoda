@@ -13,7 +13,6 @@ public class Door : MonoBehaviour
         if(isOpen)
         {
             OpenDoor();
-            timer -= Time.deltaTime;
             isClose = false;
         }
         if(timer <= 5)
@@ -23,13 +22,13 @@ public class Door : MonoBehaviour
         if(!isClose && !isOpen)
         {
             CloseDoor();
-            timer -= Time.deltaTime;
         }
         if(timer <= 0)
         {
             isClose = true;
             timer = 10f;
         }
+        timer -= Time.deltaTime;
     }
 
     public void OpenDoor()

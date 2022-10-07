@@ -10,7 +10,7 @@ public class Gun : MonoBehaviour
     public TMP_Text text;
     private GameObject player;
 
-    private Spawner spawn;
+    private PowerUpSpawner spawn;
     public Weapons weapons;
 
     private RaycastHit2D raycast;
@@ -29,7 +29,7 @@ public class Gun : MonoBehaviour
         clip = 3;
         printText();
         player = GameObject.FindWithTag("Player");
-        spawn = GameObject.FindWithTag("Spawn").GetComponent<Spawner>();
+        spawn = GameObject.FindWithTag("Spawn").GetComponent<PowerUpSpawner>();
     }
 
     // Update is called once per frame

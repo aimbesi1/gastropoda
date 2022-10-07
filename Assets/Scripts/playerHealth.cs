@@ -37,8 +37,7 @@ public class playerHealth : MonoBehaviour
         healthbar.setMaxHealth(maxHealth);
         printText();
     }
-
-    
+ 
     public void takeDamage(int dmg)
     {
         rb.velocity = transform.right * 20 + transform.up * 20;

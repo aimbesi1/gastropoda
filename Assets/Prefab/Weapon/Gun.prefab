@@ -26,9 +26,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1134575204107701732}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.65896165, y: 3.8809261, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4309325003737060655}
@@ -37,9 +37,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 290.3477, y: 759.7658}
-  m_SizeDelta: {x: 871.60004, y: 386}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!223 &5748749914127432935
 Canvas:
   m_ObjectHideFlags: 0
@@ -372,9 +372,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firepoint: {fileID: 1493413281529385223}
-  Bullet: {fileID: 5460686505802124873, guid: 3de86490c7d6def41a422f604ccb99b2, type: 3}
+  Bullet: {fileID: 5460686505802124873, guid: 8ba74bb36ea79a14d860ad65f27f6a00, type: 3}
   text: {fileID: 1178717291159267706}
-  weapons: {fileID: 4981475424355252446, guid: 115f96f00a6291c4b9972a86fb6cc3cd, type: 3}
+  weapons: {fileID: 4981475424355252446, guid: 7b59cc33e00c1c743b97dd10a0904599, type: 3}
 --- !u!1 &2542830248241218770
 GameObject:
   m_ObjectHideFlags: 0

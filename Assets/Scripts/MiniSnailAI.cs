@@ -64,15 +64,19 @@ public class MiniSnailAI : MonoBehaviour
     private void Move()
     {
         facingWall = Physics2D.OverlapBox(frontOffset.position, new Vector2(0.1f, 0.3f), 0, groundLayer);
-        Vector2 direction = (player.transform.position - transform.position).normalized;
-        // The mini snail will move faster if it is facing the player and on nearly the same vertical level
-        if ((direction.x > facingAngle && m_FacingRight) || (direction.x < -facingAngle && !m_FacingRight))
+        if (player != null)
         {
-            speed = chargeSpeed;
-        }
-        else
-        {
-            speed = baseSpeed;
+            Vector2 direction = (player.transform.position - transform.position).normalized;
+
+            // The mini snail will move faster if it is facing the player and on nearly the same vertical level
+            if ((direction.x > facingAngle && m_FacingRight) || (direction.x < -facingAngle && !m_FacingRight))
+            {
+                speed = chargeSpeed;
+            }
+            else
+            {
+                speed = baseSpeed;
+            }
         }
 
         // Move the snail

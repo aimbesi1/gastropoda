@@ -6,7 +6,7 @@ public class Door : MonoBehaviour
 {
     public bool isOpen = false;
     public bool isClose = true;
-    private float timer = 10f;
+    private float timer = 15f;
 
     void Update()
     {

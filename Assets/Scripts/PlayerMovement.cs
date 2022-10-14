@@ -8,10 +8,14 @@ public class PlayerMovement : MonoBehaviour
     private Transform spawn;
 
     public float runSpeed = 40f;
+    public float ladderSpeed = 30f;
 
     float horizontalMove = 0f;
+    float verticalMove = 0f;
+
     bool jump = false;
     bool crouch = false;
+    bool up = false;
 
     void Awake()
     {
@@ -27,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        verticalMove = Input.GetAxisRaw("Vertical") * ladderSpeed;
 
         if (Input.GetButton("Jump"))
         {
@@ -45,10 +50,19 @@ public class PlayerMovement : MonoBehaviour
         {
             crouch = false;
         }
+
+        if (Input.GetAxisRaw("Vertical") > 0)
+        {
+            up = true;
+        }
+        else
+        {
+            up = false;
+        }
     }
 
     private void FixedUpdate()
     {
-        controller.setMovementVars(horizontalMove * Time.fixedDeltaTime, crouch, jump);
+        controller.setMovementVars(horizontalMove * Time.fixedDeltaTime, crouch, jump, verticalMove * Time.fixedDeltaTime);
     }
 }

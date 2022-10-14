@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 193495760711815053}
   - component: {fileID: 7361928182144615117}
   - component: {fileID: 6306884293365975363}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Snailname
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 2370016830684463553}
   - component: {fileID: 3223193368551327132}
   - component: {fileID: 2402501613852606623}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: SnailHealthText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -280,7 +280,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4150114499492397886}
   - component: {fileID: 416526184939239288}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -354,6 +354,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &5059793356480753294
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 772867376684546249}
+  m_Layer: 8
+  m_Name: CenterPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &772867376684546249
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5059793356480753294}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2361498568172199349}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5380397303154707778
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,7 +396,7 @@ GameObject:
   - component: {fileID: 2001695055573262572}
   - component: {fileID: 2465335428356784923}
   - component: {fileID: 4259029106801825063}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -441,7 +472,7 @@ GameObject:
   - component: {fileID: 7381620749673118680}
   - component: {fileID: 8486328269604034713}
   - component: {fileID: 2688050517442762046}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -618,7 +649,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6482941566687999358}
   - component: {fileID: 1783194129034884092}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -703,7 +734,7 @@ GameObject:
   - component: {fileID: 2147495107188823893}
   - component: {fileID: 7327995593328485802}
   - component: {fileID: 7357805891148049658}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Healthbar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -730,7 +761,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -107.900024, y: -8.200012}
+  m_AnchoredPosition: {x: -107.9, y: -8.2}
   m_SizeDelta: {x: 217.0495, y: 15.316986}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7327995593328485802
@@ -797,37 +828,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 7327995593328485802}
---- !u!1 &7563169392617828103
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6515032266365546041}
-  m_Layer: 7
-  m_Name: rayposition
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6515032266365546041
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7563169392617828103}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.596, y: -0.32, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2361498568172199349}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7990830773186446708
 GameObject:
   m_ObjectHideFlags: 0
@@ -841,8 +841,10 @@ GameObject:
   - component: {fileID: 5622668737288610418}
   - component: {fileID: 7173141609983188084}
   - component: {fileID: 3089896619940818607}
+  - component: {fileID: 1667247057037524977}
+  - component: {fileID: 8029778131743999869}
   - component: {fileID: 6922798628484808697}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Snail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -864,7 +866,7 @@ Transform:
   - {fileID: 6482941566687999358}
   - {fileID: 4150114499492397886}
   - {fileID: 2128953821502686171}
-  - {fileID: 6515032266365546041}
+  - {fileID: 772867376684546249}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -878,10 +880,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.3251214, y: -0.13749278}
+  m_Offset: {x: 0.32384193, y: -0.26298797}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -892,7 +894,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.4934015, y: 0.72925067}
+  m_Size: {x: 2.4823134, y: 0.48682952}
   m_EdgeRadius: 0
 --- !u!58 &5622668737288610418
 CircleCollider2D:
@@ -907,9 +909,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.5}
+  m_Offset: {x: 0, y: 0.48}
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 0.99
 --- !u!50 &7173141609983188084
 Rigidbody2D:
   serializedVersion: 4
@@ -943,14 +945,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3918aecd97eeda4996a0635e333e275, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 430055643906229074, guid: bcd9d58d1381b1a428debbd23de9f9b2, type: 3}
+  player: {fileID: 430055643906229074, guid: 115f96f00a6291c4b9972a86fb6cc3cd, type: 3}
+  pipeAI: {fileID: 0}
+  snailVars: {fileID: 0}
   speed: 0
   grounded: 0
-  inPipe: 0
   pipeSystem: {fileID: 516018254, guid: ba29ccbe1d8d25147bdb28e79471035e, type: 3}
+  currentPointIndex: 0
   increaseSpeedTimer: 5
   speedToIncreaseBy: 1
   maxSpeed: 5
+--- !u!114 &1667247057037524977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7990830773186446708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ffa6d7087123574fbd89ca8b2ec51de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gravity: 0
+  speed: 2
+  m_FacingRight: 1
+  grounded: 0
+  pipeAI: {fileID: 0}
+  rigidbody2D: {fileID: 0}
+  collider2D: []
+  player: {fileID: 0}
+--- !u!114 &8029778131743999869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7990830773186446708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6b4f887ffcd98249b0876ec369b6642, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inPipe: 0
+  pipeSystem: {fileID: 0}
+  currentPointIndex: 0
+  pointRadius: 0.5
 --- !u!114 &6922798628484808697
 MonoBehaviour:
   m_ObjectHideFlags: 0

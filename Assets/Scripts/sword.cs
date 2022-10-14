@@ -17,8 +17,6 @@ public class sword : MonoBehaviour
     public Fly_Sword flysword;
     public GameObject swingsword;
 
-    //delete this also
-    //private Spawner spawn;
     private PowerUpSpawner spawn;
 
     public Weapons weapons;
@@ -26,7 +24,6 @@ public class sword : MonoBehaviour
     void Start()
     {
         player = GameObject.FindWithTag("Player");
-        //spawn = GameObject.FindWithTag("Spawn").GetComponent<Spawner>();
         spawn = GameObject.FindWithTag("Spawn").GetComponent<PowerUpSpawner>();
     }
 

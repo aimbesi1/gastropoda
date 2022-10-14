@@ -33,6 +33,11 @@ public class snailHealth : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public void Slow()
+    {
+        GetComponent<Rigidbody2D>().velocity *= -1f;
+    }
     
     void printText()
     {

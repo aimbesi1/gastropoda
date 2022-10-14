@@ -11,6 +11,7 @@ public class BifrostParticle : MonoBehaviour
     {
         Invoke("PowerupSpawn", .7f);
         Destroy(gameObject, 1.8f);
+
     }
 
     void PowerupSpawn()

@@ -10,7 +10,7 @@ public class Gun : MonoBehaviour
     public TMP_Text text;
     private GameObject player;
 
-    private Spawner spawn;
+    private PowerUpSpawner spawn;
     public Weapons weapons;
 
     private RaycastHit2D raycast;
@@ -25,29 +25,29 @@ public class Gun : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ammo = bullet;
-        clip = 3;
+        ammo = bullet; //set the ammo to the max bullet the gun can have
+        clip = 3; //set the amount of ammo clip the player can have
         printText();
         player = GameObject.FindWithTag("Player");
-        spawn = GameObject.FindWithTag("Spawn").GetComponent<Spawner>();
+        spawn = GameObject.FindWithTag("Spawn").GetComponent<PowerUpSpawner>();
     }
 
     // Update is called once per frame
     void Update()
     { 
-        if (Input.GetButtonDown("Fire1") && ammo > 0 && clip >= 1 && !is_reload)
+        if (Input.GetButtonDown("Fire1") && ammo > 0 && clip >= 1 && !is_reload) //if press left mouse it will shoot out bullet whenever the gun still have ammo
         {
             Shoot();
             ammo--; 
         }
-        else if(Input.GetButtonDown("Fire2"))
+        else if(Input.GetButtonDown("Fire2")) //Throw the gun away if press right mouse
         {
             gameObject.SetActive(false);
             weapons.has_gun = false;
             spawn.gun_limit++;
         }
 
-        if(reload_timer > 0 && ((ammo <= 0 && clip > 1) || Input.GetButtonDown("Reload")))
+        if(reload_timer > 0 && ((ammo <= 0 && clip > 1) || Input.GetButtonDown("Reload"))) //Reload and reload timer
         {
             ammo = 0;
             reload_timer -= Time.deltaTime;
@@ -61,26 +61,26 @@ public class Gun : MonoBehaviour
             is_reload = false;
         }
         printText();
-        SetParent(player.transform);
+        SetParent(player.transform); //Move the gun with the player
     }
 
-    public void addClip()
+    public void addClip() //add 1 clip for the player
     {
         clip++;
     }
 
     void Shoot()
     {
-        Instantiate(Bullet, firepoint.position, firepoint.rotation);
+        Instantiate(Bullet, firepoint.position, firepoint.rotation); //Spawn the bullet
     }
 
-    void reload()
+    void reload() //Reload func
     {
         clip--;
         ammo = bullet;
     }
 
-    void printText()
+    void printText() //Print out the detail of the gun (clip, ammo and whether or not the player is reloading)
     {
         if(is_reload)
         {
@@ -98,7 +98,7 @@ public class Gun : MonoBehaviour
 
     void SetParent(Transform parent)
     {
-        gameObject.transform.SetParent(parent);
+        gameObject.transform.SetParent(parent); //move the gun with the player by setting the gun as a child of the player
     }
 
 }

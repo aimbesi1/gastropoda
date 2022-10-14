@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class SaltBullet : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private int dmg = 20;
+    private float time = 3f;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        Destroy(gameObject, time);
+    }
+
+    void OnTriggerEnter2D(Collider2D hitInfo)
+    {
+        snailHealth snail = hitInfo.GetComponent<snailHealth>();
+        if(hitInfo.CompareTag("Ground"))
+        {
+            Destroy(gameObject);
+        }
+        if(snail != null)
+        {
+            snail.takeDamage(dmg);
+            snail.Slow();
+            Destroy(gameObject);
+        }
     }
 }

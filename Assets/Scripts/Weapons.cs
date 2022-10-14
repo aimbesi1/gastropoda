@@ -6,14 +6,18 @@ public class Weapons : MonoBehaviour
 {
     public GameObject theGun;
     public GameObject theSword;
+    public GameObject theSaltGun;
 
     public GameObject gun_Image;
     public GameObject gun_Border;
     public GameObject sword_Image;
     public GameObject sword_Border;
+    public GameObject saltgun_Image;
+    public GameObject saltgun_Border;
 
     public bool has_gun = false;
     public bool has_sword = false;
+    public bool has_salt_gun = false;
 
     public int num_clip = 0;
 
@@ -25,6 +29,11 @@ public class Weapons : MonoBehaviour
         {
             theSword.SetActive(false);
             sword_Border.SetActive(false);
+        }
+        if(theSaltGun.activeSelf)
+        {
+            theSaltGun.SetActive(false);
+            saltgun_Border.SetActive(false);
         }
         theGun.SetActive(true);
         gun_Image.SetActive(true);
@@ -45,10 +54,34 @@ public class Weapons : MonoBehaviour
             theGun.SetActive(false);
             gun_Border.SetActive(false);
         }
+        if(theSaltGun.activeSelf)
+        {
+            theSaltGun.SetActive(false);
+            saltgun_Border.SetActive(false);
+        }
         theSword.SetActive(true);
         sword_Image.SetActive(true);
         sword_Border.SetActive(true);
         has_sword = !has_sword;
+    }
+
+    public void getSaltGun()
+    {
+        if(theGun.activeSelf)
+        {
+            theGun.SetActive(false);
+            gun_Border.SetActive(false);
+        }
+        if(theSword.activeSelf)
+        {
+            theSword.SetActive(false);
+            sword_Border.SetActive(false);
+        }
+        theSaltGun.SetActive(true);
+        saltgun_Image.SetActive(true);
+        saltgun_Border.SetActive(true);
+        has_salt_gun = !has_salt_gun;
+
     }
 
     void Update()
@@ -63,6 +96,11 @@ public class Weapons : MonoBehaviour
             swapWeapons(2);
             weaponSelection = 2;
         }
+        else if(Input.GetKeyDown(KeyCode.Alpha3) && weaponSelection != 3 && has_salt_gun)
+        {
+            swapWeapons(3);
+            weaponSelection = 3;
+        }
     
     }
 
@@ -75,13 +113,27 @@ public class Weapons : MonoBehaviour
                 gun_Border.SetActive(true);
                 theSword.SetActive(false);
                 sword_Border.SetActive(false);
+                theSaltGun.SetActive(false);
+                saltgun_Border.SetActive(false);
                 break;
             case 2:
                 theSword.SetActive(true);
                 sword_Border.SetActive(true);
                 theGun.SetActive(false);
                 gun_Border.SetActive(false);
+                theSaltGun.SetActive(false);
+                saltgun_Border.SetActive(false);
                 break;
+            case 3:
+                theSaltGun.SetActive(true);
+                saltgun_Border.SetActive(true);
+                theGun.SetActive(false);
+                gun_Border.SetActive(false);
+                theSword.SetActive(false);
+                sword_Border.SetActive(false);
+                break;
+
+
         }
     }
 

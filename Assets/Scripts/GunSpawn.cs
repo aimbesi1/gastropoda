@@ -4,22 +4,24 @@ using UnityEngine;
 
 public class GunSpawn : MonoBehaviour
 {
-    private bool hasCollide = false;
+    [SerializeField] bool independent = false; // If true, this spawner will not reference any random weapon spawner.
+    [SerializeField] bool permanent = false; // If true, this object will not despawn.
 
-    //Enable this if you still need the old script
-    //private Spawner spawn; Delete this when everything gets corrected.
-    private PowerUpSpawner spawn;
+    private bool usable = false;
+
+    private Spawner spawn;
+
     private float time = 2f;
 
     void Start()
     {
-        //spawn = GameObject.FindWithTag("Spawn").GetComponent<Spawner>();     delete this also
-        spawn = GameObject.FindWithTag("Spawn").GetComponent<PowerUpSpawner>();
+        if (!independent)
+            spawn = GameObject.FindWithTag("Spawn").GetComponent<Spawner>();
     }
 
     void Update()
     {
-        if(time > 0)
+        if(time > 0 && !permanent)
         {
             time -= Time.deltaTime;
         }
@@ -32,12 +34,13 @@ public class GunSpawn : MonoBehaviour
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
         Weapons player = hitInfo.GetComponent<Weapons>();
-        if(player != null && !hasCollide)
+        if(player != null && !usable)
         {
-            hasCollide = !hasCollide;
+            usable = !usable;
             Destroy(gameObject);
             player.getGun();
-            spawn.gun_limit--;
+            if (!independent && spawn != null)
+                spawn.gun_limit--;
         }
 
     }

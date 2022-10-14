@@ -15,7 +15,7 @@ public class Gun : MonoBehaviour
 
     private RaycastHit2D raycast;
 
-    private int bullet = 12;
+    private int maxAmmo = 12;
     private int ammo;
     private int clip;
 
@@ -25,11 +25,11 @@ public class Gun : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ammo = bullet;
+        ammo = maxAmmo;
         clip = 3;
         printText();
         player = GameObject.FindWithTag("Player");
-        spawn = GameObject.FindWithTag("Spawn").GetComponent<Spawner>();
+        //spawn = GameObject.FindWithTag("Spawn").GetComponent<Spawner>();
     }
 
     // Update is called once per frame
@@ -44,7 +44,7 @@ public class Gun : MonoBehaviour
         {
             gameObject.SetActive(false);
             weapons.has_gun = false;
-            spawn.gun_limit++;
+            //spawn.gun_limit++;
         }
 
         if(reload_timer > 0 && ((ammo <= 0 && clip > 1) || Input.GetButtonDown("Reload")))
@@ -61,7 +61,7 @@ public class Gun : MonoBehaviour
             is_reload = false;
         }
         printText();
-        SetParent(player.transform);
+        Parent(player);
     }
 
     public void addClip()
@@ -77,7 +77,7 @@ public class Gun : MonoBehaviour
     void reload()
     {
         clip--;
-        ammo = bullet;
+        ammo = maxAmmo;
     }
 
     void printText()
@@ -88,7 +88,7 @@ public class Gun : MonoBehaviour
         }
         else if(!is_reload && ammo > 0)
         {
-            text.text = ammo + "/" + bullet + " --- Clip: " + clip;
+            text.text = ammo + "/" + maxAmmo + " --- Clip: " + clip;
         }
         else if (ammo <= 0)
         {
@@ -96,9 +96,9 @@ public class Gun : MonoBehaviour
         }
     }
 
-    void SetParent(Transform parent)
+    void Parent(GameObject parent)
     {
-        gameObject.transform.SetParent(parent);
+        transform.SetParent(parent.transform);
     }
 
 }

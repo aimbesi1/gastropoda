@@ -24,15 +24,11 @@ public class Fly_Sword : MonoBehaviour
     {
         int layermask = 1 << 8;
         layermask = ~layermask;
-        raycast = Physics2D.Raycast(rayposition.position, transform.right * speed, Mathf.Infinity, layermask);
-        if(raycast.collider.CompareTag("SpawnObj"))
-        {
-            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), GameObject.FindWithTag("SpawnObj").GetComponent<Collider2D>());
-        }
-        if(raycast.collider.name == "Lever")
-        {
-            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), GameObject.Find("Lever").GetComponent<Collider2D>());
-        }
+        //raycast = Physics2D.Raycast(rayposition.position, transform.right * speed, Mathf.Infinity, layermask);
+        //if(raycast.collider.CompareTag("SpawnObj"))
+        //{
+        //    Physics2D.IgnoreCollision(GetComponent<Collider2D>(), GameObject.FindWithTag("SpawnObj").GetComponent<Collider2D>());
+        //}
         Destroy(gameObject, fly_time);
         
     }

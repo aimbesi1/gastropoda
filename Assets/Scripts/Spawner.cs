@@ -15,18 +15,6 @@ public class Spawner : MonoBehaviour
     public Transform pt1;
     public Transform pt2;
     public Transform pt3;
-    public Transform pt4;
-    public Transform pt5;
-    public Transform pt6;
-    public Transform pt7;
-    public Transform pt8;
-    public Transform pt9;
-    public Transform pt10;
-    public Transform pt11;
-    public Transform pt12;
-    public Transform pt13;
-    public Transform pt14;
-    public Transform pt15;
 
     List<Transform> pts = new List<Transform>();
 
@@ -38,21 +26,7 @@ public class Spawner : MonoBehaviour
 
     void Start()
     {
-        addPoint(pt1);
-        addPoint(pt2);
-        addPoint(pt3);
-        addPoint(pt4);
-        addPoint(pt5);
-        addPoint(pt6);
-        addPoint(pt7);
-        addPoint(pt8);
-        addPoint(pt9);
-        addPoint(pt10);
-        addPoint(pt11);
-        addPoint(pt12);
-        addPoint(pt13);
-        addPoint(pt14);
-        addPoint(pt15);
+        addPoint();
         Spawn();
     }
 
@@ -96,12 +70,11 @@ public class Spawner : MonoBehaviour
         }
     }
 
-    void addPoint(Transform pt)
+    void addPoint()
     {
-        if(pt != null)
-        {
-            pts.Add(pt);
-        }
+        pts.Add(pt1);
+        pts.Add(pt2);
+        pts.Add(pt3);
     }
 
 

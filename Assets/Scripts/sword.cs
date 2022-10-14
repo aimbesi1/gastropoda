@@ -17,17 +17,14 @@ public class sword : MonoBehaviour
     public Fly_Sword flysword;
     public GameObject swingsword;
 
-    //delete this also
-    //private Spawner spawn;
-    private PowerUpSpawner spawn;
+    private Spawner spawn;
 
     public Weapons weapons;
 
     void Start()
     {
         player = GameObject.FindWithTag("Player");
-        //spawn = GameObject.FindWithTag("Spawn").GetComponent<Spawner>();
-        spawn = GameObject.FindWithTag("Spawn").GetComponent<PowerUpSpawner>();
+        spawn = GameObject.FindWithTag("Spawn").GetComponent<Spawner>();
     }
 
     // Update is called once per frame
@@ -73,7 +70,8 @@ public class sword : MonoBehaviour
         {
             gameObject.SetActive(false);
             weapons.has_sword = false;
-            spawn.sword_limit++;
+            if (spawn != null)
+                spawn.sword_limit++;
             throw_time = 2;
         }
 

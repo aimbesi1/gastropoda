@@ -17,7 +17,7 @@ public class Fly_Sword : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     { 
-        rb.velocity = transform.right * speed; //Set the velocity
+        rb.velocity = transform.right * speed;
     }
 
     void Update()
@@ -27,11 +27,11 @@ public class Fly_Sword : MonoBehaviour
         raycast = Physics2D.Raycast(rayposition.position, transform.right * speed, Mathf.Infinity, layermask);
         if(raycast.collider.CompareTag("SpawnObj"))
         {
-            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), GameObject.FindWithTag("SpawnObj").GetComponent<Collider2D>()); //Ignore the collision between the flying sword and the spawn obj
+            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), GameObject.FindWithTag("SpawnObj").GetComponent<Collider2D>());
         }
         if(raycast.collider.name == "Lever")
         {
-            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), GameObject.Find("Lever").GetComponent<Collider2D>());//Ignore the collision between the flying sword and the lever
+            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), GameObject.Find("Lever").GetComponent<Collider2D>());
         }
         Destroy(gameObject, fly_time);
         
@@ -43,12 +43,12 @@ public class Fly_Sword : MonoBehaviour
         snailHealth snail = hitInfo.GetComponent<snailHealth>();
         if (ground != null)
         {
-            Destroy(gameObject); //Destroy the animation if touch the ground
+            Destroy(gameObject);
         }
         if(snail != null)
         {
-            snail.takeDamage(dmg); //Deal dmg if hit the snail
-            Destroy(gameObject); //then destroy the animation
+            snail.takeDamage(dmg);
+            Destroy(gameObject);
         }
         
     }

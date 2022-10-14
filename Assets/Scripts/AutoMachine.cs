@@ -11,7 +11,7 @@ public class AutoMachine : MonoBehaviour
     void Update()
     {
         timer -= Time.deltaTime;
-        if(isTop) //check to see if the machine reach its max height, if not move the machine up else move the machine down
+        if(isTop)
         {
             MoveDown();
         }
@@ -19,23 +19,23 @@ public class AutoMachine : MonoBehaviour
         {
             MoveUp();
         }
-        if(timer <= 3) //Time for the machine to reach top
+        if(timer <= 3)
         {
             isTop = true;
         }
-        if(timer <= 0) //Time for the machine to reach bottom
+        if(timer <= 0)
         {
             isTop = false;
             timer = 6f;
         }
     }
 
-    public void MoveUp() //Move the machine up
+    public void MoveUp()
     {
         transform.Translate(Vector2.up * speed * Time.deltaTime);
     }
 
-    public void MoveDown() //Move the machine down
+    public void MoveDown()
     {
         transform.Translate(Vector2.down * speed * Time.deltaTime);
     }

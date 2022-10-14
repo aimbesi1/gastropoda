@@ -9,7 +9,7 @@ public class DeadZone : MonoBehaviour
         playerHealth player = hitInfo.GetComponent<playerHealth>();
         if(player != null)
         {
-            player.takeDamage(200); //Player died if touch
+            player.takeDamage(200);
         }
     }
 }

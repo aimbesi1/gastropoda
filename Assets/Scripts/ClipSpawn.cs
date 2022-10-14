@@ -4,17 +4,24 @@ using UnityEngine;
 
 public class ClipSpawn : MonoBehaviour
 {
-    private float time = 6f;
+    private float time = 4f;
     private bool hasCollide = false;
 
     void Update()
     {
-        Destroy(gameObject, time); //Destroy itself over a period of time
+        if (time > 0)
+        {
+            time -= Time.deltaTime;
+        }
+        if (time <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        Weapons player = hitInfo.GetComponent<Weapons>(); 
-        if(player != null && !hasCollide) //Player interact with the spawn obj
+        Weapons player = hitInfo.GetComponent<Weapons>();
+        if(player != null && !hasCollide)
         {
             hasCollide = !hasCollide;
             Destroy(gameObject);

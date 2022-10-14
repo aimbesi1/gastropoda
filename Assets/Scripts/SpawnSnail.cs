@@ -18,6 +18,6 @@ public class SpawnSnail : MonoBehaviour
     void SpawnEnemySnail()
     {
         //Spawn your impending doom
-        m_Snail.GetComponent<Transform>().position = transform.position;
+        Instantiate(m_Snail,transform.position, transform.rotation);
     }
 }

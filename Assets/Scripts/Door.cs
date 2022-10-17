@@ -6,7 +6,7 @@ public class Door : MonoBehaviour
 {
     public bool isOpen = false;
     public bool isClose = true;
-    private float timer = 10f;
+    public float doorTimer = 10f;
 
     void Update()
     {
@@ -15,7 +15,7 @@ public class Door : MonoBehaviour
             OpenDoor();
             isClose = false;
         }
-        if(timer <= 5)
+        if(doorTimer <= 5)
         {
             isOpen = false;
         }
@@ -23,12 +23,12 @@ public class Door : MonoBehaviour
         {
             CloseDoor();
         }
-        if(timer <= 0)
+        if(doorTimer <= 0)
         {
             isClose = true;
-            timer = 10f;
+            doorTimer = 10f;
         }
-        timer -= Time.deltaTime;
+        doorTimer -= Time.deltaTime;
     }
 
     public void OpenDoor()

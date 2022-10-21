@@ -9,6 +9,7 @@ public class SnailPipeMovement : MonoBehaviour
     private new Collider2D[] collider2D;
 
     [SerializeField] public bool inPipe = false;
+    [SerializeField] public bool escapingGround = false;
     private float pipeSpeed;
     [SerializeField] private PipeSystem pipeSystem;
     [SerializeField] private int currentPointIndex = 0;
@@ -36,12 +37,37 @@ public class SnailPipeMovement : MonoBehaviour
             snail.grounded = false;
             inPipe = true;
             pipeSystem = collision.transform.GetComponentInParent<PipeSystem>();
+            //foreach (Transform p in pipeSystem.points)
+            //{
+            //    Debug.Log(p);
+            //}
             currentPointIndex = 0;
             pipeSpeed = pipeSystem.pipeSpeed;
             rigidbody2D.gravityScale = 0;
             EnableTrigger();
             rigidbody2D.velocity = Vector2.zero;
             //transform.position = currentPoint.position;
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            escapingGround = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        // Do not collide with ground until snail has fully exited the pipe and left the ground it was stuck in
+        if (escapingGround && !inPipe && collision.gameObject.CompareTag("Ground"))
+        {
+            DisableTrigger();
+        }
+        if (inPipe && collision.gameObject.CompareTag("Ground"))
+        {
+            escapingGround = false;
         }
     }
 
@@ -64,6 +90,7 @@ public class SnailPipeMovement : MonoBehaviour
             || pipeSystem.points[currentPointIndex].gameObject.CompareTag("PipeEntrance")))
         {
             currentPointIndex += 1;
+            //Debug.Log("Current point index: " + currentPointIndex);
             //currentPoint = pipeSystem.points[currentPointIndex];
         }
 
@@ -73,7 +100,10 @@ public class SnailPipeMovement : MonoBehaviour
         {
             inPipe = false;
             currentPointIndex = 0;
-            DisableTrigger();
+            if (!escapingGround)
+            {
+                DisableTrigger();
+            }
             rigidbody2D.gravityScale = snail.gravity;
             Vector2 direction = rigidbody2D.velocity.normalized;
             rigidbody2D.velocity = new Vector2(direction.x * pipeSystem.pipeLaunchSpeed, direction.y * pipeSystem.pipeLaunchSpeed);

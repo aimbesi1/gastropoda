@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1819245667474870110}
   m_Layer: 0
   m_Name: SwordSpawn
-  m_TagString: SpawnObj
+  m_TagString: SwordSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124,3 +124,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ca0501d135b6544693fee974b544b94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  independent: 0
+  permanent: 0
+  time: 2

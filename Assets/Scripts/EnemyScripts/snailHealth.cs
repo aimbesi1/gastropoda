@@ -49,5 +49,4 @@ public class snailHealth : MonoBehaviour
             has_Collide = !has_Collide;
         }
     }
-
 }

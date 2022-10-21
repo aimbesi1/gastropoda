@@ -2,42 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SwordSpawn : MonoBehaviour
+public class SwordSpawn : SpawnedItem
 {
-    private bool hasCollide = false;
-    private float time = 2f;
-
-    //Enable this if you still need the old script
-    //private Spawner spawn; Delete this when everything gets corrected.
-    private PowerUpSpawner spawn;
-
-    void Start()
+    public override void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        //spawn = GameObject.FindWithTag("Spawn").GetComponent<Spawner>();          delete this
-        spawn = GameObject.FindWithTag("Spawn").GetComponent<PowerUpSpawner>();
-    }
+        if (hitInfo.gameObject.CompareTag("Player"))
+        {
+            Weapons playerWeapons = hitInfo.GetComponent<Weapons>();
+            if (playerWeapons != null)
+            {
+                if (!IsIndependent() && GetPowerUpSpawner() != null)
+                {
+                    GetPowerUpSpawner().sword_limit--;
+                }
+                playerWeapons.getSword(GetPowerUpSpawner());
+            }
 
-    void Update()
-    {
-        if(time > 0)
-        {
-            time -= Time.deltaTime;
+            base.OnTriggerEnter2D(hitInfo);
         }
-        if (time <= 0)
-        {
-            Destroy(gameObject);
-        }
-    }
 
-    void OnTriggerEnter2D(Collider2D hitInfo)
-    {
-        Weapons player = hitInfo.GetComponent<Weapons>();
-        if(player != null && !hasCollide)
-        {
-            hasCollide = !hasCollide;
-            Destroy(gameObject);
-            player.getSword();
-            spawn.sword_limit--;
-        }
     }
 }

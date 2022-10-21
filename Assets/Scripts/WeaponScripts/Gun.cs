@@ -10,7 +10,7 @@ public class Gun : MonoBehaviour
     public TMP_Text text;
     private GameObject player;
 
-    private PowerUpSpawner spawn;
+    private PowerUpSpawner spawner;
     public Weapons weapons;
 
     private RaycastHit2D raycast;
@@ -29,7 +29,7 @@ public class Gun : MonoBehaviour
         clip = 3;
         printText();
         player = GameObject.FindWithTag("Player");
-        spawn = GameObject.FindWithTag("Spawn").GetComponent<PowerUpSpawner>();
+        //spawn = GameObject.FindWithTag("Spawn").GetComponent<PowerUpSpawner>();
     }
 
     // Update is called once per frame
@@ -44,7 +44,8 @@ public class Gun : MonoBehaviour
         {
             gameObject.SetActive(false);
             weapons.has_gun = false;
-            spawn.gun_limit++;
+            if (spawner != null)
+                spawner.gun_limit++;
         }
 
         if(reload_timer > 0 && ((ammo <= 0 && clip > 1) || Input.GetButtonDown("Reload")))
@@ -96,6 +97,10 @@ public class Gun : MonoBehaviour
         }
     }
 
+    public void SetSpawner(PowerUpSpawner s)
+    {
+        spawner = s;
+    }
     void SetParent(Transform parent)
     {
         gameObject.transform.SetParent(parent);

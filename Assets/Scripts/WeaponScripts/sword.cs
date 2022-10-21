@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class sword : MonoBehaviour
+public class Sword : MonoBehaviour
 {
     public int throw_time = 0;
 
@@ -19,15 +19,13 @@ public class sword : MonoBehaviour
 
     //delete this also
     //private Spawner spawn;
-    private PowerUpSpawner spawn;
+    private PowerUpSpawner spawner;
 
     public Weapons weapons;
 
     void Start()
     {
         player = GameObject.FindWithTag("Player");
-        //spawn = GameObject.FindWithTag("Spawn").GetComponent<Spawner>();
-        spawn = GameObject.FindWithTag("Spawn").GetComponent<PowerUpSpawner>();
     }
 
     // Update is called once per frame
@@ -73,7 +71,7 @@ public class sword : MonoBehaviour
         {
             gameObject.SetActive(false);
             weapons.has_sword = false;
-            spawn.sword_limit++;
+            spawner.sword_limit++;
             throw_time = 2;
         }
 
@@ -84,5 +82,8 @@ public class sword : MonoBehaviour
     {
         gameObject.transform.parent = parent.transform;
     }
-
+    public void SetSpawner(PowerUpSpawner s)
+    {
+        spawner = s;
+    }
 }

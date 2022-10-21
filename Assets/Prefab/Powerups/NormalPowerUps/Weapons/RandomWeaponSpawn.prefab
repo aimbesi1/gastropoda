@@ -4866,4 +4866,5 @@ MonoBehaviour:
   powerups:
   - {fileID: 6843927693858181522, guid: ce65ce85e0f73e64eac746c671be6424, type: 3}
   - {fileID: 2093916161533718796, guid: 6b105542fd1cffd4b9c582a39e5511e3, type: 3}
+  - {fileID: 5140443473531615844, guid: 3df4f187bfaec85448419e067017a103, type: 3}
   PwupLocation: {fileID: 5538878885723339101}

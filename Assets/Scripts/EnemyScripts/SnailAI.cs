@@ -120,4 +120,9 @@ public class SnailAI : MonoBehaviour
 
         transform.Rotate(0f, 180f, 0f);
     }
+
+    public void slow()
+    {
+        speed -= 0.5f;
+    }
 }

@@ -5566,7 +5566,7 @@ GameObject:
   - component: {fileID: 6636358024507462643}
   m_Layer: 8
   m_Name: Snail
-  m_TagString: Untagged
+  m_TagString: Snail
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

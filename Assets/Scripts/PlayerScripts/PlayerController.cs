@@ -20,12 +20,17 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool m_wasJumping = false;                                         // For determining if the player is airborne due to a jump
     [SerializeField] private bool m_nearLadder = false;                                         // For determining if the player is near a ladder
 
+    private float m_timePowJumpVelocity;
+    private float m_timePowCancelJumpVel;
+    private float m_timePowJumpBrake;
+
     private bool newJumpInput = false;
     private float m_move = 0;
     private bool m_crouch = false;
     private bool m_jump = false;
     private float m_vertical = 0;
     private float m_gravity = 0;
+    private float m_timePowerGravity;
 
     [SerializeField] private LayerMask m_LadderLayer;
 
@@ -33,15 +38,12 @@ public class PlayerController : MonoBehaviour
     [Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;  // How much to smooth out the movement
     [SerializeField] private bool m_AirControl = false;                         // Whether or not a player can steer while jumping;
 
-    //[SerializeField] private Collider2D m_CrouchDisableCollider;                // A collider that will be disabled when crouching
-
-
     [SerializeField] private bool m_Grounded;            // Whether or not the player is grounded.
 
     [SerializeField] private bool m_onLadder = false;
 
     private Rigidbody2D m_Rigidbody2D;
-    private BoxCollider2D m_Collider2D;
+    private BoxCollider2D m_BodyCollider;
     private CheckCollisions m_CheckCollisions;
     AudioSource audioSrc;
     bool isMoving = false;
@@ -55,6 +57,7 @@ public class PlayerController : MonoBehaviour
     private float crouchYSize = 2.3f;
 
     public bool timePowerActive = false;
+    public float timeScaleMultiplier = 0.5f;
 
     [Header("Events")]
     [Space]
@@ -70,7 +73,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         m_Rigidbody2D = GetComponent<Rigidbody2D>();
-        m_Collider2D = GetComponent<BoxCollider2D>();
+        m_BodyCollider = GetComponent<BoxCollider2D>();
         m_CheckCollisions = GetComponent<CheckCollisions>();
         audioSrc = GetComponent<AudioSource>();
         m_gravity = m_Rigidbody2D.gravityScale;
@@ -80,10 +83,25 @@ public class PlayerController : MonoBehaviour
 
         if (OnCrouchEvent == null)
             OnCrouchEvent = new BoolEvent();
+
+        // Initialize slowed-time movement variables as functions of the default values
+        m_timePowerGravity = m_gravity / timeScaleMultiplier;
+        m_timePowJumpVelocity = m_JumpVelocity / timeScaleMultiplier * 0.7f;
+        m_timePowJumpBrake = m_JumpBrake / timeScaleMultiplier;
+        m_timePowCancelJumpVel = m_cancelJumpVelocity / timeScaleMultiplier;
     }
 
     private void FixedUpdate()
     {
+        if (timePowerActive)
+        {
+            Time.timeScale = timeScaleMultiplier;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
+
         Move(m_move, m_crouch, m_jump, m_vertical);
 
         bool wasGrounded = m_Grounded;
@@ -132,6 +150,11 @@ public class PlayerController : MonoBehaviour
 
     public void Move(float horizontal, bool crouch, bool jump, float vertical)
     {
+        if (timePowerActive)
+        {
+            horizontal /= timeScaleMultiplier;
+            vertical /= timeScaleMultiplier;
+        }
         if (vertical > 0)
         {
             if (Physics2D.OverlapBox(transform.position, transform.localScale, 0, m_LadderLayer))
@@ -150,7 +173,14 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            m_Rigidbody2D.gravityScale = m_gravity;
+            if (timePowerActive)
+            {
+                m_Rigidbody2D.gravityScale = m_timePowerGravity;
+            }
+            else
+            {
+                m_Rigidbody2D.gravityScale = m_gravity;
+            }
             HandleCrouch(ref horizontal, ref crouch);
             MoveX(horizontal);
         }
@@ -194,6 +224,21 @@ public class PlayerController : MonoBehaviour
 
     private void HandleJump(bool jump)
     {
+        float jumpVelocity;
+        float jumpBrake;
+        float jumpCancel;
+        if (timePowerActive)
+        {
+            jumpVelocity = m_timePowJumpVelocity;
+            jumpBrake = m_timePowJumpBrake;
+            jumpCancel = m_timePowCancelJumpVel;
+        }
+        else
+        {
+            jumpVelocity = m_JumpVelocity;
+            jumpBrake = m_JumpBrake;
+            jumpCancel = m_cancelJumpVelocity;
+        }
         // If the player should jump...
         // @JUMP
         if ((m_Grounded || m_onLadder) && jump && !m_isJumping && newJumpInput)
@@ -255,18 +300,15 @@ public class PlayerController : MonoBehaviour
                 OnCrouchEvent.Invoke(true);
             }
 
-            // Reduce the speed by the crouchSpeed multiplier
-            move *= m_CrouchSpeed;
-
             // Resize main collider when crouching
-            m_Collider2D.offset = new Vector2(m_Collider2D.offset.x, crouchYOffset);
-            m_Collider2D.size = new Vector2(m_Collider2D.size.x, crouchYSize);
+            m_BodyCollider.offset = new Vector2(m_BodyCollider.offset.x, crouchYOffset);
+            m_BodyCollider.size = new Vector2(m_BodyCollider.size.x, crouchYSize);
         }
         else
         {
             // Restore default collider dimensions when not crouching
-            m_Collider2D.offset = new Vector2(m_Collider2D.offset.x, defaultYOffset);
-            m_Collider2D.size = new Vector2(m_Collider2D.size.x, defaultYSize);
+            m_BodyCollider.offset = new Vector2(m_BodyCollider.offset.x, defaultYOffset);
+            m_BodyCollider.size = new Vector2(m_BodyCollider.size.x, defaultYSize);
 
             if (m_wasCrouching)
             {

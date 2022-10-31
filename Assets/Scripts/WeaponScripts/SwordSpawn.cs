@@ -15,7 +15,7 @@ public class SwordSpawn : SpawnedItem
                 {
                     GetPowerUpSpawner().sword_limit--;
                 }
-                playerWeapons.getSword(GetPowerUpSpawner());
+                playerWeapons.getSword();
             }
 
             base.OnTriggerEnter2D(hitInfo);

@@ -26,6 +26,7 @@ public class Sword : MonoBehaviour
     void Start()
     {
         player = GameObject.FindWithTag("Player");
+        spawner = GameObject.FindWithTag("Spawn").GetComponent<PowerUpSpawner>();
     }
 
     // Update is called once per frame

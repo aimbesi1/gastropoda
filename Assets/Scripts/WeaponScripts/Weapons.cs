@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Weapons : MonoBehaviour
 {
-    public Gun theGun;
-    public Sword theSword;
-    public SaltShakerGun theSaltGun;
+    public GameObject theGun;
+    public GameObject theSword;
+    public GameObject theSaltGun;
 
     public GameObject gun_Image;
     public GameObject gun_Border;
@@ -24,12 +24,15 @@ public class Weapons : MonoBehaviour
     private int weaponSelection = 0;
 
     // Give the player a weapon and assign a reference to that weapon's spawner.
-    public void getGun(PowerUpSpawner spawner)
+    public void getGun()
     {
         if (theSword.gameObject.activeSelf)
         {
             theSword.gameObject.SetActive(false);
             sword_Border.SetActive(false);
+        }
+        if(theSaltGun.gameObject.activeSelf)
+        {
             theSaltGun.gameObject.SetActive(false);
             salt_Border.SetActive(false);
         }
@@ -37,15 +40,18 @@ public class Weapons : MonoBehaviour
         gun_Image.SetActive(true);
         gun_Border.SetActive(true);
         has_gun = true;
-        theGun.SetSpawner(spawner);
+        //theGun.SetSpawner(spawner);
     }
 
-    public void getSaltGun(PowerUpSpawner spawner)
+    public void getSaltGun()
     {
         if (theSword.gameObject.activeSelf)
         {
             theSword.gameObject.SetActive(false);
             sword_Border.SetActive(false);
+        }
+        if(theGun.gameObject.activeSelf)
+        {
             theGun.gameObject.SetActive(false);
             gun_Border.SetActive(false);
         }
@@ -53,7 +59,7 @@ public class Weapons : MonoBehaviour
         salt_Image.SetActive(true);
         salt_Border.SetActive(true);
         has_saltgun = true;
-        theSaltGun.SetSpawner(spawner);
+        //theSaltGun.SetSpawner(spawner);
     }
 
     public void storeClip()
@@ -63,12 +69,15 @@ public class Weapons : MonoBehaviour
     }
 
     // Similar to getGun
-    public void getSword(PowerUpSpawner spawner)
+    public void getSword()
     {
         if (theGun.gameObject.activeSelf)
         {
             theGun.gameObject.SetActive(false);
             gun_Border.SetActive(false);
+        }
+        if(theSaltGun.gameObject.activeSelf)
+        {
             theSaltGun.gameObject.SetActive(false);
             salt_Border.SetActive(false);
         }
@@ -76,7 +85,7 @@ public class Weapons : MonoBehaviour
         sword_Image.SetActive(true);
         sword_Border.SetActive(true);
         has_sword = true;
-        theSword.SetSpawner(spawner);
+        //theSword.SetSpawner(spawner);
     }
 
     void Update()
@@ -99,6 +108,10 @@ public class Weapons : MonoBehaviour
 
     }
 
+    //Player can switch the weapons based on the num 1, 2, 3
+    //         1 - Normal Gun
+    //         2 - Sword
+    //         3 - Salt Gun
     void swapWeapons(int num)
     {
         switch (num)

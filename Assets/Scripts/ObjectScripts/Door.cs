@@ -31,8 +31,8 @@ public class Door : MonoBehaviour
     {
         if (isOpen && Vector2.Distance(transform.position, openPoint.position) > pointRadius)
         {
-            Debug.Log("Moving door to open position");
-            Debug.Log(Vector2.Distance(transform.position, openPoint.position));
+            //Debug.Log("Moving door to open position");
+            //Debug.Log(Vector2.Distance(transform.position, openPoint.position));
 
             // Move the door towards the open position at the doorSpeed
             transform.position = Vector2.MoveTowards(transform.position, openPoint.position, doorSpeed);
@@ -58,7 +58,7 @@ public class Door : MonoBehaviour
     // Calling this function once will change the door's state and cause it to open or close accordingly.
     public void ToggleDoorState()
     {
-        Debug.Log("Event triggered");
+        //Debug.Log("Event triggered");
         isOpen = !isOpen;
         doorOpenTime = 0;
     }

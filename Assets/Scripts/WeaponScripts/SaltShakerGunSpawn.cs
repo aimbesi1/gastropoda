@@ -15,7 +15,7 @@ public class SaltShakerGunSpawn : SpawnedItem
                 {
                     GetPowerUpSpawner().saltgun_limit--;
                 }
-                playerWeapons.getSaltGun(GetPowerUpSpawner());
+                playerWeapons.getSaltGun();
             }
 
             base.OnTriggerEnter2D(hitInfo);

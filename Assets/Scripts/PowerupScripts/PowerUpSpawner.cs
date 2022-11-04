@@ -11,6 +11,7 @@ public class PowerUpSpawner : MonoBehaviour
     public float time = 6f;         //time in between item respawns
 
     public int gun_limit = 1;       //limits how many times weapons are picked up
+    public int saltgun_limit = 1;
     public int sword_limit = 1;
 
     private void Update()
@@ -36,7 +37,14 @@ public class PowerUpSpawner : MonoBehaviour
     {
         for (int i = 0; i < weaponLocations.Length; i++)
         {
-            Instantiate(weaponParticleSpawn, weaponLocations[i]);
+            if (CanSpawnWeapon(weaponLocations[i]))
+                Instantiate(weaponParticleSpawn, weaponLocations[i]);
         }
+    }
+
+    bool CanSpawnWeapon(Transform weapon)
+    {
+        return (weapon != null &&
+            ((weapon.gameObject.CompareTag("GunSpawner") && gun_limit > 0) || (weapon.gameObject.CompareTag("SwordSpawner") && sword_limit > 0)));
     }
 }

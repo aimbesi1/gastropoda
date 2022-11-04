@@ -33,6 +33,11 @@ public class snailHealth : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public void slow()
+    {
+        GetComponent<SnailAI>().slow();
+    }
     
     void printText()
     {
@@ -49,5 +54,4 @@ public class snailHealth : MonoBehaviour
             has_Collide = !has_Collide;
         }
     }
-
 }

@@ -5,19 +5,34 @@ using UnityEngine;
 public class SpawnSnail : MonoBehaviour
 {
     public GameObject m_Snail;
+    AudioSource audio;
+    bool spawnOnce = false;
 
-    public float graceTimer = 5f; //How many seconds until snail spawns
+    //public float graceTimer = 3f; //How many seconds until snail spawns
 
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("SpawnEnemySnail", graceTimer); //Invokes after set timer
+        audio = GetComponent<AudioSource>();
+        //Invoke("SpawnEnemySnail", graceTimer); //Invokes after set timer
     }
 
 
-    void SpawnEnemySnail()
+    public void SpawnEnemySnail()
     {
-        //Spawn your impending doom
-        Instantiate(m_Snail,transform.position, transform.rotation);
+        //Invoke("SnailTimer", graceTimer); //Invokes after set timer
+        SnailTimer();
+    }
+
+    void SnailTimer()
+    {
+        if(spawnOnce == false)
+        {
+            //Spawn your impending doom
+            Instantiate(m_Snail, transform.position, transform.rotation);
+            audio.Play();
+            spawnOnce = true;
+        }
+        
     }
 }

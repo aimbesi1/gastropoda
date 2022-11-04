@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1060533716902513236}
   - component: {fileID: 1060533716902513234}
   - component: {fileID: 1060533716902513235}
-  - component: {fileID: 7991445994309165340}
+  - component: {fileID: -1983613839043572954}
   m_Layer: 3
   m_Name: MovingSolid
   m_TagString: Ground
@@ -134,7 +134,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &7991445994309165340
+--- !u!114 &-1983613839043572954
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,13 +143,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1060533716902513239}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c0c32c9c67a00d44b9a7b41d04ad95d, type: 3}
+  m_Script: {fileID: 11500000, guid: 3312897d5be3a214097968d8679a43e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loopThroughPoints: 0
-  movingObject: {fileID: 0}
-  points: []
-  moveSpeed: 0
-  currentPointIndex: 0
-  pointRadius: 0.5
-  waitTime: 0

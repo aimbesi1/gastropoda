@@ -19,18 +19,23 @@ public class CameraFollow : MonoBehaviour
     private Vector3 lerpedPosition;
     private Camera _camera;
 
+    [SerializeField] private float speed = 4f;
+    private static Transform target;
+    private static float CameraTimer;
+
     private void Awake()
     {
         // Get the camera component        
         _camera = GetComponent<Camera>();
         player = GameObject.FindWithTag("Player");
+        target = GameObject.FindGameObjectWithTag("Snail").transform;
     }
     // FixedUpdate is called every frame, when the physics are calculated    
     // You can also put the code in Update(), but putting it in FixedUpdate()    
     // make the camera motion slightly smoother.     
     void FixedUpdate()
     {
-        if (player != null)
+        /*if (player != null)
         {
             // Use the Lerp() function so that the camera is slighly behind the character.             
             lerpedPosition = Vector3.Lerp(transform.position, player.transform.position, Time.deltaTime * 10f);
@@ -39,6 +44,53 @@ public class CameraFollow : MonoBehaviour
             lerpedPosition.y += .3f;
             // If you don't want the slighly delay, use this code.             
             // lerpedPosition = new Vector3(target.position.x, target.position.y, -10f);        
+        }*/
+        if(player != null)
+        {
+            MoveCam();
+            CamTimer();
+        }
+    }
+
+    public void MoveCam()
+    {
+        if (CamTimer())
+        {
+            /*Vector3 newPos = new Vector3(target.position.x, target.position.y, -10f);
+            transform.position = Vector3.MoveTowards(transform.position, newPos, speed * Time.deltaTime);*/
+
+            // Use the Lerp() function so that the camera is slighly behind the character.             
+            lerpedPosition = Vector3.Lerp(transform.position, target.transform.position, Time.deltaTime * 10f);
+            // The default Z position for camera in a 2D game is -10f.            
+            lerpedPosition.z = -10f;
+            lerpedPosition.y += .3f;
+        }
+        else
+        {
+            if (transform.position != player.transform.position)
+            {
+                /*Vector3 newPos = new Vector3(player.transform.position.x, player.transform.position.y, 10f);
+                transform.position = Vector3.MoveTowards(transform.position, newPos, speed * Time.deltaTime);*/
+
+                // Use the Lerp() function so that the camera is slighly behind the character.             
+                lerpedPosition = Vector3.Lerp(transform.position, player.transform.position, Time.deltaTime * 10f);
+                // The default Z position for camera in a 2D game is -10f.            
+                lerpedPosition.z = -10f;
+                lerpedPosition.y += .3f;
+            }
+        }
+    }
+
+    public bool CamTimer()
+    {
+        if (CameraTimer > 0)
+        {
+            CameraTimer -= Time.deltaTime;
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
     // LateUpdate is called after all other objects have moved.    
@@ -79,6 +131,12 @@ public class CameraFollow : MonoBehaviour
                 transform.position = boundPosition;
             }
         }
+    }
+
+    public static void TargetChange(string Zone, float cameraTimer)
+    {
+        target = GameObject.FindGameObjectWithTag(Zone).transform;
+        CameraTimer = cameraTimer;
     }
     // Draw lines to show the boundaries of camera motion using Gizmos so    
     // the developers can adjust the boundaries and see the result in the Scene view.     

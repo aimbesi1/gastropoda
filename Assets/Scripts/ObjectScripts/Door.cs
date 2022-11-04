@@ -5,39 +5,61 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     public bool isOpen = false;
-    public bool isClose = true;
-    private float timer = 15f;
+    public Transform openPoint; // Point where the door stays at while open
+    public Transform closePoint; // Point where the door stays when closed
+    public bool closeOnTimer = false; // Will automatically close after timer seconds if true
+    public float timer = 4f;
+    private float doorOpenTime = 0;
+    private float pointRadius = 0.5f; // Maximum distance away from open or close points required to satisfy open/closed conditions
 
-    void Update()
+    [SerializeField] private float doorSpeed;
+
+    private void Start()
     {
-        if(isOpen)
+        if (isOpen)
         {
-            OpenDoor();
-            isClose = false;
+            // Start the door in the open state
+            transform.position = openPoint.position;
         }
-        if(timer <= 5)
+        else
         {
-            isOpen = false;
+            // Start the door in the closed state
+            transform.position = closePoint.position;
         }
-        if(!isClose && !isOpen)
+    }
+    private void FixedUpdate()
+    {
+        if (isOpen && Vector2.Distance(transform.position, openPoint.position) > pointRadius)
         {
-            CloseDoor();
+            //Debug.Log("Moving door to open position");
+            //Debug.Log(Vector2.Distance(transform.position, openPoint.position));
+
+            // Move the door towards the open position at the doorSpeed
+            transform.position = Vector2.MoveTowards(transform.position, openPoint.position, doorSpeed);
         }
-        if(timer <= 0)
+        else if (!isOpen && Vector2.Distance(transform.position, closePoint.position) >= pointRadius)
         {
-            isClose = true;
-            timer = 10f;
+            // Move the door towards the closed position at the doorSpeed
+            transform.position = Vector2.MoveTowards(transform.position, closePoint.position, doorSpeed);
         }
-        timer -= Time.deltaTime;
+
+        // Close the door after a set amount of time
+        if (isOpen && closeOnTimer)
+        {
+            doorOpenTime += Time.deltaTime;
+            if (doorOpenTime >= timer)
+            {
+                isOpen = false;
+            }
+        }
     }
 
-    public void OpenDoor()
-    {
-        transform.Translate(Vector2.up * Time.deltaTime);
-    }
 
-    public void CloseDoor()
+    // Calling this function once will change the door's state and cause it to open or close accordingly.
+    public void ToggleDoorState()
     {
-        transform.Translate(Vector2.down * Time.deltaTime);
+        //Debug.Log("Event triggered");
+        isOpen = !isOpen;
+        doorOpenTime = 0;
     }
 }

@@ -33,30 +33,43 @@ change
 1. Snail
 
     a. Moving up, Down, Side
-    b. Travel via pipeps
-    c. Special slime attack: shooting slime at player before death.
-    d. Special range attack: shooting a continues slime across map before death.
-    e. jumping
+    
+	b. Travel via pipeps
+    
+	c. Special slime attack: shooting slime at player before death.
+    
+	d. Special range attack: shooting a continues slime across map before death.
+    
+	e. jumping
 2. Mini Snails
 
     a. Move’s in a single direction
-    b. low view range
+    
+	b. low view range
 3. Middle Snail
 
     a. Moves in a single direction with more health points and is faster than mini snails.
     4. Player
     a. (WASD)
-    b. Running, walking, jumping, sliding, climbing
-    c. Equip items into inventory
-    d. Use power-ups
-    e. Throwing
-    f. Placing/ toggling interactive world objects
-    g. Double jump: allows the player to slightly glide
+    
+	b. Running, walking, jumping, sliding, climbing
+    
+	c. Equip items into inventory
+    
+	d. Use power-ups
+    
+	e. Throwing
+    
+	f. Placing/ toggling interactive world objects
+    
+	g. Double jump: allows the player to slightly glide
 5. Power-ups
 
     a. Invisibility power-up: invisible to enemies, but can still take damage, last 10sec.
-    b. Shield power-up: activates when present in the inventory by a hit or potential death sequence. can also activate whenever player wants, last 10 sec.
-    c. Time power-up: Freezes everything, time motion, enemies, objects within scene except the player. The entire screen should have a hue/chromatic/Ambit effect to indicate its activation, last 10 sec.
+    
+	b. Shield power-up: activates when present in the inventory by a hit or potential death sequence. can also activate whenever player wants, last 10 sec.
+    
+	c. Time power-up: Freezes everything, time motion, enemies, objects within scene except the player. The entire screen should have a hue/chromatic/Ambit effect to indicate its activation, last 10 sec.
 
 # 🎬Key animations
 ### Features

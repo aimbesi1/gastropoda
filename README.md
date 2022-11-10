@@ -31,28 +31,32 @@ change
 
 # 🎯Core Mechanics:
 1. Snail
-a. Moving up, Down, Side
-b. Travel via pipeps
-c. Special slime attack: shooting slime at player before death.
-d. Special range attack: shooting a continues slime across map before death.
-e. jumping
+
+    a. Moving up, Down, Side
+    b. Travel via pipeps
+    c. Special slime attack: shooting slime at player before death.
+    d. Special range attack: shooting a continues slime across map before death.
+    e. jumping
 2. Mini Snails
-a. Move’s in a single direction
-b. low view range
+
+    a. Move’s in a single direction
+    b. low view range
 3. Middle Snail
-a. Moves in a single direction with more health points and is faster than mini snails.
-4. Player
-a. (WASD)
-b. Running, walking, jumping, sliding, climbing
-c. Equip items into inventory
-d. Use power-ups
-e. Throwing
-f. Placing/ toggling interactive world objects
-g. Double jump: allows the player to slightly glide
+
+    a. Moves in a single direction with more health points and is faster than mini snails.
+    4. Player
+    a. (WASD)
+    b. Running, walking, jumping, sliding, climbing
+    c. Equip items into inventory
+    d. Use power-ups
+    e. Throwing
+    f. Placing/ toggling interactive world objects
+    g. Double jump: allows the player to slightly glide
 5. Power-ups
-a. Invisibility power-up: invisible to enemies, but can still take damage, last 10sec.
-b. Shield power-up: activates when present in the inventory by a hit or potential death sequence. can also activate whenever player wants, last 10 sec.
-c. Time power-up: Freezes everything, time motion, enemies, objects within scene except the player. The entire screen should have a hue/chromatic/Ambit effect to indicate its activation, last 10 sec.
+
+    a. Invisibility power-up: invisible to enemies, but can still take damage, last 10sec.
+    b. Shield power-up: activates when present in the inventory by a hit or potential death sequence. can also activate whenever player wants, last 10 sec.
+    c. Time power-up: Freezes everything, time motion, enemies, objects within scene except the player. The entire screen should have a hue/chromatic/Ambit effect to indicate its activation, last 10 sec.
 
 # 🎬Key animations
 ### Features
@@ -113,7 +117,7 @@ Character will look like fallout shelter with slight more detail
 * * *
 # (Programmers) How to contribute
 - Programmers meet in the library from 12:30pm to ~2:00pm on Wednesday every week. 
-- We also meet on Fridays in the CMII building before the weekly PantherDev meeting, but it's not required
+- We also meet on Fridays in the CMII building before the weekly PantherDev meeting, but it's not required.
 
 ## Install Unity Hub and Unity Editor
 1. Sign up for Unity Student Edition: https://api.unity.com/v1/oauth2/authorize/student?student_type=university
@@ -140,7 +144,8 @@ Character will look like fallout shelter with slight more detail
 
 ## How to see your tasks with Asana
 1. Sign up for Asana: https://asana.com/create-account
-a. Use your GSU email to create the account
+
+     a. Use your GSU email to create the account
 2. Message brand to get invited to the project
 3. You can try this link:
 4. Check your assigned tasks

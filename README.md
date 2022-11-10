@@ -132,7 +132,7 @@ Character will look like fallout shelter with slight more detail
 - Programmers meet in the library from 12:30pm to ~2:00pm on Wednesday every week. 
 - We also meet on Fridays in the CMII building before the weekly PantherDev meeting, but it's not required.
 
-## 👾 Install Unity Hub And Unity Editor
+### 👾 Install Unity Hub And Unity Editor
 
 1. Sign up for Unity Student Edition: https://api.unity.com/v1/oauth2/authorize/student?student_type=university
 
@@ -158,7 +158,7 @@ Character will look like fallout shelter with slight more detail
 
     ![A7](https://raw.githubusercontent.com/aimbesi1/gastropoda/main/README/A7.jpg)
 
-## 🐱 Set Up Github Desktop
+### 🐱 Set Up Github Desktop
 1. Download: https://desktop.github.com/
 2. Create a github account: https://github.com/join
 3. Open GitHub Desktop and log in. Go to File > Clone Repository > URL
@@ -185,12 +185,12 @@ Character will look like fallout shelter with slight more detail
 
     ![B8](https://raw.githubusercontent.com/aimbesi1/gastropoda/main/README/B8.jpg)
 
-## 👾 Opening The Project
+### 👾 Opening The Project
 1. Click the project file
 
     ![C1](https://raw.githubusercontent.com/aimbesi1/gastropoda/main/README/C1.jpg)
 
-## 📋 How To See Your Tasks With Asana
+### 📋 How To See Your Tasks With Asana
 1. Sign up for Asana: https://asana.com/create-account
 
     a. Use your GSU email to create the account

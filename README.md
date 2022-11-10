@@ -85,15 +85,15 @@ Character will look like fallout shelter with slight more detail
 - Brandon - Lead || 2D || Art || Artist || College || Music
 - Laura - Co-Lead || Artist || College || Developer
 ### Programmers:
-- Jimmy - College || Developer || Programmer
+- Jimmy - College || Developer || Programmer ||
 - Quang - Developer || Programmer
 - Tony - Developer || Programmer
 - Sagar - Developer || Programmer
+- Avvai - Developer || Programmer
 - Mustafa - College || Developer || Programmer
 - Shana - Developer || Programmer
 - Sanat - College || Developer || Programmer
 - Sara - Programmer 
-- Avvai - Developer || Programmer
 ### Audio:
 - Vaughn - Artist || Music
 - Caleb - Artist || Audio || College || sound effects

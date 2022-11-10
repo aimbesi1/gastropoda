@@ -110,3 +110,38 @@ Character will look like fallout shelter with slight more detail
 - Un-named - 2D || Animation || Art || Artist 
 - Un-named - 2D ||  Art || Artist 
 - Un-named - 2D || Architect || Art || Artist 
+* * *
+# (Programmers) How to contribute
+- Programmers meet in the library from 12:30pm to ~2:00pm on Wednesday every week. 
+- We also meet on Fridays in the CMII building before the weekly PantherDev meeting, but it's not required
+
+## Install Unity Hub and Unity Editor
+1. Sign up for Unity Student Edition: https://api.unity.com/v1/oauth2/authorize/student?student_type=university
+2. Download and install Unity Hub: https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.exe
+3. Open Unity Hub. Log in. Click “install Unity Editor” when it asks:
+4.  https://app.asana.com/0/1202908827085557/1203075958094008
+5. Click the “projects” tab on the left. Then click “new project”
+6. Click All Templates > 2D
+7. Find the project we just created, click the 3 dots on the right, click “Show in Explorer”
+8. Open the project file, keep this open for later
+
+## Set up Github Desktop
+1. Download: https://desktop.github.com/
+2. Create a github account: https://github.com/join
+3. Open GitHub Desktop and log in. Go to File > Clone Repository > URL
+4. Enter the URL: https://github.com/aimbesi1/gastropoda
+5. Now click Repository > Pull
+6. Now click Repository > Show in Explorer
+7. Now, we need to copy the assets folder from the GitHub folder into the Unity Project folder
+8. Click “Replace the files in the destination”
+
+## Opening the project
+1. Click the project file
+
+## How to see your tasks with Asana
+1. Sign up for Asana: https://asana.com/create-account
+a. Use your GSU email to create the account
+2. Message brand to get invited to the project
+3. You can try this link:
+4. Check your assigned tasks
+5. You must complete the tasks in the Unity Editor and then mark them as complete in Asana

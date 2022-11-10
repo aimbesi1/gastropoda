@@ -136,30 +136,42 @@ Character will look like fallout shelter with slight more detail
 1. Sign up for Unity Student Edition: https://api.unity.com/v1/oauth2/authorize/student?student_type=university
 2. Download and install Unity Hub: https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.exe
 3. Open Unity Hub. Log in. Click “install Unity Editor” when it asks:
-4.  https://app.asana.com/0/1202908827085557/1203075958094008
-5. Click the “projects” tab on the left. Then click “new project”
-6. Click All Templates > 2D
-7. Find the project we just created, click the 3 dots on the right, click “Show in Explorer”
-8. Open the project file, keep this open for later
+![A3](https://raw.githubusercontent.com/aimbesi1/gastropoda/main/README/A3.jpg)
+4. Click the “projects” tab on the left. Then click “new project”
+![A4](https://raw.githubusercontent.com/aimbesi1/gastropoda/main/README/A4.jpg)
+5. Click All Templates > 2D
+![A5](https://raw.githubusercontent.com/aimbesi1/gastropoda/main/README/A5.jpg)
+6. Find the project we just created, click the 3 dots on the right, click “Show in Explorer”
+![A6](https://raw.githubusercontent.com/aimbesi1/gastropoda/main/README/A6.jpg)
+7. Open the project file, keep this open for later
+![A7](https://raw.githubusercontent.com/aimbesi1/gastropoda/main/README/A7.jpg)
 
 ## Set up Github Desktop
 1. Download: https://desktop.github.com/
 2. Create a github account: https://github.com/join
 3. Open GitHub Desktop and log in. Go to File > Clone Repository > URL
+![B3](https://raw.githubusercontent.com/aimbesi1/gastropoda/main/README/B3.jpg)
 4. Enter the URL: https://github.com/aimbesi1/gastropoda
+![B4](https://raw.githubusercontent.com/aimbesi1/gastropoda/main/README/B4.jpg)
 5. Now click Repository > Pull
+![B5](https://raw.githubusercontent.com/aimbesi1/gastropoda/main/README/B5.jpg)
 6. Now click Repository > Show in Explorer
+![B6](https://raw.githubusercontent.com/aimbesi1/gastropoda/main/README/B6.jpg)
 7. Now, we need to copy the assets folder from the GitHub folder into the Unity Project folder
+![B7](https://raw.githubusercontent.com/aimbesi1/gastropoda/main/README/B7.jpg)
 8. Click “Replace the files in the destination”
+![B8](https://raw.githubusercontent.com/aimbesi1/gastropoda/main/README/B8.jpg)
 
 ## Opening the project
 1. Click the project file
-
+![C1](https://raw.githubusercontent.com/aimbesi1/gastropoda/main/README/C1.jpg)
 ## How to see your tasks with Asana
 1. Sign up for Asana: https://asana.com/create-account
 
-     a. Use your GSU email to create the account
+    a. Use your GSU email to create the account
+    ![D1](https://raw.githubusercontent.com/aimbesi1/gastropoda/main/README/D1.jpg)
 2. Message brand to get invited to the project
 3. You can try this link:
+![D3](https://raw.githubusercontent.com/aimbesi1/gastropoda/main/README/D3.jpg)
 4. Check your assigned tasks
 5. You must complete the tasks in the Unity Editor and then mark them as complete in Asana

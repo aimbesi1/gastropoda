@@ -1,7 +1,7 @@
 #  🐌 Gastropoda 
 ### Welcome to Gastropoda's 🐱GitHub page! 
 
-# 🎮 Game description:
+# 🎮 Game Description:
 Gastropoda is a 2D platform game that challenges players to overcome obstacles as the misunderstood Snail hunts the lab experiment down. Our hero will be challenged to climb up and down walls, run in dark environments, and use special abilities such as power-ups and weapons across maps. The player's goal is to outpace the Snail and other enemies while reaching for the time-traveling spears that reset the clock for the hero to return to their universe. Although the Snail is slow, it can be challenging to achieve its death.
 
 # 📖 Backstory:
@@ -63,7 +63,7 @@ change
 	f. Placing/ toggling interactive world objects
     
 	g. Double jump: allows the player to slightly glide
-5. 🍄 Power-ups
+5. 🍄 Power-Ups
 
     a. Invisibility power-up: invisible to enemies, but can still take damage, last 10sec.
     
@@ -71,7 +71,7 @@ change
     
 	c. Time power-up: Freezes everything, time motion, enemies, objects within scene except the player. The entire screen should have a hue/chromatic/Ambit effect to indicate its activation, last 10 sec.
 
-# 🎬 Key animations
+# 🎬 Key Animations
 ### Features
 | 💡 running animation, Climbing animation, shooting animation, grabbing animation, sliding animation, falling animation, falling death animation, jumping animation, Hero's signature landing stance | 💡 power up activation, bifrost animation, double jump, snail slime attack, snail range attack. |
 | - | - |
@@ -88,7 +88,7 @@ change
 9. Final level will be cyberpunk theme on a balcony.
 10. Each level will have familiar obstacles but the same simple platformer layout that relies on the player’s movement abilities to keep going. Think like geometry dash meets celeste.
 
-# 🎨 Art style
+# 🎨 Art Style
 Character will mumble like legos, no talking
 Character will look like fallout shelter with slight more detail
 
@@ -97,7 +97,7 @@ Character will look like fallout shelter with slight more detail
 2.  <del> 🇪🇬 🐫 Ancient Egyptian
 3. 🚦🧪👹 Cyberpunk
 
-# 👥 Meet the team!
+# 👥 Meet The Team!
 ### 👨‍‍✈️👩‍‍✈️ Coordination:
 - Brandon - Lead || 2D || Art || Artist || College || Music
 - Laura - Co-Lead || Artist || College || Developer
@@ -132,7 +132,7 @@ Character will look like fallout shelter with slight more detail
 - Programmers meet in the library from 12:30pm to ~2:00pm on Wednesday every week. 
 - We also meet on Fridays in the CMII building before the weekly PantherDev meeting, but it's not required.
 
-## 👾 Install Unity Hub and Unity Editor
+## 👾 Install Unity Hub And Unity Editor
 
 1. Sign up for Unity Student Edition: https://api.unity.com/v1/oauth2/authorize/student?student_type=university
 
@@ -158,7 +158,7 @@ Character will look like fallout shelter with slight more detail
 
     ![A7](https://raw.githubusercontent.com/aimbesi1/gastropoda/main/README/A7.jpg)
 
-## 🐱 Set up Github Desktop
+## 🐱 Set Up Github Desktop
 1. Download: https://desktop.github.com/
 2. Create a github account: https://github.com/join
 3. Open GitHub Desktop and log in. Go to File > Clone Repository > URL
@@ -185,12 +185,12 @@ Character will look like fallout shelter with slight more detail
 
     ![B8](https://raw.githubusercontent.com/aimbesi1/gastropoda/main/README/B8.jpg)
 
-## 👾 Opening the project
+## 👾 Opening The Project
 1. Click the project file
 
     ![C1](https://raw.githubusercontent.com/aimbesi1/gastropoda/main/README/C1.jpg)
 
-## 📋 How to see your tasks with Asana
+## 📋 How To See Your Tasks With Asana
 1. Sign up for Asana: https://asana.com/create-account
 
     a. Use your GSU email to create the account

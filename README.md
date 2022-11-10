@@ -170,8 +170,8 @@ Character will look like fallout shelter with slight more detail
 
     a. Use your GSU email to create the account
     ![D1](https://raw.githubusercontent.com/aimbesi1/gastropoda/main/README/D1.jpg)
-2. Message brand to get invited to the project
-3. You can try this link:
+2. Message Brandon to get invited to the project
+3. You can try this link: https://app.asana.com/0/1202908827085557/1203075958094008
 ![D3](https://raw.githubusercontent.com/aimbesi1/gastropoda/main/README/D3.jpg)
 4. Check your assigned tasks
 5. You must complete the tasks in the Unity Editor and then mark them as complete in Asana

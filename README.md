@@ -205,3 +205,18 @@ Character will look like fallout shelter with slight more detail
     ![D4](https://raw.githubusercontent.com/aimbesi1/gastropoda/main/README/D4.jpg)
 
 5. You must complete the tasks in the Unity Editor and then mark them as complete in Asana
+
+## 🐱 How to push your changes to GitHub
+**(Section will be updated with photo guides soon)**
+
+1. Open GitHub Desktop
+
+2. Open the file in File Explorer
+
+3. Delete the old ‘Assets’ folder
+
+4. Open your Unity project folder in File Explorer
+
+5. Copy the ‘Assets’ folder from the Unity project, paste it into the GitHub folder
+
+6. Push your code as a new branch

@@ -11,5 +11,26 @@ public class StartGame : MonoBehaviour
     public void LoadLevel()
     {
         SceneManager.LoadSceneAsync(levelName, LoadSceneMode.Single);
+
+        PlayerPrefs.SetInt("SnailMaxHealth", 500000); // Set snail max health
+        PlayerPrefs.SetInt("SnailCurrentHealth", PlayerPrefs.GetInt("SnailMaxHealth")); // Set snail initial health to max health
+
+        PlayerPrefs.SetInt("PlayerMaxHealth", 100); // Set player max health
+        PlayerPrefs.SetInt("PlayerCurrentHealth", PlayerPrefs.GetInt("PlayerMaxHealth")); // set player initial health to max health
+
+        PlayerPrefs.SetInt("PlayerCurrentShield", 0); // Set player initial shield to 0
+
+        // Intialize Player with no weapon
+        PlayerPrefs.SetInt("HasGun", 0);
+        PlayerPrefs.SetInt("HasSword", 0);
+        PlayerPrefs.SetInt("HasSaltGun", 0);
+        //PlayerPrefs.SetInt("isInvincible", 0);
+        //PlayerPrefs.SetInt("isInvisible", 0);
+        PlayerPrefs.SetInt("Clip", 3); // Store the number of clip in the normal gun
+        PlayerPrefs.SetInt("Ammo", 12); //Store the number of bullet in the normal gun
+        PlayerPrefs.SetInt("Throwtime", 2); // Store the throw time for the sword
+        PlayerPrefs.SetInt("Shoottime", 10); // Store the shoot time of the salt gun
+
+        PlayerPrefs.SetFloat("SpeedRunTime", 0f); // Speedrun timer
     }
 }

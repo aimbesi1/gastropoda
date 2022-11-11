@@ -13,17 +13,6 @@ public class SaltBullet : MonoBehaviour
 
     void Update()
     {
-        int layermask = 1 << 8;
-        layermask = ~layermask;
-        raycast = Physics2D.Raycast(rayposition.position, transform.right, Mathf.Infinity, layermask);
-        if (raycast.collider.CompareTag("SpawnObj"))
-        {
-            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), GameObject.FindWithTag("SpawnObj").GetComponent<Collider2D>());
-        }
-        if (raycast.collider.name == "Lever")
-        {
-            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), GameObject.Find("Lever").GetComponent<Collider2D>());
-        }
         Destroy(gameObject, fly_time);
 
     }
@@ -42,6 +31,5 @@ public class SaltBullet : MonoBehaviour
             snail.slow();
             Destroy(gameObject);
         }
-
     }
 }

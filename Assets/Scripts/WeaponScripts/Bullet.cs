@@ -22,20 +22,9 @@ public class Bullet : MonoBehaviour
 
     void Update()
     {
-        int layermask = 1 << 8;
-        layermask = ~layermask;
-        raycast = Physics2D.Raycast(rayposition.position, transform.right * speed, Mathf.Infinity, layermask);
-        if(raycast.collider.CompareTag("SpawnObj"))
-        {
-            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), GameObject.FindWithTag("SpawnObj").GetComponent<Collider2D>());
-        }
-        if(raycast.collider.name == "Lever")
-        {
-            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), GameObject.Find("Lever").GetComponent<Collider2D>());
-        }
-        Destroy(gameObject, fly_time);
-        
+        Destroy(gameObject, fly_time); // Destroy the bullet after a period of time
     }
+
     // Update is called once per frame
     void OnTriggerEnter2D(Collider2D hitInfo)
     {   
@@ -43,11 +32,11 @@ public class Bullet : MonoBehaviour
         snailHealth snail = hitInfo.GetComponent<snailHealth>();
         if (ground != null)
         {
-            Destroy(gameObject);
+            Destroy(gameObject); // Destroy if touch ground
         }
         if(snail != null)
         {
-            snail.takeDamage(dmg);
+            snail.takeDamage(dmg); // Deal damage to snail
             Destroy(gameObject);
         }
         

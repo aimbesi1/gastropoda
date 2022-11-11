@@ -25,37 +25,38 @@ public class Gun : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ammo = bullet;
-        clip = 3;
+        ammo = PlayerPrefs.GetInt("Ammo"); // Set the ammo for the gun
+        clip = PlayerPrefs.GetInt("Clip"); // Set the clip for the gun
         printText();
         player = GameObject.FindWithTag("Player");
-        //spawn = GameObject.FindWithTag("Spawn").GetComponent<PowerUpSpawner>();
+        spawner = GameObject.FindWithTag("Spawn").GetComponent<PowerUpSpawner>();
     }
 
     // Update is called once per frame
     void Update()
-    { 
-        if (Input.GetButtonDown("Fire1") && ammo > 0 && clip >= 1 && !is_reload)
+    {
+        if (Input.GetButtonDown("Fire1") && ammo > 0 && clip >= 1 && !is_reload) // If pressed right mouse, fire a bullet
         {
             Shoot();
-            ammo--; 
+            ammo--;
+            PlayerPrefs.SetInt("Ammo", ammo); // Store the data for the ammo
         }
-        else if(Input.GetButtonDown("Fire2"))
+        else if (Input.GetButtonDown("Fire2")) // If pressed left mouse, inactive the gun
         {
-            gameObject.SetActive(false);
-            weapons.has_gun = false;
+            weapons.DestroyGun();
             if (spawner != null)
                 spawner.gun_limit++;
+
         }
 
-        if(reload_timer > 0 && ((ammo <= 0 && clip > 1) || Input.GetButtonDown("Reload")))
+        if (reload_timer > 0 && ((ammo <= 0 && clip > 1) || Input.GetButtonDown("Reload"))) // If pressed key R, reload the gun
         {
             ammo = 0;
             reload_timer -= Time.deltaTime;
             is_reload = true;
         }
 
-        if(reload_timer <= 0)
+        if (reload_timer <= 0)
         {
             reload();
             reload_timer = 2f;
@@ -65,29 +66,33 @@ public class Gun : MonoBehaviour
         SetParent(player.transform);
     }
 
-    public void addClip()
+    public void addClip() // Add a clip
     {
+        clip = PlayerPrefs.GetInt("Clip");
         clip++;
+        PlayerPrefs.SetInt("Clip", clip);
     }
 
-    void Shoot()
+    void Shoot() // Shoot out a bullet
     {
         Instantiate(Bullet, firepoint.position, firepoint.rotation);
     }
 
-    void reload()
+    void reload() // Reload the gun
     {
         clip--;
         ammo = bullet;
+        PlayerPrefs.SetInt("Ammo", ammo);
+        PlayerPrefs.SetInt("Clip", clip);
     }
 
     void printText()
     {
-        if(is_reload)
+        if (is_reload)
         {
             text.text = "Reloading... " + Mathf.RoundToInt(reload_timer) + "s";
         }
-        else if(!is_reload && ammo > 0)
+        else if (!is_reload && ammo > 0)
         {
             text.text = ammo + "/" + bullet + " --- Clip: " + clip;
         }
@@ -97,13 +102,8 @@ public class Gun : MonoBehaviour
         }
     }
 
-    public void SetSpawner(PowerUpSpawner s)
-    {
-        spawner = s;
-    }
     void SetParent(Transform parent)
     {
         gameObject.transform.SetParent(parent);
     }
-
 }

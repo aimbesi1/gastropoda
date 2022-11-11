@@ -32,13 +32,13 @@ public class Sword : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Fire1") && can_hit && !is_flying)
+        if(Input.GetButtonDown("Fire1") && can_hit && !is_flying)       // Swing the sword if pressed right mouse
         {
             GetComponent<Renderer>().enabled = false;
             swingsword.SetActive(true);
             can_hit = !can_hit;
         }
-        if(hit_timer > 0 && !can_hit)
+        if(hit_timer > 0 && !can_hit)               // Animation stuff by fixing the rotation
         {
             hit_timer -= Time.deltaTime;
         }
@@ -50,13 +50,13 @@ public class Sword : MonoBehaviour
             swingsword.SetActive(false);
         }
 
-        else if (Input.GetButtonDown("Fire2") && !is_flying)
+        else if (Input.GetButtonDown("Fire2") && !is_flying)        // Throw the sword if pressed left mouse
         {
             GetComponent<Renderer>().enabled = false;
             Instantiate(flysword, flyPoint.position, flysword.transform.rotation);
             is_flying = !is_flying;
         }
-        if(fly_timer > 0 && is_flying)
+        if(fly_timer > 0 && is_flying)              // Animation stuff by intializing a horizontal sword
         {
             fly_timer -= Time.deltaTime;
         }
@@ -66,14 +66,15 @@ public class Sword : MonoBehaviour
             fly_timer = 2f;
             GetComponent<Renderer>().enabled = true;
             throw_time--;
+            PlayerPrefs.SetInt("Throwtime", throw_time);
         }
 
-        if(throw_time <= 0)
+        if(throw_time <= 0) // If throw time < 0, then destroy the sword
         {
-            gameObject.SetActive(false);
-            weapons.has_sword = false;
+            weapons.DestroySword();
             spawner.sword_limit++;
             throw_time = 2;
+            PlayerPrefs.SetInt("Throwtime", throw_time);
         }
 
         Parent(player);

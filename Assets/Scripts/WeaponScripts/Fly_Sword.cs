@@ -17,7 +17,7 @@ public class Fly_Sword : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     { 
-        rb.velocity = transform.right * speed;
+        rb.velocity = transform.right * speed;  // Initialize the speed of the flying sword
     }
 
     void Update()
@@ -27,14 +27,13 @@ public class Fly_Sword : MonoBehaviour
         raycast = Physics2D.Raycast(rayposition.position, transform.right * speed, Mathf.Infinity, layermask);
         if(raycast.collider.CompareTag("SpawnObj"))
         {
-            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), GameObject.FindWithTag("SpawnObj").GetComponent<Collider2D>());
+            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), GameObject.FindWithTag("SpawnObj").GetComponent<Collider2D>());   // Ignore collision between the sword and the spawn object
         }
         if(raycast.collider.name == "Lever")
         {
-            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), GameObject.Find("Lever").GetComponent<Collider2D>());
+            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), GameObject.Find("Lever").GetComponent<Collider2D>());             // Ignore the collision between the sword and the lever mechanics
         }
-        Destroy(gameObject, fly_time);
-        
+        Destroy(gameObject, fly_time);          // Destroy fly_sword after an amount of time fly
     }
     // Update is called once per frame
     void OnTriggerEnter2D(Collider2D hitInfo)
@@ -43,13 +42,12 @@ public class Fly_Sword : MonoBehaviour
         snailHealth snail = hitInfo.GetComponent<snailHealth>();
         if (ground != null)
         {
-            Destroy(gameObject);
+            Destroy(gameObject); // Destroy the fly sword if it hit the ground
         }
-        if(snail != null)
+        if (snail != null)
         {
-            snail.takeDamage(dmg);
+            snail.takeDamage(dmg); // Deal damage to the snail then destroy the object
             Destroy(gameObject);
         }
-        
     }
 }

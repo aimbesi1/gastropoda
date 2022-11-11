@@ -16,17 +16,10 @@ public class SaltShakerGun : MonoBehaviour
     private GameObject player;
     public TMP_Text text;
 
-    /*private int ammo;
-    private int clip;
-
-    private float reload_timer = 2f;
-    private bool is_reload = false;*/
-
     // Start is called before the first frame update
     void Start()
     {
-        /*ammo = num_bullet;
-        clip = 2;*/
+        num_bullet = PlayerPrefs.GetInt("Shoottime");
         printText();
         player = GameObject.FindWithTag("Player");
         spawner = GameObject.FindWithTag("Spawn").GetComponent<PowerUpSpawner>();
@@ -35,20 +28,21 @@ public class SaltShakerGun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && num_bullet > 0)
+        if (Input.GetButtonDown("Fire1") && num_bullet > 0) // Type 1 shoot if pressed right mouse
         {
             shoot1();
             num_bullet--;
+            PlayerPrefs.SetInt("Shoottime", num_bullet);
         }
-        else if (Input.GetButtonDown("Fire2") && num_bullet > 0)
+        else if (Input.GetButtonDown("Fire2") && num_bullet > 0) // Type 2 shoot if pressed left mouse
         {
             shoot2();
             num_bullet--;
+            PlayerPrefs.SetInt("Shoottime", num_bullet);
         }
-        if (num_bullet <= 0)
+        if (num_bullet <= 0) // Destroy the gun when out of shoot time
         {
-            gameObject.SetActive(false);
-            weapons.has_saltgun = false;
+            weapons.DestroySaltGun();
             if (spawner != null)
                 spawner.saltgun_limit++;
         }
@@ -56,7 +50,7 @@ public class SaltShakerGun : MonoBehaviour
         SetParent(player.transform);
     }
 
-    void shoot1()
+    void shoot1() // Slow shoot but wide spread
     {
         for (int i = 0; i <= 2; i++)
         {
@@ -78,7 +72,7 @@ public class SaltShakerGun : MonoBehaviour
         }
     }
 
-    void shoot2()
+    void shoot2() // Fast shoot but narrow spread
     {
         for (int i = 0; i <= 2; i++)
         {
@@ -99,39 +93,12 @@ public class SaltShakerGun : MonoBehaviour
             }
         }
     }
-    /*void reload()
-    {
-        clip--;
-        ammo = num_bullet;
-    }
-    public void addClip()
-    {
-        clip++;
-    }
-    void printText()
-    {
-        if (is_reload)
-        {
-            text.text = "Reloading... " + Mathf.RoundToInt(reload_timer) + "s";
-        }
-        else if (!is_reload && ammo > 0)
-        {
-            text.text = ammo + "/" + num_bullet + " --- Clip: " + clip;
-        }
-        else if (ammo <= 0)
-        {
-            text.text = "OUT OF AMMO";
-        }
-    }*/
 
     void printText()
     {
         text.text = "Shoot time: " + num_bullet;
     }
-    public void SetSpawner(PowerUpSpawner s)
-    {
-        spawner = s;
-    }
+
     void SetParent(Transform parent)
     {
         gameObject.transform.SetParent(parent);

@@ -9,6 +9,7 @@ public class SnailAI : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private SnailPipeMovement pipeAI;
     [SerializeField] private SnailVars snailVars;
+    public playerHealth pHealth;
     private new Rigidbody2D rigidbody2D;
     private new Collider2D[] collider2D;
     [SerializeField] private float speed = 0;
@@ -35,6 +36,7 @@ public class SnailAI : MonoBehaviour
         collider2D = GetComponents<Collider2D>();
         audio = GetComponent<AudioSource>();
         player = GameObject.FindWithTag("Player");  //When snail spawns, it will find the player
+        pHealth = player.GetComponent<playerHealth>();
         InvokeRepeating("DoTimer", 0.001f, increaseSpeedTimer);
     }
 
@@ -82,10 +84,15 @@ public class SnailAI : MonoBehaviour
         //Debug.Log("Running Move()");
         if(player != null)
         {
-            Vector2 direction = (player.transform.position - transform.position).normalized;
+            if (pHealth.isInvisible == false)
+            {
+                Vector2 direction = (player.transform.position - transform.position).normalized;
 
-            // Move the snail
-            rigidbody2D.velocity = new Vector2(direction.x * snailVars.speed, rigidbody2D.velocity.y);
+                // Move the snail
+                rigidbody2D.velocity = new Vector2(direction.x * snailVars.speed, rigidbody2D.velocity.y);
+            }
+            else
+                speed = 0;
         }
         
         float velocity = rigidbody2D.velocity.x;

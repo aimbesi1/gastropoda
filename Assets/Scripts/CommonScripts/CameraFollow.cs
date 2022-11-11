@@ -7,6 +7,7 @@ public class CameraFollow : MonoBehaviour
     //public Transform target;
 
     [SerializeField] private GameObject player;
+    [SerializeField] private PlayerController playerController;
     //Bound camera to limits. Since these are public variables,     
     // make sure you ajust these values in Unity Editor to fit     
     // the boundry of your scene. Don't just use the default values here.      
@@ -19,6 +20,9 @@ public class CameraFollow : MonoBehaviour
     private Vector3 lerpedPosition;
     private Camera _camera;
 
+    private float timeMultiplier = 10f;
+    private float timePowMultiplier;
+
     [SerializeField] private float speed = 4f;
     private static Transform target;
     private static float CameraTimer;
@@ -29,6 +33,8 @@ public class CameraFollow : MonoBehaviour
         _camera = GetComponent<Camera>();
         player = GameObject.FindWithTag("Player");
         target = GameObject.FindGameObjectWithTag("Snail").transform;
+        /*playerController = player.GetComponent<PlayerController>();
+        timePowMultiplier = timeMultiplier / playerController.timeScaleMultiplier;*/
     }
     // FixedUpdate is called every frame, when the physics are calculated    
     // You can also put the code in Update(), but putting it in FixedUpdate()    
@@ -54,24 +60,18 @@ public class CameraFollow : MonoBehaviour
 
     public void MoveCam()
     {
-        if (CamTimer())
+        if (CamTimer()) // moves camera towards a target position, in this case, the snail spawn point
         {
-            /*Vector3 newPos = new Vector3(target.position.x, target.position.y, -10f);
-            transform.position = Vector3.MoveTowards(transform.position, newPos, speed * Time.deltaTime);*/
-
             // Use the Lerp() function so that the camera is slighly behind the character.             
             lerpedPosition = Vector3.Lerp(transform.position, target.transform.position, Time.deltaTime * 10f);
             // The default Z position for camera in a 2D game is -10f.            
             lerpedPosition.z = -10f;
             lerpedPosition.y += .3f;
         }
-        else
+        else // move the camera to the player position
         {
             if (transform.position != player.transform.position)
             {
-                /*Vector3 newPos = new Vector3(player.transform.position.x, player.transform.position.y, 10f);
-                transform.position = Vector3.MoveTowards(transform.position, newPos, speed * Time.deltaTime);*/
-
                 // Use the Lerp() function so that the camera is slighly behind the character.             
                 lerpedPosition = Vector3.Lerp(transform.position, player.transform.position, Time.deltaTime * 10f);
                 // The default Z position for camera in a 2D game is -10f.            

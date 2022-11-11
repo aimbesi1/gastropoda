@@ -7,16 +7,19 @@ using TMPro;
 public class playerHealth : MonoBehaviour
 {
     public playerHealthbar healthbar;
-    public int maxHealth = 100;
+    public int maxHealth;
     public int currentHealth;
 
     public playerShieldbar shieldbar;
     public int maxShield = 100;
-    public int currentShield = 0;
+    public int currentShield;
 
-    
-    //public float invincibleTimer = 3f;
+    public PlayerInventory playerInventory;
+    private SpriteRenderer rend;
+    public float invisibleTimer = 3f;
     public bool isInvincible = false;
+    public bool isInvisible = false;
+    public bool hasInvis = false;
 
     public TMP_Text text;
     public TMP_Text text2;
@@ -33,24 +36,36 @@ public class playerHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentHealth = maxHealth;
+        rend = GetComponent<SpriteRenderer>();
+        maxHealth = PlayerPrefs.GetInt("PlayerMaxHealth");
+        currentHealth = PlayerPrefs.GetInt("PlayerCurrentHealth");
+        currentShield = PlayerPrefs.GetInt("PlayerCurrentShield");
         healthbar.setMaxHealth(maxHealth);
+        shieldbar.setShield(currentShield);
         printText();
     }
- 
+
+    public void Update()
+    {
+        if(Input.GetKey("4") && hasInvis == true) //if player has invisible powerup in inventory
+        {                                         //on key press "4", the player will be invisible
+            SetInvisible();
+        }
+    }
+
     public void takeDamage(int dmg)
     {
-        rb.velocity = transform.right * 20 + transform.up * 20;
-        currentHealth -= dmg - currentShield;
+        rb.velocity = transform.right * 20 + transform.up * 20; // Push the player out so that the player won't continue take dmg
+        currentHealth -= dmg - currentShield;  // Deal dmg to shield before deal dmg to actual health
         currentShield -= dmg;
-        if(currentShield < 0 && !isInvincible) //if player is not invincible, player takes damage to shield
+        if(currentShield < 0 && !isInvincible) // Set current shield to 0 if shield drop below 0 (UI purposes)
         {
             currentShield = 0;
         }
         healthbar.setHealth(currentHealth);
         shieldbar.setShield(currentShield);
         printText();
-        if(currentHealth <= 0) //player takes damage to health
+        if(currentHealth <= 0) //If health drop to or below 0, player die
         {
             Destroy(gameObject);
             LoadLevel();
@@ -66,12 +81,36 @@ public class playerHealth : MonoBehaviour
     public void SetInvincible()
     {
         isInvincible = true;
-        CancelInvoke("SetDamageable");              //makes it so player can not get hurt
+        CancelInvoke("SetDamageable");                  //makes it so player can not get hurt
         PlayParticles();
-        //Invoke("SetDamageable", invincibleTimer);   // after a set timer, player will be able to get hurt
+        //Invoke("SetDamageable", invincibleTimer);     // after a set timer, player will be able to get hurt
     }
 
-    public void SetDamageable()
+    public void InvisPickUp()                           //called when player first picks up the invisible powerup
+    {
+        hasInvis = true;
+    }
+
+    public void SetInvisible()                          //Set player to not be tracked by Enemy/invisible
+    {
+        //Debug.Log("invis");
+        isInvisible = true;
+        hasInvis = false;                               //player no longer has the power up in inventory
+        rend.color = new Color(1f, 1f, 1f, .5f);        //turns the player about 50% transparent
+        CancelInvoke("SetVisible");
+        Invoke("SetVisible", invisibleTimer);
+    }
+
+    public void SetVisible()                            //enemy can track player again.
+    {
+        //Debug.Log("visible");
+        isInvisible = false;
+        rend.color = new Color(1f, 1f, 1f, 1f);         //turns player back to normal
+        playerInventory.Invisslot.SetActive(false);
+        CancelInvoke("SetInvisible");
+    }
+
+    public void SetDamageable()                         //falling will use up the powerup and the player will become vulnerable again
     {
         isInvincible = false;
         CancelInvoke("SetInvincible");
@@ -90,7 +129,7 @@ public class playerHealth : MonoBehaviour
         ps.Stop();
     }
 
-    public void Heal(int health)
+    public void Heal(int health) // Add health to player when player picked up health potion
     {
         if(currentHealth < maxHealth)
         {
@@ -99,12 +138,13 @@ public class playerHealth : MonoBehaviour
             {
                 currentHealth = maxHealth;
             }
+            PlayerPrefs.SetInt("PlayerCurrentHealth", currentHealth);
             healthbar.setHealth(currentHealth);
             printText();
         }
     }
 
-    public void Shield(int amount)
+    public void Shield(int amount) // Add shield to player when player picked up shield potion
     {
         if(currentShield < maxShield)
         {
@@ -113,9 +153,9 @@ public class playerHealth : MonoBehaviour
             {
                 currentShield = maxShield;
             }
+            PlayerPrefs.SetInt("PlayerCurrentShield", currentShield);
             shieldbar.setShield(currentShield);
             printText();
         }
     }
-
 }

@@ -9,23 +9,39 @@ public class Timer : MonoBehaviour
     public TMP_Text text;
     private float time = 0;
 
-    private float hours;
-    private float mins;
-    private float secs;
+    private float mins = 0;
+    private float secs = 0;
     private float milsecs;
 
-    void Awake()
+    void Start()
     {
-        DontDestroyOnLoad(this);
+        time = PlayerPrefs.GetFloat("SpeedRunTime");
     }
+
     // Update is called once per frame
     void Update()
     {
         time += Time.deltaTime;
         milsecs = time * 1000 % 1000;
-        secs = Mathf.Round(time);
-        mins = Mathf.FloorToInt(time) / 60;
-        hours = Mathf.FloorToInt(time) / 360;
-        text.text = string.Format("{0:00}:{1:00}:{2:00}.{3:000}", hours, mins, secs, milsecs);
+
+        if (secs >= 60)
+        {
+            mins++;
+            secs = 0;
+        }
+        else
+        {
+            if (mins > 0)
+            {
+                secs = Mathf.Round(time) % (60 * mins);
+            }
+            else
+            {
+                secs = Mathf.Round(time);
+            }
+
+        }
+        text.text = string.Format("{0:00}:{1:00}.{2:000}", mins, secs, milsecs);
+        PlayerPrefs.SetFloat("SpeedRunTime", time);
     }
 }

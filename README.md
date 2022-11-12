@@ -1,5 +1,6 @@
 #  🐌 Gastropoda 
 ### Welcome to Gastropoda's 🐱GitHub page! 
+<a href="https://github.com/aimbesi1/gastropoda/stargazers"><img src="https://img.shields.io/github/stars/aimbesi1/gastropoda?color=yellow" alt="Stars Badge"/></a> <a href="https://github.com/aimbesi1/gastropoda/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors-anon/aimbesi1/gastropoda"></a> <a href="https://github.com/aimbesi1/gastropoda/pulls"><img src="https://img.shields.io/github/issues-pr/aimbesi1/gastropoda?color=blue" alt="Pull Requests Badge"/></a> <a href="https://github.com/aimbesi1/gastropoda/issues"><img src="https://img.shields.io/github/issues/aimbesi1/gastropoda?color=important" alt="Issues	 Badge"/></a> <a href="http://hits.dwyl.com/aimbesi1/gastropoda"><img src="http://hits.dwyl.com/aimbesi1/gastropoda.svg?style=flat" alt="Hits Badge"/></a> <a href="https://github.com/aimbesi1/gastropoda"><img src="https://img.shields.io/github/repo-size/aimbesi1/gastropoda?color=ff69b4" alt="Repo Size Badge"/></a> 
 
 # 🎮 Game Description:
 Gastropoda is a 2D platform game that challenges players to overcome obstacles as the misunderstood Snail hunts the lab experiment down. Our hero will be challenged to climb up and down walls, run in dark environments, and use special abilities such as power-ups and weapons across maps. The player's goal is to outpace the Snail and other enemies while reaching for the time-traveling spears that reset the clock for the hero to return to their universe. Although the Snail is slow, it can be challenging to achieve its death.
@@ -111,18 +112,18 @@ Character will look like fallout shelter with slight more detail
 - Shana - Developer || Programmer
 - Sanat - College || Developer || Programmer
 - Sara - Programmer 
+- Marc - Programmer || 
 ### 👷‍‍♂️👷‍‍♀️ Audio:
 - Vaughn - Artist || Music
-- Caleb - Artist || Audio || College || sound effects
 - Sriram Mohan - 2D || Artist || College || asset || lead
+- Caleb - Artist || Audio || College || sound effects
 ### 👨‍🎨👩‍🎨 2D Artists:
 - Sidney - 2D || Artist || Lead
+- Yuna - 2D || Art || Artist
 - Janice - 2D || Artist 
 - Oliva - 2D || Artist 
 - Audrey - 2D || Art || Artist || College
 - Nicolette - Artist || College || ui || ux
-- Yuna - 2D || Art || Artist
-- Marc
 - Unnamed - 2D || Animation || Art || Artist 
 - Unnamed - 2D || Animation || Art || Artist 
 - Unnamed - 2D ||  Art || Artist 

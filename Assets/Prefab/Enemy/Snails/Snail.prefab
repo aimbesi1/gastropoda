@@ -610,7 +610,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5667,6 +5667,7 @@ MonoBehaviour:
   player: {fileID: 430055643906229074, guid: 115f96f00a6291c4b9972a86fb6cc3cd, type: 3}
   pipeAI: {fileID: 0}
   snailVars: {fileID: 0}
+  pHealth: {fileID: 0}
   speed: 0
   grounded: 0
   pipeSystem: {fileID: 516018254, guid: ba29ccbe1d8d25147bdb28e79471035e, type: 3}

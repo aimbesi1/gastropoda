@@ -39,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButton("Jump"))
         {
             jump = true;
+            // If you hold spacebar, the jump animation loops even when running
             animator.SetBool("IsJumping", true);
         }
         else
@@ -58,10 +59,13 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetAxisRaw("Vertical") > 0)
         {
             up = true;
+            animator.SetBool("IsFalling", false);
         }
         else
         {
             up = false;
+            animator.SetBool("IsJumping", false);
+            animator.SetBool("IsFalling", true);
         }
     }
 

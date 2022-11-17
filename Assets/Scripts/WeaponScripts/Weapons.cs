@@ -166,6 +166,7 @@ public class Weapons : MonoBehaviour
     //         1 - Normal Gun
     //         2 - Sword
     //         3 - Salt Gun
+    // setActive() 
     void swapWeapons(int num)
     {
         switch (num)

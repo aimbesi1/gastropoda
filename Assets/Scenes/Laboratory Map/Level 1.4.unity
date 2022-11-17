@@ -166,7 +166,7 @@ GameObject:
   - component: {fileID: 222430141}
   - component: {fileID: 222430142}
   m_Layer: 0
-  m_Name: Room C Lights
+  m_Name: Room C Lights (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -180,9 +180,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 222430140}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 155.776, y: -0, z: 0}
-  m_LocalScale: {x: 1.05, y: 1.05, z: 1.05}
-  m_ConstrainProportionsScale: 1
+  m_LocalPosition: {x: 155.776, y: -1.305, z: 0}
+  m_LocalScale: {x: 0.62367356, y: 1.1208, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1665171362}
   m_RootOrder: 1
@@ -314,7 +314,7 @@ GameObject:
   - component: {fileID: 325672798}
   - component: {fileID: 325672799}
   m_Layer: 0
-  m_Name: Room C Hallway
+  m_Name: Room C Hallway (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -328,9 +328,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 325672797}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 155.6163, y: 0, z: 0}
-  m_LocalScale: {x: 1.05, y: 1.05, z: 1.05}
-  m_ConstrainProportionsScale: 1
+  m_LocalPosition: {x: 155.6163, y: -1.2586, z: 0}
+  m_LocalScale: {x: 0.626135, y: 1.1165, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1665171362}
   m_RootOrder: 0
@@ -1830,7 +1830,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1665171362}
   m_Layer: 0
-  m_Name: Hallway
+  m_Name: Hallway(1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

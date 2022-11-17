@@ -32,7 +32,7 @@ public class CameraFollow : MonoBehaviour
         // Get the camera component        
         _camera = GetComponent<Camera>();
         player = GameObject.FindWithTag("Player");
-        target = GameObject.FindGameObjectWithTag("Snail").transform;
+        //target = GameObject.FindGameObjectWithTag("Snail").transform;
         /*playerController = player.GetComponent<PlayerController>();
         timePowMultiplier = timeMultiplier / playerController.timeScaleMultiplier;*/
     }

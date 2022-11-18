@@ -7,6 +7,7 @@ public class MovingElement : MonoBehaviour
     public bool loopThroughPoints; // If true, the object will visit the first waypoint after it reaches the last waypoint.
 
     public Transform movingObject; // The moving object itself
+    private Rigidbody2D movingRB;
 
     private bool goingForwards = true; // Visit the point with a higher index if true, or the one with a lower index if false
 
@@ -18,7 +19,8 @@ public class MovingElement : MonoBehaviour
     private bool moving = true;
     void Start()
     {
-        movingObject.position = points[0].position;
+        movingObject.transform.position = points[0].position;
+        movingRB = movingObject.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -31,13 +33,15 @@ public class MovingElement : MonoBehaviour
     {
         if (moving)
         {
+            Vector2 direction = (points[currentPointIndex].position - movingObject.transform.position).normalized;
             // Go to the next point in the sequence
-            movingObject.position = Vector2.MoveTowards(movingObject.position, points[currentPointIndex].position, moveSpeed);
+            movingObject.transform.position = Vector2.MoveTowards(movingObject.transform.position, points[currentPointIndex].position, moveSpeed);
+            //movingRB.velocity = direction * moveSpeed;
 
-
-            if (Vector2.Distance(points[currentPointIndex].position, movingObject.position) <= pointRadius)
+            if (Vector2.Distance(points[currentPointIndex].position, movingObject.transform.position) <= pointRadius)
             {
                 // Stop movement until UpdatePointIndex is called
+                movingRB.velocity = Vector2.zero;
                 moving = false;
                 Invoke("UpdatePointIndex", waitTime);
             }

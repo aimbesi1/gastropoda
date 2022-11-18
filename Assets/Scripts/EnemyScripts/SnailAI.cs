@@ -107,20 +107,6 @@ public class SnailAI : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Ground") && !pipeAI.inPipe)
-        {
-            snailVars.grounded = true;
-        }
-        else
-        {
-            snailVars.grounded = false;
-        }
-
-
-    }
-
     private void Flip()
     {
         snailVars.m_FacingRight = !snailVars.m_FacingRight;

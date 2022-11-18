@@ -24,7 +24,7 @@ public class CameraFollow : MonoBehaviour
     private float timePowMultiplier;
 
     [SerializeField] private float speed = 4f;
-    private static Transform target;
+    [SerializeField] private static Transform target;
     private static float CameraTimer;
 
     private void Awake()
@@ -32,7 +32,7 @@ public class CameraFollow : MonoBehaviour
         // Get the camera component        
         _camera = GetComponent<Camera>();
         player = GameObject.FindWithTag("Player");
-        target = GameObject.FindGameObjectWithTag("Snail").transform;
+        //target = GameObject.FindGameObjectWithTag("Snail").transform;
         /*playerController = player.GetComponent<PlayerController>();
         timePowMultiplier = timeMultiplier / playerController.timeScaleMultiplier;*/
     }

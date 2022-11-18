@@ -568,6 +568,7 @@ GameObject:
   - component: {fileID: 6390029038710132447}
   - component: {fileID: 2712673448755594636}
   - component: {fileID: 2413629652205776377}
+  - component: {fileID: 3502104212739996246}
   m_Layer: 8
   m_Name: Body
   m_TagString: Untagged
@@ -610,7 +611,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5442,6 +5443,58 @@ MonoBehaviour:
   radius: 12
   gizmoColor: {r: 0, g: 1, b: 0, a: 1}
   showGizmos: 0
+--- !u!114 &3502104212739996246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6543619726862698288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -11.618292, y: -8.51315, z: 0}
+  - {x: -7.6761527, y: -7.227719, z: 0}
+  - {x: -9.017881, y: -6.384346, z: 0}
+  - {x: -11.011307, y: -4.00757, z: 0}
+  - {x: -11.969685, y: -0.82575643, z: 0}
+  - {x: -11.767994, y: 3.13032, z: 0}
+  - {x: -8.5176525, y: 7.223445, z: 0}
+  - {x: -5.554452, y: 8.546303, z: 0}
+  - {x: -0.7392514, y: 7.9642544, z: 0}
+  - {x: 2.4991965, y: 5.462397, z: 0}
+  - {x: 4.1431465, y: 1.2010608, z: 0}
+  - {x: 3.670639, y: -2.6577578, z: 0}
+  - {x: 6.3219357, y: 2.2773287, z: 0}
+  - {x: 7.6344585, y: 3.9048574, z: 0}
+  - {x: 6.7419443, y: 6.7136583, z: 0}
+  - {x: 6.7419453, y: 10.388722, z: 0}
+  - {x: 7.1094513, y: 7.054914, z: 0}
+  - {x: 8.474475, y: 4.2198668, z: 0}
+  - {x: 11.782034, y: 10.519978, z: 0}
+  - {x: 12.20204, y: 10.388724, z: 0}
+  - {x: 9.340743, y: 3.9836202, z: 0}
+  - {x: 10.443266, y: 2.198597, z: 0}
+  - {x: 12.324386, y: 0.3452394, z: 0}
+  - {x: 10.420839, y: 1.5154479, z: 0}
+  - {x: 9.067438, y: -0.580143, z: 0}
+  - {x: 8.0633, y: -4.2910843, z: 0}
+  - {x: 7.9759874, y: -8.56958, z: 0}
+  - {x: 5.9512796, y: -9.487589, z: 0}
+  - {x: -12.084689, y: -9.374485, z: 0}
+  m_ShapePathHash: -1892789329
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -76468
 --- !u!1 &6674318602245449223
 GameObject:
   m_ObjectHideFlags: 0
@@ -5667,6 +5720,7 @@ MonoBehaviour:
   player: {fileID: 430055643906229074, guid: 115f96f00a6291c4b9972a86fb6cc3cd, type: 3}
   pipeAI: {fileID: 0}
   snailVars: {fileID: 0}
+  pHealth: {fileID: 0}
   speed: 0
   grounded: 0
   pipeSystem: {fileID: 516018254, guid: ba29ccbe1d8d25147bdb28e79471035e, type: 3}

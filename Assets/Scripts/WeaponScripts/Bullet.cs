@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    private int speed = 20;
+    private float speed = 20;
     private int dmg = 50;
+    public float knockbackMultiplier = 2.5f; // Multiplier for hitting the player
+    public float hitMultiplier = 7f;    // Multiplier for hitting physics blocks
 
     private float fly_time = 2f;
-
-    private RaycastHit2D raycast;
-    public Transform rayposition;
     
     public Rigidbody2D rb;
+    private bool friendly = true; // Determines whether this is a player-fired or enemy-fired bullet
 
     // Start is called before the first frame update
     void Start()
@@ -27,11 +27,26 @@ public class Bullet : MonoBehaviour
 
     // Update is called once per frame
     void OnTriggerEnter2D(Collider2D hitInfo)
-    {   
-        GameObject ground = GameObject.FindWithTag("Ground");
+    {
         snailHealth snail = hitInfo.GetComponent<snailHealth>();
+        if (friendly)
+        {
+            if (snail != null)
+            {
+                snail.takeDamage(dmg);
+                Destroy(gameObject);
+            }
+        }
+        GameObject ground = GameObject.FindWithTag("Ground");
+        dummy dummy = hitInfo.GetComponent<dummy>();
         if (ground != null)
         {
+            Rigidbody2D otherRB = hitInfo.GetComponent<Rigidbody2D>();
+            if (otherRB != null)
+            {
+                Vector2 force = new Vector2(rb.velocity.x, rb.velocity.y + 10) * hitMultiplier;
+                otherRB.AddForce(force, ForceMode2D.Impulse);
+            }
             Destroy(gameObject); // Destroy if touch ground
         }
         if(snail != null)
@@ -39,7 +54,24 @@ public class Bullet : MonoBehaviour
             snail.takeDamage(dmg); // Deal damage to snail
             Destroy(gameObject);
         }
-        
+        if (dummy != null)
+        {
+            dummy.takeDamage(dmg);
+            Destroy(gameObject);
+        }
     }
-    
+    public void SetDamage(int value)
+    {
+        dmg = value;
+    }
+
+    public void SetSpeed(float value)
+    {
+        speed = value;
+    }
+
+    public void SetFriendly(bool value)
+    {
+        friendly = value;
+    }
 }

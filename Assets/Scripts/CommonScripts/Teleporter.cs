@@ -32,6 +32,10 @@ public class Teleporter : MonoBehaviour
                 PlayerPrefs.SetInt("Throwtime", 2); // Store the throw time for the sword
                 PlayerPrefs.SetInt("Shoottime", 10); // Store the shoot time of the salt gun
             }
+            if (SceneManager.GetActiveScene().name == "Level 2.1" || SceneManager.GetActiveScene().name == "Level 2.3" || SceneManager.GetActiveScene().name == "Level 2.6")
+            {
+                PlayerPrefs.SetInt("IsBoss", 1); // Set the snail as a boss
+            }
         }
     }
 }

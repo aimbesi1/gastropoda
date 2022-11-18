@@ -654,7 +654,7 @@ GameObject:
   - component: {fileID: 6179761754031859352}
   - component: {fileID: 4341685706512061128}
   - component: {fileID: 5626447236683439449}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -705,7 +705,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6284,7 +6284,7 @@ MonoBehaviour:
   - {x: 0.25013828, y: -1.8271545, z: 0}
   m_ShapePathHash: -423385400
   m_Mesh: {fileID: 0}
-  m_InstanceId: 136558
+  m_InstanceId: 65766
 --- !u!1 &1056848482388824583
 GameObject:
   m_ObjectHideFlags: 0

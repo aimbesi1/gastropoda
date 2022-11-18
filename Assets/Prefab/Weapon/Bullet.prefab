@@ -171,7 +171,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da59793158f860c4c846f5e21aa35a08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rayposition: {fileID: 7867074081481846032}
+  knockbackMultiplier: 2.5
+  hitMultiplier: 7
   rb: {fileID: 5460686505802124872}
 --- !u!114 &-3855088792251004330
 MonoBehaviour:

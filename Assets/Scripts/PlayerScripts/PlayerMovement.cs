@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
 
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
-        if (Input.GetButton("Jump"))
+        if (Input.GetButton("Jump") && GetComponent<CheckCollisions>().isGrounded())
         {
             jump = true;
             animator.SetBool("IsJumping", true);

@@ -7,6 +7,11 @@ public class EndGame : MonoBehaviour
 {
     public string levelName;
 
+    public void Respawn()
+    {
+        SceneManager.LoadSceneAsync(PlayerPrefs.GetString("CurrentScene"), LoadSceneMode.Single);
+    }
+
     public void LoadLevel()
     {
         SceneManager.LoadSceneAsync(levelName, LoadSceneMode.Single);

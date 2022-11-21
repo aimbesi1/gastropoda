@@ -93,18 +93,6 @@ public class MiniSnailAI : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Ground") && !inPipe)
-        {
-            grounded = true;
-        }
-        else
-        {
-            grounded = false;
-        }
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // Initialize pipe movement

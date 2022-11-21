@@ -10,15 +10,14 @@ public class Teleporter : MonoBehaviour
     public void LoadLevel()
     {
         SceneManager.LoadSceneAsync(levelName, LoadSceneMode.Single);
+        PlayerPrefs.SetString("CurrentScene", levelName);
     }
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
         if(hitInfo.CompareTag("Player"))
         {
-            LoadLevel();
-
-            if (SceneManager.GetActiveScene().name == "Level 2.1") // Player will not have weapons when change era
+            if (levelName == "Level 2.1") // Player will not have weapons when change era
             {
                 PlayerPrefs.SetInt("PlayerMaxHealth", 100); // Set player max health
                 PlayerPrefs.SetInt("PlayerCurrentHealth", PlayerPrefs.GetInt("PlayerMaxHealth")); // set player initial health to max health
@@ -32,6 +31,20 @@ public class Teleporter : MonoBehaviour
                 PlayerPrefs.SetInt("Throwtime", 2); // Store the throw time for the sword
                 PlayerPrefs.SetInt("Shoottime", 10); // Store the shoot time of the salt gun
             }
+            if (levelName == "Level 2.1" || levelName == "Level 2.3" || levelName == "Level 2.6")
+            {
+                PlayerPrefs.SetInt("IsBoss", 1); // Set the snail as a boss
+            }
+            
+            if(PlayerPrefs.GetInt("IsBoss") == 0)
+            {
+                LoadLevel();
+            }
+            else
+            {
+                SceneManager.LoadSceneAsync("Boss Room", LoadSceneMode.Single);
+            }
+            
         }
     }
 }

@@ -15,6 +15,9 @@ public class StartGame : MonoBehaviour
         PlayerPrefs.SetInt("SnailMaxHealth", 500000); // Set snail max health
         PlayerPrefs.SetInt("SnailCurrentHealth", PlayerPrefs.GetInt("SnailMaxHealth")); // Set snail initial health to max health
 
+        PlayerPrefs.SetInt("IsBoss", 0);
+        PlayerPrefs.SetInt("NumFight", 1);
+
         PlayerPrefs.SetInt("PlayerMaxHealth", 100); // Set player max health
         PlayerPrefs.SetInt("PlayerCurrentHealth", PlayerPrefs.GetInt("PlayerMaxHealth")); // set player initial health to max health
 
@@ -32,5 +35,7 @@ public class StartGame : MonoBehaviour
         PlayerPrefs.SetInt("Shoottime", 10); // Store the shoot time of the salt gun
 
         PlayerPrefs.SetFloat("SpeedRunTime", 0f); // Speedrun timer
+
+        PlayerPrefs.SetString("CurrentScene", "");// Store the current scene
     }
 }

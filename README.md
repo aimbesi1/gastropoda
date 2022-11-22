@@ -108,26 +108,26 @@ Character will look like fallout shelter with slight more detail
 - Tony - Developer || Programmer
 - Sagar - Developer || Programmer
 - Avvai - Developer || Programmer
-- Mustafa - College || Developer || Programmer
 - Shana - Developer || Programmer
-- Sanat - College || Developer || Programmer
-- Sara - Programmer 
-- Marc - Programmer || 
+- <del>Sanat - College || Developer || Programmer
+- <del>Sara - Programmer 
+- <del>Marc - Programmer 
+- <del>Unnamed - College || Developer || Programmer
 ### 👷‍‍♂️👷‍‍♀️ Audio:
 - Vaughn - Artist || Music
 - Sriram Mohan - 2D || Artist || College || asset || lead
 - Caleb - Artist || Audio || College || sound effects
 ### 👨‍🎨👩‍🎨 2D Artists:
 - Sidney - 2D || Artist || Lead
+- Oliva - 2D || Artist 
 - Yuna - 2D || Art || Artist
 - Janice - 2D || Artist 
-- Oliva - 2D || Artist 
 - Audrey - 2D || Art || Artist || College
 - Nicolette - Artist || College || ui || ux
-- Unnamed - 2D || Animation || Art || Artist 
-- Unnamed - 2D || Animation || Art || Artist 
-- Unnamed - 2D ||  Art || Artist 
-- Unnamed - 2D || Architect || Art || Artist 
+- <del>Unnamed - 2D || Animation || Art || Artist 
+- <del>Unnamed - 2D || Animation || Art || Artist 
+- <del>Unnamed - 2D ||  Art || Artist 
+- <del>Unnamed - 2D || Architect || Art || Artist 
 * * *
 # 💻 (Programmers) How to contribute
 - Programmers meet in the library from 12:30pm to ~2:00pm on Wednesday every week. 

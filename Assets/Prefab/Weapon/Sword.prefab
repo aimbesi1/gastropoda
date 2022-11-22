@@ -177,16 +177,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ShadowGroup: 0
   m_ComponentVersion: 1
-  m_HasRenderer: 0
+  m_HasRenderer: 1
   m_UseRendererSilhouette: 1
   m_CastsShadows: 1
-  m_SelfShadows: 0
+  m_SelfShadows: 1
   m_ApplyToSortingLayers: 00000000
   m_ShapePath:
-  - {x: -4.8080125, y: -0.44729844, z: 0}
-  - {x: -4.8080125, y: 0.44729844, z: 0}
-  - {x: 4.808012, y: 0.44729844, z: 0}
-  - {x: 4.808012, y: -0.44729844, z: 0}
-  m_ShapePathHash: 0
+  - {x: -0.48236716, y: -0.4989017, z: 0}
+  - {x: -0.47469896, y: 0.49855566, z: 0}
+  - {x: 0.49663675, y: 0.4986762, z: 0}
+  - {x: 0.48910138, y: -0.49961337, z: 0}
+  m_ShapePathHash: -1831783832
   m_Mesh: {fileID: 0}
-  m_InstanceId: -63696
+  m_InstanceId: 33222

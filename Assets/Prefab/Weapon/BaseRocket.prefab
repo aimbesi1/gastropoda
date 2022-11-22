@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 6620140735034756860}
   - component: {fileID: 8628446940218043321}
   - component: {fileID: 5363206964622069927}
+  - component: {fileID: 7133223970575642920}
   m_Layer: 0
   m_Name: BaseRocket
   m_TagString: Untagged
@@ -186,6 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CannonBullet: {fileID: 8237560769566715268, guid: 839420b26cc8d6e46ad0b920c4e840d6, type: 3}
   firepoint: {fileID: 6132107209340521212}
+  cd_time: 2
 --- !u!58 &5363206964622069927
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -202,6 +204,33 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.50000006
+--- !u!114 &7133223970575642920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3496108667980759585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 0
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -0.7008505, y: -0.71347594, z: 0}
+  - {x: -0.7008505, y: 0.713476, z: 0}
+  - {x: 0.70085, y: 0.713476, z: 0}
+  - {x: 0.70085, y: -0.71347594, z: 0}
+  m_ShapePathHash: 0
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -59374
 --- !u!1 &7645744607994853518
 GameObject:
   m_ObjectHideFlags: 0

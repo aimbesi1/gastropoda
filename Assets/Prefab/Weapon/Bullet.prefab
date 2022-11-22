@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 5460686505802124872}
   - component: {fileID: 3783465039792887257}
   - component: {fileID: 991280197392425117}
-  - component: {fileID: -3855088792251004330}
+  - component: {fileID: 1695470571641499986}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Bullet
@@ -174,7 +174,7 @@ MonoBehaviour:
   knockbackMultiplier: 2.5
   hitMultiplier: 7
   rb: {fileID: 5460686505802124872}
---- !u!114 &-3855088792251004330
+--- !u!114 &1695470571641499986
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -194,13 +194,17 @@ MonoBehaviour:
   m_SelfShadows: 0
   m_ApplyToSortingLayers: 00000000
   m_ShapePath:
-  - {x: -0.5, y: -0.5, z: 0}
-  - {x: -0.5, y: 0.49999997, z: 0}
-  - {x: 0.5, y: 0.49999997, z: 0}
-  - {x: 0.5, y: -0.5, z: 0}
-  m_ShapePathHash: 0
+  - {x: -0.34507275, y: -0.33701715, z: 0}
+  - {x: -0.48599148, y: 0.005167712, z: 0}
+  - {x: -0.3473182, y: 0.34154436, z: 0}
+  - {x: -0.0032475104, y: 0.47827083, z: 0}
+  - {x: 0.3562995, y: 0.34154436, z: 0}
+  - {x: 0.48174173, y: -0.0016232352, z: 0}
+  - {x: 0.34282756, y: -0.33248982, z: 0}
+  - {x: 0.0057337726, y: -0.48604465, z: 0}
+  m_ShapePathHash: 1368406589
   m_Mesh: {fileID: 0}
-  m_InstanceId: 104156
+  m_InstanceId: -65790
 --- !u!1 &7630987381430229148
 GameObject:
   m_ObjectHideFlags: 0

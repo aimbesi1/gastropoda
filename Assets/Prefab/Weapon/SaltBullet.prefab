@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4428648817294156666}
   - component: {fileID: 1935651002849402304}
   - component: {fileID: -6404110069303125640}
+  - component: {fileID: 3321976489020860595}
   m_Layer: 0
   m_Name: SaltBullet
   m_TagString: Untagged
@@ -138,6 +139,37 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &3321976489020860595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7822663576192515398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -0.3428578, y: -0.33139706, z: 0}
+  - {x: -0.48313376, y: 0.009717818, z: 0}
+  - {x: -0.34527993, y: 0.32651037, z: 0}
+  - {x: -0.004467317, y: 0.48131743, z: 0}
+  - {x: 0.32835776, y: 0.34850132, z: 0}
+  - {x: 0.4790349, y: -0.000055700526, z: 0}
+  - {x: 0.3356072, y: -0.33628383, z: 0}
+  - {x: -0.002049424, y: -0.48142883, z: 0}
+  m_ShapePathHash: 724250165
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 51156
 --- !u!1 &9178612362457036169
 GameObject:
   m_ObjectHideFlags: 0

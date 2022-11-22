@@ -542,6 +542,7 @@ GameObject:
   - component: {fileID: 1611244677782348230}
   - component: {fileID: 2932602860403444224}
   - component: {fileID: 8302527782242193009}
+  - component: {fileID: 111005225996447853}
   m_Layer: 8
   m_Name: MiniSnail
   m_TagString: Untagged
@@ -695,6 +696,39 @@ MonoBehaviour:
   pipeSystem: {fileID: 0}
   currentPointIndex: 0
   pointRadius: 0.5
+--- !u!114 &111005225996447853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3917553430003275603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 0
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -0.9111786, y: -0.47971916, z: 0}
+  - {x: -0.9111786, y: -0.007860184, z: 0}
+  - {x: -0.9629382, y: 0.4904776, z: -0.0000000022085374}
+  - {x: -0.6880476, y: 1.159967, z: -0.0000000022085374}
+  - {x: -0.027425407, y: 1.4703263, z: -0.0000000022085374}
+  - {x: 0.6110277, y: 1.2264726, z: -0.0000000022085374}
+  - {x: 0.9391215, y: 0.619055, z: -0.0000000022085374}
+  - {x: 0.8548814, y: -0.010530246, z: -0.0000000022085374}
+  - {x: 1.5666138, y: -0.012294184, z: -0.0000000022085374}
+  - {x: 1.5666138, y: -0.48858592, z: -0.0000000022085374}
+  m_ShapePathHash: 564816257
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -51624
 --- !u!1 &5586406273346428614
 GameObject:
   m_ObjectHideFlags: 0

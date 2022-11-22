@@ -278,6 +278,7 @@ GameObject:
   - component: {fileID: 2685686427987117168}
   - component: {fileID: 1493413282969026992}
   - component: {fileID: 1493413282969026958}
+  - component: {fileID: 4511574946977315882}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Gun
@@ -375,6 +376,35 @@ MonoBehaviour:
   Bullet: {fileID: 5460686505802124873, guid: 8ba74bb36ea79a14d860ad65f27f6a00, type: 3}
   text: {fileID: 1178717291159267706}
   weapons: {fileID: 4981475424355252446, guid: 7b59cc33e00c1c743b97dd10a0904599, type: 3}
+  force: {x: 0, y: 0}
+  forceYMultiplier: 1.1
+--- !u!114 &4511574946977315882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493413282969026995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 0
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -0.5, y: -0.50006104, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: 0.5, y: -0.50006104, z: 0}
+  m_ShapePathHash: 0
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -61240
 --- !u!1 &2542830248241218770
 GameObject:
   m_ObjectHideFlags: 0

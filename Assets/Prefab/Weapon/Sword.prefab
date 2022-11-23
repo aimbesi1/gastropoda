@@ -43,7 +43,6 @@ GameObject:
   - component: {fileID: 4295442361555237169}
   - component: {fileID: 4630890385754289133}
   - component: {fileID: 7796658506531112092}
-  - component: {fileID: -4549101637698834488}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Sword
@@ -163,30 +162,3 @@ MonoBehaviour:
   flysword: {fileID: 3488234384715585183, guid: 767c4dfcc07fa614ea40d689b3958878, type: 3}
   swingsword: {fileID: 3269187196255543977, guid: 413bf8adbdeff604b9ddb1024e6165cb, type: 3}
   weapons: {fileID: 0}
---- !u!114 &-4549101637698834488
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8908804256545030347}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShadowGroup: 0
-  m_ComponentVersion: 1
-  m_HasRenderer: 1
-  m_UseRendererSilhouette: 1
-  m_CastsShadows: 1
-  m_SelfShadows: 1
-  m_ApplyToSortingLayers: 00000000
-  m_ShapePath:
-  - {x: -0.48236716, y: -0.4989017, z: 0}
-  - {x: -0.47469896, y: 0.49855566, z: 0}
-  - {x: 0.49663675, y: 0.4986762, z: 0}
-  - {x: 0.48910138, y: -0.49961337, z: 0}
-  m_ShapePathHash: -1831783832
-  m_Mesh: {fileID: 0}
-  m_InstanceId: 33222

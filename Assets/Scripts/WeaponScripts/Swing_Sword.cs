@@ -9,7 +9,7 @@ public class Swing_Sword : MonoBehaviour
     void OnTriggerEnter2D(Collider2D hitInfo)
     {   
         snailHealth snail = hitInfo.GetComponent<snailHealth>();
-        if(snail != null)
+        if(snail != null && PlayerPrefs.GetInt("IsBoss") == 1)
         {
             snail.takeDamage(dmg);
         }

@@ -9,7 +9,11 @@ public class Gun : MonoBehaviour
     public GameObject Bullet;
     public TMP_Text text;
     private GameObject player;
+    private PlayerController player_controller;
+    private Rigidbody2D player_rb;
+    AudioSource audio;
 
+    private GameObject target;
     private PowerUpSpawner spawner;
     public Weapons weapons;
 
@@ -19,16 +23,23 @@ public class Gun : MonoBehaviour
     private int ammo;
     private int clip;
 
+    private bool can_shoot = true;
+    private float fire_rate = 0.3f;
     private float reload_timer = 2f;
     private bool is_reload = false;
+
+    [SerializeField] private Vector2 force;
+    [SerializeField] private float forceYMultiplier = 1.1f;
 
     // Start is called before the first frame update
     void Start()
     {
+        audio = GetComponent<AudioSource>();
         ammo = PlayerPrefs.GetInt("Ammo"); // Set the ammo for the gun
         clip = PlayerPrefs.GetInt("Clip"); // Set the clip for the gun
         printText();
         player = GameObject.FindWithTag("Player");
+        player_controller = player.GetComponent<PlayerController>();
         spawner = GameObject.FindWithTag("Spawn").GetComponent<PowerUpSpawner>();
     }
 
@@ -38,6 +49,7 @@ public class Gun : MonoBehaviour
         if (Input.GetButtonDown("Fire1") && ammo > 0 && clip >= 1 && !is_reload) // If pressed right mouse, fire a bullet
         {
             Shoot();
+            audio.Play();
             ammo--;
             PlayerPrefs.SetInt("Ammo", ammo); // Store the data for the ammo
         }
@@ -75,7 +87,24 @@ public class Gun : MonoBehaviour
 
     void Shoot() // Shoot out a bullet
     {
+        can_shoot = false;
+        Invoke("CoolDown", fire_rate);
         Instantiate(Bullet, firepoint.position, firepoint.rotation);
+    }
+
+    void Aim()
+    {
+        Vector2 direction = (target.transform.position - player.transform.position).normalized;
+        if ((player_controller.IsFacingRight() && direction.x > 0) || (!player_controller.IsFacingRight() && direction.x < 0))
+        {
+            transform.right = target.transform.position - transform.position;
+
+        }
+    }
+
+    void CoolDown()
+    {
+        can_shoot = true;
     }
 
     void reload() // Reload the gun

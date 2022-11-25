@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ClipSpawn : MonoBehaviour
 {
-    private float time = 4f;
+    private float time = 2f;
     private bool hasCollide = false;
 
     void Update()

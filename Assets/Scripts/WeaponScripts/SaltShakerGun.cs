@@ -52,21 +52,28 @@ public class SaltShakerGun : MonoBehaviour
 
     void shoot1() // Slow shoot but wide spread
     {
-        for (int i = 0; i <= 2; i++)
+        for (int i = 0; i <= 4; i++)
         {
             GameObject b = Instantiate(Bullet, firepoint.position, firepoint.rotation);
 
             switch (i)
             {
                 case 0:
-                    b.GetComponent<Rigidbody2D>().AddForce(firepoint.right * bulletVel1 + new Vector3(0, -30f, 0));
+                    b.GetComponent<Rigidbody2D>().AddForce(firepoint.right * bulletVel1 + new Vector3(0, -50f, 0));
                     break;
                 case 1:
-                    b.GetComponent<Rigidbody2D>().AddForce(firepoint.right * bulletVel1 + new Vector3(0, 0, 0));
+                    b.GetComponent<Rigidbody2D>().AddForce(firepoint.right * bulletVel1 + new Vector3(0, -25f, 0));
                     break;
                 case 2:
-                    b.GetComponent<Rigidbody2D>().AddForce(firepoint.right * bulletVel1 + new Vector3(0, 30f, 0));
+                    b.GetComponent<Rigidbody2D>().AddForce(firepoint.right * bulletVel1 + new Vector3(0, 0f, 0));
                     break;
+                case 3:
+                    b.GetComponent<Rigidbody2D>().AddForce(firepoint.right * bulletVel1 + new Vector3(0, 25f, 0));
+                    break;
+                case 4:
+                    b.GetComponent<Rigidbody2D>().AddForce(firepoint.right * bulletVel1 + new Vector3(0, 50f, 0));
+                    break;
+
 
             }
         }

@@ -32,11 +32,11 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-        verticalMove = Input.GetAxisRaw("Vertical") * ladderSpeed;
+        //verticalMove = Input.GetAxisRaw("Vertical") * ladderSpeed;
 
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
-        if (Input.GetButton("Jump"))
+        if (Input.GetButton("Jump") && GetComponent<CheckCollisions>().isGrounded())
         {
             jump = true;
             animator.SetBool("IsJumping", true);
@@ -54,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
         {
             crouch = false;
         }
-
+/*
         if (Input.GetAxisRaw("Vertical") > 0)
         {
             up = true;
@@ -63,6 +63,7 @@ public class PlayerMovement : MonoBehaviour
         {
             up = false;
         }
+*/
     }
 
     private void FixedUpdate()

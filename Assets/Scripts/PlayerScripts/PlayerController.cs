@@ -39,8 +39,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool m_AirControl = false;                         // Whether or not a player can steer while jumping;
 
     [SerializeField] private bool m_Grounded;            // Whether or not the player is grounded.
-
     [SerializeField] private bool m_onLadder = false;
+    [SerializeField] private Transform m_CenterPoint;
 
     private Rigidbody2D m_Rigidbody2D;
     private BoxCollider2D m_BodyCollider;
@@ -115,7 +115,7 @@ public class PlayerController : MonoBehaviour
             if (!wasGrounded)
                 OnLandEvent.Invoke();
         }
-        if (m_Rigidbody2D.velocity.x != 0)
+        if (Mathf.Abs(m_Rigidbody2D.velocity.x) > 0.1f)
             isMoving = true;
         else
             isMoving = false;
@@ -127,17 +127,6 @@ public class PlayerController : MonoBehaviour
         else
             audioSrc.Stop();
 
-        // The following code is not the right way to implement the time powerup. It multiplies the velocity and gravity exponentially.
-        //if (timePowerActive)
-        //{
-        //    Time.timeScale = 0.5f;
-        //}
-        //else
-        //{
-        //    Time.timeScale = 1;
-        //}
-        //m_Rigidbody2D.velocity /= Time.timeScale;
-        //m_Rigidbody2D.gravityScale /= Time.timeScale;
     }
 
     public void setMovementVars(float move, bool crouch, bool jump, float vertical)
@@ -337,5 +326,29 @@ public class PlayerController : MonoBehaviour
         //Vector3 theScale = transform.localScale;
         //theScale.x *= -1;
         //transform.localScale = theScale;
+    }
+
+    public Transform GetCenter()
+    {
+        return m_CenterPoint;
+    }
+
+    public void SetLadderState(bool value)
+    {
+        m_onLadder = value;
+    }
+
+    public bool IsFacingRight()
+    {
+        return m_FacingRight;
+    }
+
+    public bool IsJumping()
+    {
+        return m_isJumping || m_wasJumping;
+    }
+    public void StopJump()
+    {
+        m_isJumping = false;
     }
 }

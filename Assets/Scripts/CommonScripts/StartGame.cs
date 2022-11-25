@@ -12,7 +12,7 @@ public class StartGame : MonoBehaviour
     {
         SceneManager.LoadSceneAsync(levelName, LoadSceneMode.Single);
 
-        PlayerPrefs.SetInt("SnailMaxHealth", 500000); // Set snail max health
+        PlayerPrefs.SetInt("SnailMaxHealth", 15000); // Set snail max health
         PlayerPrefs.SetInt("SnailCurrentHealth", PlayerPrefs.GetInt("SnailMaxHealth")); // Set snail initial health to max health
 
         PlayerPrefs.SetInt("IsBoss", 0);

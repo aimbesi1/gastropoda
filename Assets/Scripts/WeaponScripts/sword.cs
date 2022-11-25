@@ -72,7 +72,10 @@ public class sword : MonoBehaviour
         if(throw_time <= 0) // If throw time < 0, then destroy the sword
         {
             weapons.DestroySword();
-            spawner.sword_limit++;
+            if(spawner != null)
+            {
+                spawner.sword_limit++;
+            }  
             throw_time = 2;
             PlayerPrefs.SetInt("Throwtime", throw_time);
         }

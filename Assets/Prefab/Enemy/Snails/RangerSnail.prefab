@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2062775695
+  m_SortingLayer: -1
   m_SortingOrder: 8
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
   m_Color: {r: 0.5377358, g: 0.27266297, b: 0.07355822, a: 1}
@@ -513,8 +513,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2062775695
+  m_SortingLayer: -1
   m_SortingOrder: 5
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0.7228996, g: 0.8962264, b: 0.89143, a: 1}
@@ -738,7 +738,7 @@ MonoBehaviour:
   - {x: 2.1592135, y: -0.58757687, z: 0}
   m_ShapePathHash: -605184059
   m_Mesh: {fileID: 0}
-  m_InstanceId: -47504
+  m_InstanceId: 49168
 --- !u!1 &5586406273346428614
 GameObject:
   m_ObjectHideFlags: 0
@@ -1059,6 +1059,14 @@ PrefabInstance:
       propertyPath: rotationSpeed
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2003704793713494121, guid: 7dc79480a8f59874fb3d4da5789123ca, type: 3}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003704793713494121, guid: 7dc79480a8f59874fb3d4da5789123ca, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -2062775695
+      objectReference: {fileID: 0}
     - target: {fileID: 2446806846798899467, guid: 7dc79480a8f59874fb3d4da5789123ca, type: 3}
       propertyPath: m_Name
       value: Cannon
@@ -1107,6 +1115,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7042878271278181296, guid: 7dc79480a8f59874fb3d4da5789123ca, type: 3}
+      propertyPath: m_InstanceId
+      value: -80858
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7dc79480a8f59874fb3d4da5789123ca, type: 3}
 --- !u!4 &971002331373740174 stripped
@@ -1145,7 +1157,7 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: -50616
+  m_InstanceId: 49184
 --- !u!114 &4066088959072447992 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 636961786081338741, guid: 7dc79480a8f59874fb3d4da5789123ca, type: 3}

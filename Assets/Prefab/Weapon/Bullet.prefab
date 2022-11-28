@@ -174,6 +174,7 @@ MonoBehaviour:
   knockbackMultiplier: 2.5
   hitMultiplier: 7
   rb: {fileID: 5460686505802124872}
+  friendly: 1
 --- !u!114 &1695470571641499986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,7 +205,7 @@ MonoBehaviour:
   - {x: 0.0057337726, y: -0.48604465, z: 0}
   m_ShapePathHash: 1368406589
   m_Mesh: {fileID: 0}
-  m_InstanceId: -65790
+  m_InstanceId: 46896
 --- !u!1 &7630987381430229148
 GameObject:
   m_ObjectHideFlags: 0
@@ -463,7 +464,7 @@ MonoBehaviour:
   m_Intensity: 4.23
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 1
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: 43a25a8d718a0c8500000000
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0

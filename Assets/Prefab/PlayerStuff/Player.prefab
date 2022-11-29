@@ -6268,8 +6268,8 @@ MonoBehaviour:
   m_HasRenderer: 1
   m_UseRendererSilhouette: 1
   m_CastsShadows: 1
-  m_SelfShadows: 1
-  m_ApplyToSortingLayers: 718a0c85
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000
   m_ShapePath:
   - {x: -0.08933735, y: -2.4662542, z: 0}
   - {x: -0.20056975, y: -0.5898948, z: 0}
@@ -6285,7 +6285,7 @@ MonoBehaviour:
   - {x: 0.25013828, y: -1.8271545, z: 0}
   m_ShapePathHash: -423385400
   m_Mesh: {fileID: 0}
-  m_InstanceId: 52648
+  m_InstanceId: 47858
 --- !u!114 &6633605600854484927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8009,7 +8009,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5526930645478804620, guid: 9bde883d17a206748873c38d34a697de, type: 3}
       propertyPath: m_InstanceId
-      value: -29064
+      value: -73574
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bde883d17a206748873c38d34a697de, type: 3}
@@ -8199,7 +8199,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3424628732483831310, guid: 810197c79dfda8a40bc8401e6e8b59e4, type: 3}
       propertyPath: m_InstanceId
-      value: -29088
+      value: -73598
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 810197c79dfda8a40bc8401e6e8b59e4, type: 3}
@@ -8521,7 +8521,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8865852317764566082, guid: 41dd6be2f30b18749b1129d44739db1e, type: 3}
       propertyPath: m_InstanceId
-      value: -29138
+      value: -73648
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41dd6be2f30b18749b1129d44739db1e, type: 3}

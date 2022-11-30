@@ -347,7 +347,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -375,6 +375,8 @@ MonoBehaviour:
   Bullet: {fileID: 5460686505802124873, guid: 3de86490c7d6def41a422f604ccb99b2, type: 3}
   text: {fileID: 1178717291159267706}
   weapons: {fileID: 4981475424355252446, guid: 115f96f00a6291c4b9972a86fb6cc3cd, type: 3}
+  force: {x: 0, y: 0}
+  forceYMultiplier: 1.1
 --- !u!1 &2542830248241218770
 GameObject:
   m_ObjectHideFlags: 0

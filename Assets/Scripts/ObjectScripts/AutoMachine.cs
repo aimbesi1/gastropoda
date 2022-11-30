@@ -11,7 +11,7 @@ public class AutoMachine : MonoBehaviour
     void Update()
     {
         timer -= Time.deltaTime;
-        if(isTop)
+        if (isTop)
         {
             MoveDown();
         }
@@ -19,11 +19,11 @@ public class AutoMachine : MonoBehaviour
         {
             MoveUp();
         }
-        if(timer <= 3)
+        if (timer <= 3)
         {
             isTop = true;
         }
-        if(timer <= 0)
+        if (timer <= 0)
         {
             isTop = false;
             timer = 6f;

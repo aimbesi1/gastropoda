@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class MovingObjectCollision : MonoBehaviour
 {
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void Start()
     {
-        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Enemy"))
+
+    }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        // If the "Enemy" tag doesn't exist, use the "Snail" tag instead
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Block"))
         {
-            Debug.Log("Collided successfully");
-            collision.gameObject.transform.SetParent(transform);
+            // Set this transform as the parent of the subject's transform's parent to avoid messing up the scale or motion values
+            collision.transform.parent.parent = transform;
         }
         else
         {
@@ -21,7 +26,7 @@ public class MovingObjectCollision : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Enemy"))
         {
-            collision.gameObject.transform.SetParent(null);
+            collision.transform.parent.parent = null;
         }
     }
 }

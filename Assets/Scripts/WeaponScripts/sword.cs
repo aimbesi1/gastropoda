@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sword : MonoBehaviour
+public class sword : MonoBehaviour
 {
     public int throw_time = 0;
 
@@ -72,7 +72,8 @@ public class Sword : MonoBehaviour
         if(throw_time <= 0) // If throw time < 0, then destroy the sword
         {
             weapons.DestroySword();
-            spawner.sword_limit++;
+            if(spawner != null)
+                spawner.sword_limit++;
             throw_time = 2;
             PlayerPrefs.SetInt("Throwtime", throw_time);
         }

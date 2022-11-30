@@ -5,8 +5,8 @@ using UnityEngine;
 public class Ladder : MonoBehaviour
 {
     private int speed = 5;
-    private bool isClimb;
-    private bool isLadder;
+    public bool isClimb;
+    public bool isLadder;
     private float vertical;
 
     private GameObject topLadder;
@@ -14,27 +14,12 @@ public class Ladder : MonoBehaviour
 
     [SerializeField] private Rigidbody2D rb;
 
-    void Awake()
-    {
-        topLadder = GameObject.Find("Top");
-        bottomLadder = GameObject.Find("Bottom");
-    }
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
         if(hitInfo.CompareTag("Ladder"))
         {
             isLadder = true;
-        }
-        if(hitInfo.name == "Bottom")
-        {
-            vertical = 1;
-            topLadder.SetActive(false);
-        }
-        else if(hitInfo.name == "Top")
-        {
-            vertical = -1;
-            bottomLadder.SetActive(false);
         }
     }
 
@@ -43,24 +28,28 @@ public class Ladder : MonoBehaviour
         if(hitInfo.CompareTag("Ladder"))
         {
             isLadder = false;
-            isClimb = false;
-            if(!topLadder.activeSelf)
-            {
-                topLadder.SetActive(true);
-            }
-            else if(!bottomLadder.activeSelf)
-            {
-                bottomLadder.SetActive(true);
-            }
         }
     }
 
     void Update()
     {
-        if(isLadder && Mathf.Abs(vertical) > 0f && Input.GetKeyDown(KeyCode.E))
+        if(isLadder)
+        {
+            vertical = 1;
+        }
+        else
+        {
+            vertical = -1;
+        }
+        if(isLadder && Mathf.Abs(vertical) > 0f && Input.GetAxisRaw("Vertical") > 0)
         {
             isClimb = true;
         }
+        else
+        {
+            isClimb = false;
+        }
+        
     }
 
     void FixedUpdate()

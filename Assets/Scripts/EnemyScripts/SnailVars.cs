@@ -25,9 +25,15 @@ public class SnailVars : MonoBehaviour
         Physics2D.IgnoreLayerCollision(8, 8, true); // 8 = enemy layer
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground") && !pipeAI.inPipe)
+        {
+            grounded = true;
+        }
+        else
+        {
+            grounded = false;
+        }
     }
 }

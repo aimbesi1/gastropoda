@@ -160,6 +160,8 @@ public class Weapons : MonoBehaviour
             weaponSelection = 3;
         }
 
+        
+
     }
 
     //Player can switch the weapons based on the num 1, 2, 3

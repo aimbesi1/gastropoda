@@ -25,7 +25,7 @@ public class SaltBullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        if (snail != null)
+        if (snail != null && PlayerPrefs.GetInt("IsBoss") == 1)
         {
             snail.takeDamage(dmg);
             snail.slow();

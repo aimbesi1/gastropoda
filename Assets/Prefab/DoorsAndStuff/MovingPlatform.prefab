@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8653936273755790930}
   - component: {fileID: 1749755321210977962}
   - component: {fileID: 6908258547008105972}
+  - component: {fileID: 1407324285860614915}
   m_Layer: 3
   m_Name: MovingPlatform
   m_TagString: Ground
@@ -74,8 +75,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2062775695
+  m_SortingLayer: -1
   m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0.99215686, g: 0.29411772, b: 0.6149571, a: 1}
@@ -166,3 +167,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3312897d5be3a214097968d8679a43e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1407324285860614915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8653936273755790934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 1
+  m_ApplyToSortingLayers: 43a25a8d718a0c85
+  m_ShapePath:
+  - {x: -0.50000006, y: -0.49999976, z: 0}
+  - {x: -0.50000006, y: 0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: 0.5, y: -0.49999976, z: 0}
+  m_ShapePathHash: 0
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -408334

@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 4450372793755592707}
   - component: {fileID: 636961786081338741}
   - component: {fileID: 266902840853987315}
+  - component: {fileID: 7042878271278181296}
   m_Layer: 8
   m_Name: Cannon
   m_TagString: Untagged
@@ -121,6 +122,33 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7042878271278181296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2446806846798899467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 0
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: 0.017466232, y: -0.08207681, z: 0}
+  - {x: 0.018567203, y: 0.08140635, z: 0}
+  - {x: 0.74605995, y: 0.08141877, z: 0}
+  - {x: 0.7443132, y: -0.080545396, z: 0}
+  m_ShapePathHash: 909991370
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -72972
 --- !u!1 &3130529386953783850
 GameObject:
   m_ObjectHideFlags: 0

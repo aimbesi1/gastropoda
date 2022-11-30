@@ -73,7 +73,9 @@ public class sword : MonoBehaviour
         {
             weapons.DestroySword();
             if(spawner != null)
+            {
                 spawner.sword_limit++;
+            }  
             throw_time = 2;
             PlayerPrefs.SetInt("Throwtime", throw_time);
         }

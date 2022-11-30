@@ -6,7 +6,7 @@ public class GunshipCannon : MonoBehaviour
 {
     public Transform firepoint;
     public GameObject Bullet;
-    private bool can_shoot = true;
+    [SerializeField] private bool can_shoot = true;
     private float fire_rate = 2f;
 
     // Start is called before the first frame update

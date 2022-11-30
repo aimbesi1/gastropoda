@@ -74,7 +74,6 @@ public class SaltShakerGun : MonoBehaviour
                     b.GetComponent<Rigidbody2D>().AddForce(firepoint.right * bulletVel1 + new Vector3(0, 50f, 0));
                     break;
 
-
             }
         }
     }

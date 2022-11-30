@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2062775695
+  m_SortingLayer: -1
   m_SortingOrder: 8
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
   m_Color: {r: 0.5377358, g: 0.27266297, b: 0.07355822, a: 1}
@@ -513,8 +513,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2062775695
+  m_SortingLayer: -1
   m_SortingOrder: 5
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0.7228996, g: 0.8962264, b: 0.89143, a: 1}
@@ -543,6 +543,7 @@ GameObject:
   - component: {fileID: 2932602860403444224}
   - component: {fileID: 8302527782242193009}
   - component: {fileID: 7685624659082884385}
+  - component: {fileID: 6663073994031208138}
   m_Layer: 8
   m_Name: RangerSnail
   m_TagString: Enemy
@@ -639,7 +640,9 @@ MonoBehaviour:
   currentHealth: 0
   dmg: 100
   text: {fileID: 8786441697144885944}
+  teleporter: {fileID: 0}
   healthbar: {fileID: 4514011106512699101}
+  canvas: {fileID: 0}
 --- !u!114 &2932602860403444224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -673,6 +676,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inPipe: 0
+  escapingGround: 0
   pipeSystem: {fileID: 0}
   currentPointIndex: 0
   pointRadius: 0.5
@@ -698,8 +702,43 @@ MonoBehaviour:
     m_Bits: 8
   baseSpeed: 2
   aimingSpeed: 1
-  grounded: 0
   facingWall: 0
+--- !u!114 &6663073994031208138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3917553430003275603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 0
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -1.4950356, y: -0.58757687, z: 0}
+  - {x: -1.4950356, y: 0.09829521, z: 0}
+  - {x: -1.0350655, y: 0.10951679, z: -0.0000000017330137}
+  - {x: -1.3878887, y: 0.90801144, z: -0.0000000017330137}
+  - {x: -1.2579012, y: 1.7312655, z: -0.0000000017330137}
+  - {x: -0.75652045, y: 2.337874, z: -0.0000000017330137}
+  - {x: 0.0048347744, y: 2.55452, z: -0.0000000017330137}
+  - {x: 0.6362025, y: 2.4121525, z: -0.0000000017330137}
+  - {x: 1.1128236, y: 2.0036204, z: -0.0000000017330137}
+  - {x: 1.4161277, y: 1.0070497, z: -0.0000000017330137}
+  - {x: 1.0075957, y: 0.097137004, z: -0.0000000017330137}
+  - {x: 2.1592135, y: 0.09829521, z: 0}
+  - {x: 2.1592135, y: -0.58757687, z: 0}
+  m_ShapePathHash: -605184059
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 49168
 --- !u!1 &5586406273346428614
 GameObject:
   m_ObjectHideFlags: 0
@@ -1020,6 +1059,14 @@ PrefabInstance:
       propertyPath: rotationSpeed
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2003704793713494121, guid: 7dc79480a8f59874fb3d4da5789123ca, type: 3}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003704793713494121, guid: 7dc79480a8f59874fb3d4da5789123ca, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -2062775695
+      objectReference: {fileID: 0}
     - target: {fileID: 2446806846798899467, guid: 7dc79480a8f59874fb3d4da5789123ca, type: 3}
       propertyPath: m_Name
       value: Cannon
@@ -1068,6 +1115,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7042878271278181296, guid: 7dc79480a8f59874fb3d4da5789123ca, type: 3}
+      propertyPath: m_InstanceId
+      value: -80858
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7dc79480a8f59874fb3d4da5789123ca, type: 3}
 --- !u!4 &971002331373740174 stripped
@@ -1075,6 +1126,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4450372793755592707, guid: 7dc79480a8f59874fb3d4da5789123ca, type: 3}
   m_PrefabInstance: {fileID: 3511496008557578381}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2002563514199962279 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3130529386953783850, guid: 7dc79480a8f59874fb3d4da5789123ca, type: 3}
+  m_PrefabInstance: {fileID: 3511496008557578381}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7952362889801478286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002563514199962279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  m_ShapePathHash: 0
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 49184
 --- !u!114 &4066088959072447992 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 636961786081338741, guid: 7dc79480a8f59874fb3d4da5789123ca, type: 3}

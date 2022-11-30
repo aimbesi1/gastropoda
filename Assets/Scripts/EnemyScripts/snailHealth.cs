@@ -96,7 +96,7 @@ public class snailHealth : MonoBehaviour
         {
             teleporter.SetActive(false);
 
-            if (currentHealth <= (maxHealth / 3.0) * num_fight)
+            if (currentHealth == maxHealth / 3 * num_fight)
             {
                 num_fight = PlayerPrefs.GetInt("NumFight");
                 num_fight++;

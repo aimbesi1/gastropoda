@@ -14,30 +14,36 @@ public class waveMachenics : MonoBehaviour
 
     public GameObject teleporter; // Store the prefab teleporter
 
+    public bool waveEnded = false;
+
     // Start is called before the first frame update
     void Start()
     {
         teleporter.SetActive(false); //set the teleporter to false
-        Spawn();
-        num_wave--;
+        //Spawn();
+        //num_wave--;
     }
 
     // Update is called once per frame
     void Update()                                               //When timer end, spawn another wave
     {
-        if(spawn_timer > 0)
+        if (!waveEnded)
         {
-            spawn_timer -= Time.deltaTime;
-        }
-        if(spawn_timer < 0)
-        {
-            Spawn();
-            num_wave--;
-            spawn_timer = 5f;
+            if (spawn_timer > 0)
+            {
+                spawn_timer -= Time.deltaTime;
+            }
+            if (spawn_timer < 0)
+            {
+                Spawn();
+                num_wave--;
+                spawn_timer = 5f;
+            }
         }
         if(num_wave <= 0)
         {
             teleporter.SetActive(true); // when all the waves is gone, the teleporter pop up
+            waveEnded = true;
         }
     }
 

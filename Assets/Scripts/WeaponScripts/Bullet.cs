@@ -12,7 +12,7 @@ public class Bullet : MonoBehaviour
     private float fly_time = 2f;
     
     public Rigidbody2D rb;
-    private bool friendly = true; // Determines whether this is a player-fired or enemy-fired bullet
+    [SerializeField]private bool friendly = true; // Determines whether this is a player-fired or enemy-fired bullet
 
     // Start is called before the first frame update
     void Start()

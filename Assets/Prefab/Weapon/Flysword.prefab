@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7405587988509643213}
   - component: {fileID: 3690671555679680541}
   - component: {fileID: 3488234384715585183}
+  - component: {fileID: 3853082932214485125}
   m_Layer: 0
   m_Name: Flysword
   m_TagString: Untagged
@@ -149,6 +150,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 7405587988509643213}
   rayposition: {fileID: 3600528413662881200}
+--- !u!114 &3853082932214485125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192180507740262110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: -0.5, y: 0.49999988, z: 0}
+  - {x: 0.49999997, y: 0.49999988, z: 0}
+  - {x: 0.49999997, y: -0.5, z: 0}
+  m_ShapePathHash: 0
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -60680
 --- !u!1 &3186103037997477969
 GameObject:
   m_ObjectHideFlags: 0

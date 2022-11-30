@@ -278,6 +278,7 @@ GameObject:
   - component: {fileID: 7121096578247979653}
   - component: {fileID: 7121096578247979652}
   - component: {fileID: 7121096578247979650}
+  - component: {fileID: 1595467397644078456}
   m_Layer: 0
   m_Name: SaltShakerGun
   m_TagString: Untagged
@@ -340,8 +341,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2062775695
+  m_SortingLayer: -1
   m_SortingOrder: 3
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.11512991, g: 0.74301374, b: 0.7924528, a: 1}
@@ -370,6 +371,33 @@ MonoBehaviour:
   Bullet: {fileID: 7822663576192515398, guid: 60daca299ceb4e6478cba725e608060c, type: 3}
   weapons: {fileID: 4981475424355252446, guid: 7b59cc33e00c1c743b97dd10a0904599, type: 3}
   text: {fileID: 4906189000642973630}
+--- !u!114 &1595467397644078456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7121096578247979655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  m_ShapePathHash: 0
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -62378
 --- !u!1 &8615243104777773266
 GameObject:
   m_ObjectHideFlags: 0

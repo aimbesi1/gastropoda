@@ -29,14 +29,7 @@ public class Bullet : MonoBehaviour
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
         snailHealth snail = hitInfo.GetComponent<snailHealth>();
-        if (friendly)
-        {
-            if (snail != null)
-            {
-                snail.takeDamage(dmg);
-                Destroy(gameObject);
-            }
-        }
+        playerHealth player = hitInfo.GetComponent<playerHealth>();
         GameObject ground = GameObject.FindWithTag("Ground");
         dummy dummy = hitInfo.GetComponent<dummy>();
         if (ground != null)
@@ -49,15 +42,19 @@ public class Bullet : MonoBehaviour
             }
             Destroy(gameObject); // Destroy if touch ground
         }
-        if(snail != null && PlayerPrefs.GetInt("IsBoss") == 1)
+        if(snail != null && PlayerPrefs.GetInt("IsBoss") == 1 && friendly)
         {
             snail.takeDamage(dmg); // Deal damage to snail
             Destroy(gameObject);
         }
-        if (dummy != null)
+        if (dummy != null && friendly)
         {
             dummy.takeDamage(dmg);
             Destroy(gameObject);
+        }
+        if(!friendly && player != null)
+        {
+            player.takeDamage(dmg);
         }
     }
     public void SetDamage(int value)

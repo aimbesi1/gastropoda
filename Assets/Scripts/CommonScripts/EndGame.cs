@@ -15,8 +15,6 @@ public class EndGame : MonoBehaviour
     public void LoadLevel()
     {
         SceneManager.LoadSceneAsync(levelName, LoadSceneMode.Single);
-
-        PlayerPrefs.DeleteAll();
         
     }
 }

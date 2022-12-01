@@ -80,7 +80,7 @@ public class Cannon : MonoBehaviour
     // Limits the cannon's rotation based on tutorial at https://www.youtube.com/watch?v=dU_6Z3WKdtg
     private void LimitRotation()
     {
-        Debug.Log("Angle before clamping: " + angle);
+        //Debug.Log("Angle before clamping: " + angle);
         angle = Mathf.Clamp(angle, minAngle, maxAngle);
 
         launcher.transform.localRotation = Quaternion.Euler(0, 0, angle);

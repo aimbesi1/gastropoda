@@ -9,7 +9,7 @@ public class Teleporter : MonoBehaviour
 
     void Awake()
     {
-        PlayerPrefs.SetString("CurrentScene", levelName);
+        PlayerPrefs.SetString("CurrentScene", SceneManager.GetActiveScene().name);
     }
 
     public void LoadLevel()

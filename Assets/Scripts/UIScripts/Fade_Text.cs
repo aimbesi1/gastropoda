@@ -7,8 +7,10 @@ using TMPro;
 public class Fade_Text : MonoBehaviour
 {
     public GameObject button;
+    public GameObject respawnButton;
     public TextMeshProUGUI txt;
     public TMP_Text text;
+    public GameObject time_text;
 
     public float fade_time = 10f;
 
@@ -19,6 +21,8 @@ public class Fade_Text : MonoBehaviour
     void Awake()
     {
         button.SetActive(false);
+        respawnButton.SetActive(false);
+        time_text.SetActive(false);
         text.enableVertexGradient = true;
         if(changable_text == "")
         {
@@ -26,6 +30,7 @@ public class Fade_Text : MonoBehaviour
             fade_time = 0f;
             txt.alpha = 0f;
         }
+
     }
 
     void Update()
@@ -54,6 +59,15 @@ public class Fade_Text : MonoBehaviour
             if(fade_time >= 3)
             {
                 button.SetActive(true);
+                time_text.SetActive(true);
+                if(respawnButton != null && PlayerPrefs.GetInt("RespawnLimit") > 0 )
+                {
+                    respawnButton.SetActive(true);
+                }
+                else
+                {
+                    respawnButton.SetActive(false);
+                }
             }
         }
     }

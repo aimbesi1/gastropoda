@@ -45,6 +45,8 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D m_Rigidbody2D;
     private BoxCollider2D m_BodyCollider;
     private CheckCollisions m_CheckCollisions;
+    private PlayerMovement m_movement;
+
     AudioSource audioSrc;
     bool isMoving = false;
 
@@ -75,6 +77,7 @@ public class PlayerController : MonoBehaviour
         m_Rigidbody2D = GetComponent<Rigidbody2D>();
         m_BodyCollider = GetComponent<BoxCollider2D>();
         m_CheckCollisions = GetComponent<CheckCollisions>();
+        m_movement = GetComponent<PlayerMovement>();
         audioSrc = GetComponent<AudioSource>();
         m_gravity = m_Rigidbody2D.gravityScale;
 
@@ -234,6 +237,8 @@ public class PlayerController : MonoBehaviour
         {
             //Debug.Log("Initialized jump");
             // Add a vertical force to the player and set the appropriate flags.
+            m_movement.animator.SetBool("IsJumping", true);
+
             m_onLadder = false;
             m_isJumping = true;
             //m_Grounded = false;

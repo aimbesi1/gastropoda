@@ -6,7 +6,7 @@ using TMPro;
 
 public class playerHealth : MonoBehaviour
 {
-    public playerHealthbar healthbar;
+    public Healthbar healthbar;
     public int maxHealth;
     public int currentHealth;
 
@@ -55,7 +55,6 @@ public class playerHealth : MonoBehaviour
 
     public void takeDamage(int dmg)
     {
-        rb.velocity = transform.right * 20 + transform.up * 20; // Push the player out so that the player won't continue take dmg
         currentHealth -= dmg - currentShield;  // Deal dmg to shield before deal dmg to actual health
         currentShield -= dmg;
         if(currentShield < 0 && !isInvincible) // Set current shield to 0 if shield drop below 0 (UI purposes)
@@ -68,6 +67,9 @@ public class playerHealth : MonoBehaviour
         if(currentHealth <= 0) //If health drop to or below 0, player die
         {
             Destroy(gameObject);
+            int time = PlayerPrefs.GetInt("RespawnLimit");
+            time--;
+            PlayerPrefs.SetInt("RespawnLimit", time);
             LoadLevel();
         }
     }

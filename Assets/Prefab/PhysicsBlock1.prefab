@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7206114738975187970}
   - component: {fileID: 1572182390570179996}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PhysicsBlock1
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59,7 +59,7 @@ MonoBehaviour:
   - {x: 2, y: -2, z: 0}
   m_ShapePathHash: 1268118805
   m_Mesh: {fileID: 0}
-  m_InstanceId: -71818
+  m_InstanceId: 41540
 --- !u!1001 &5167929750830145758
 PrefabInstance:
   m_ObjectHideFlags: 0

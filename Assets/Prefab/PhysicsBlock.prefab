@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9037460478081688244}
   - component: {fileID: 9037460478081688242}
   - component: {fileID: 9037460478081688243}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: PhysicsBlock
   m_TagString: Ground
   m_Icon: {fileID: 0}

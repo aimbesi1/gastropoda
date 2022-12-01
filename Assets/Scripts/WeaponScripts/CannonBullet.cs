@@ -5,7 +5,7 @@ using UnityEngine;
 public class CannonBullet : MonoBehaviour
 {
     private int speed = 20;
-    private int dmg = 200;
+    public int dmg = 200;
 
     private float fly_time = 2f;
 
@@ -26,6 +26,6 @@ public class CannonBullet : MonoBehaviour
     // Update is called once per frame
     void OnTriggerEnter2D(Collider2D hitInfo)
     {   
-        
+        Destroy(gameObject); 
     }
 }

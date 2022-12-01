@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 388554655}
   - component: {fileID: 388554657}
   - component: {fileID: 388554656}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 1169044314}
   - component: {fileID: 1169044316}
   - component: {fileID: 1169044315}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -281,7 +281,7 @@ GameObject:
   - component: {fileID: 1185114134}
   - component: {fileID: 1185114136}
   - component: {fileID: 1185114135}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: InvSlot (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -356,7 +356,7 @@ GameObject:
   - component: {fileID: 1354604573}
   - component: {fileID: 1354604572}
   - component: {fileID: 1354604571}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: InvSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -431,7 +431,7 @@ GameObject:
   - component: {fileID: 1368996618}
   - component: {fileID: 1368996620}
   - component: {fileID: 1368996619}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: InvSlot (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -506,7 +506,7 @@ GameObject:
   - component: {fileID: 1904670178}
   - component: {fileID: 1904670180}
   - component: {fileID: 1904670179}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -654,8 +654,7 @@ GameObject:
   - component: {fileID: 6179761754031859352}
   - component: {fileID: 4341685706512061128}
   - component: {fileID: 5626447236683439449}
-  - component: {fileID: 6633605600854484927}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -726,7 +725,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2062775695
   m_SortingLayer: -1
-  m_SortingOrder: 10
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 16595ca7b673f9244be933ce56a1d7ac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -754,7 +753,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 5.5
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 3bb85f9c0ff08d74cb10bba59a03101d, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -785,7 +784,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.175, y: -0.1}
@@ -821,7 +820,7 @@ MonoBehaviour:
   m_nearLadder: 0
   m_LadderLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 128
   m_CrouchSpeed: 0.36
   m_MovementSmoothing: 0.05
   m_AirControl: 1
@@ -6130,10 +6129,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_WhatIsGround:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 64
   m_GroundCheck: {fileID: 5325712370474474387}
   m_CeilingCheck: {fileID: 480999263201716979}
-  k_GroundedSize: {x: 0.2, y: 0.2}
+  k_GroundedSize: {x: 0.2, y: 0.35}
   k_CeilingRadius: 0.2
 --- !u!95 &6179761754031859352
 Animator:
@@ -6175,7 +6174,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 71.9375
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -6285,22 +6284,7 @@ MonoBehaviour:
   - {x: 0.25013828, y: -1.8271545, z: 0}
   m_ShapePathHash: -423385400
   m_Mesh: {fileID: 0}
-  m_InstanceId: 52648
---- !u!114 &6633605600854484927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430055643906229074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1d8342cf9d120c49b5c66f7358de7fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isClimb: 0
-  isLadder: 0
-  rb: {fileID: 430055643906229072}
+  m_InstanceId: 30314
 --- !u!1 &1056848482388824583
 GameObject:
   m_ObjectHideFlags: 0
@@ -6343,7 +6327,7 @@ GameObject:
   - component: {fileID: 4586413953421715949}
   - component: {fileID: 2805827589674855353}
   - component: {fileID: 7689878992907776062}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Shieldbar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6448,7 +6432,7 @@ GameObject:
   - component: {fileID: 4742560196223047764}
   - component: {fileID: 7831214068218843522}
   - component: {fileID: 6775003557608430843}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: PlayerHealthText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6583,7 +6567,7 @@ GameObject:
   - component: {fileID: 104275928153310947}
   - component: {fileID: 651325200770756965}
   - component: {fileID: 3125754786318792251}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6659,7 +6643,7 @@ GameObject:
   - component: {fileID: 7298775834067065179}
   - component: {fileID: 8653907246555960956}
   - component: {fileID: 6950906518162343666}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: PlayerShieldText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6795,7 +6779,7 @@ GameObject:
   - component: {fileID: 6466906983552054392}
   - component: {fileID: 4713492802726276326}
   - component: {fileID: 4381744016597293090}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6906,7 +6890,7 @@ GameObject:
   - component: {fileID: 4077387015868400290}
   - component: {fileID: 4940566804059825116}
   - component: {fileID: 1719997702923439559}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6982,7 +6966,7 @@ GameObject:
   - component: {fileID: 7488511300391107821}
   - component: {fileID: 4223981818978759597}
   - component: {fileID: 3659766867415638067}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SwordBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7058,7 +7042,7 @@ GameObject:
   - component: {fileID: 6629134702569033749}
   - component: {fileID: 4817556141349199906}
   - component: {fileID: 1915786726137610655}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7134,7 +7118,7 @@ GameObject:
   - component: {fileID: 3143793487046113211}
   - component: {fileID: 7099637631541813675}
   - component: {fileID: 6555873506834398451}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: shieldBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7241,7 +7225,7 @@ GameObject:
   - component: {fileID: 7238107208891236072}
   - component: {fileID: 3840289661332064511}
   - component: {fileID: 5053817651980833416}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Healthbar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7331,7 +7315,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6624331689952507083}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ff4a993e4df4d549825f65926ab6313, type: 3}
+  m_Script: {fileID: 11500000, guid: eb766430e93f4d2458225f3752891f85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 3840289661332064511}
@@ -7346,7 +7330,7 @@ GameObject:
   - component: {fileID: 1385057884414139989}
   - component: {fileID: 5446849637661891938}
   - component: {fileID: 6022744075694461058}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SaltGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7422,7 +7406,7 @@ GameObject:
   - component: {fileID: 8159756846990962532}
   - component: {fileID: 6085397816880168942}
   - component: {fileID: 256382768795605983}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SaltGunBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7498,7 +7482,7 @@ GameObject:
   - component: {fileID: 9163011490885871983}
   - component: {fileID: 9174303911527741915}
   - component: {fileID: 9223245081329633865}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Playername
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7633,7 +7617,7 @@ GameObject:
   - component: {fileID: 916807521390995401}
   - component: {fileID: 2455538209183176259}
   - component: {fileID: 541280783047671767}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7709,7 +7693,7 @@ GameObject:
   - component: {fileID: 616964387636297856}
   - component: {fileID: 713306946874094324}
   - component: {fileID: 7451588733712184532}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: GunBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7816,7 +7800,7 @@ GameObject:
   - component: {fileID: 6754617377958226281}
   - component: {fileID: 4878810667336852694}
   - component: {fileID: 4914274912382517552}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7923,6 +7907,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TimePwrButton
       objectReference: {fileID: 0}
+    - target: {fileID: 1660784631807680314, guid: 9bde883d17a206748873c38d34a697de, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2042915202000608598, guid: 9bde883d17a206748873c38d34a697de, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -8008,8 +7996,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5526930645478804620, guid: 9bde883d17a206748873c38d34a697de, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5526930645478804620, guid: 9bde883d17a206748873c38d34a697de, type: 3}
       propertyPath: m_InstanceId
-      value: -29064
+      value: -4078
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bde883d17a206748873c38d34a697de, type: 3}
@@ -8113,6 +8105,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: InviciblePwrButton
       objectReference: {fileID: 0}
+    - target: {fileID: 1660784631807680314, guid: 810197c79dfda8a40bc8401e6e8b59e4, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2042915202000608598, guid: 810197c79dfda8a40bc8401e6e8b59e4, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -8198,8 +8194,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3424628732483831310, guid: 810197c79dfda8a40bc8401e6e8b59e4, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3424628732483831310, guid: 810197c79dfda8a40bc8401e6e8b59e4, type: 3}
       propertyPath: m_InstanceId
-      value: -29088
+      value: -4102
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 810197c79dfda8a40bc8401e6e8b59e4, type: 3}
@@ -8220,6 +8220,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 430055643906229078}
     m_Modifications:
+    - target: {fileID: 1134575204107701732, guid: 55cc7118a8ebb6e458f33cca3e8e80e4, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1143339351565518552, guid: 55cc7118a8ebb6e458f33cca3e8e80e4, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1493413282969026958, guid: 55cc7118a8ebb6e458f33cca3e8e80e4, type: 3}
       propertyPath: weapons
       value: 
@@ -8230,6 +8238,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1493413282969026995, guid: 55cc7118a8ebb6e458f33cca3e8e80e4, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2542830248241218770, guid: 55cc7118a8ebb6e458f33cca3e8e80e4, type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2685686427987117168, guid: 55cc7118a8ebb6e458f33cca3e8e80e4, type: 3}
@@ -8340,7 +8352,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: cf0cf328eb6e4a44683e88f57ba890de, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.375
+  m_Volume: 0.461
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -8435,6 +8447,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: InvisPwrButton
       objectReference: {fileID: 0}
+    - target: {fileID: 1660784631807680314, guid: 41dd6be2f30b18749b1129d44739db1e, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2042915202000608598, guid: 41dd6be2f30b18749b1129d44739db1e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -8520,8 +8536,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8865852317764566082, guid: 41dd6be2f30b18749b1129d44739db1e, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8865852317764566082, guid: 41dd6be2f30b18749b1129d44739db1e, type: 3}
       propertyPath: m_InstanceId
-      value: -29138
+      value: -4152
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41dd6be2f30b18749b1129d44739db1e, type: 3}
@@ -8621,6 +8641,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 430055643906229078}
     m_Modifications:
+    - target: {fileID: 567053532590197490, guid: 87f5a3ea04d45bf4aaf5aa9f12d84c3f, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1369962572307578225, guid: 87f5a3ea04d45bf4aaf5aa9f12d84c3f, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4802502733445768622, guid: 87f5a3ea04d45bf4aaf5aa9f12d84c3f, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -8683,6 +8711,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7121096578247979655, guid: 87f5a3ea04d45bf4aaf5aa9f12d84c3f, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8615243104777773266, guid: 87f5a3ea04d45bf4aaf5aa9f12d84c3f, type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -5494,7 +5494,7 @@ MonoBehaviour:
   - {x: -12.084689, y: -9.374485, z: 0}
   m_ShapePathHash: -1892789329
   m_Mesh: {fileID: 0}
-  m_InstanceId: 51738
+  m_InstanceId: 41368
 --- !u!1 &6674318602245449223
 GameObject:
   m_ObjectHideFlags: 0
@@ -5505,7 +5505,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2147495107188823893}
   - component: {fileID: 7327995593328485802}
-  - component: {fileID: 7357805891148049658}
+  - component: {fileID: 3733337498933029441}
   m_Layer: 8
   m_Name: Healthbar
   m_TagString: Untagged
@@ -5587,7 +5587,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &7357805891148049658
+--- !u!114 &3733337498933029441
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5596,7 +5596,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6674318602245449223}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3dcbda29b0cf3ae4e9173a02be7aa840, type: 3}
+  m_Script: {fileID: 11500000, guid: eb766430e93f4d2458225f3752891f85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 7327995593328485802}
@@ -5782,7 +5782,7 @@ MonoBehaviour:
   dmg: 100
   text: {fileID: 2402501613852606623}
   teleporter: {fileID: 6666754746910277891, guid: 749e59ee28a612645bfcaa270b205f73, type: 3}
-  healthbar: {fileID: 7357805891148049658}
+  healthbar: {fileID: 3733337498933029441}
   canvas: {fileID: 6248848450981878376}
 --- !u!82 &6636358024507462643
 AudioSource:

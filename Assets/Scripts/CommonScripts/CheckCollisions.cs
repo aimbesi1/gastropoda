@@ -10,6 +10,7 @@ public class CheckCollisions : MonoBehaviour
     public Vector2 k_GroundedSize = new Vector2(0.2f, 0.2f); // Radius of the overlap circle to determine if grounded
     public float k_CeilingRadius = .2f; // Radius of the overlap circle to determine if touching the ceiling
 
+    
     public bool isGrounded()
     {
         // The entity is grounded if a circlecast to the groundcheck position hits anything designated as ground

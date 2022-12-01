@@ -16,7 +16,7 @@ public class snailHealth : MonoBehaviour
 
     private bool has_Collide = false;
 
-    public snailHealthbar healthbar;
+    public Healthbar healthbar;
 
     public GameObject canvas;
 
@@ -65,6 +65,7 @@ public class snailHealth : MonoBehaviour
         if(currentHealth <= 0)
         {
             Destroy(gameObject);
+            PlayerPrefs.SetInt("GameComplete", 1);
         }
     }
 

@@ -29,6 +29,7 @@ public class InvisiblePowerUp : MonoBehaviour
                 hasCollide = true;
                 player.InvisPickUp();
                 inventory.Invisslot.SetActive(true);
+                PlayerPrefs.SetInt("HasInvisiblePower", 1);
             }
             Destroy(gameObject);
         }

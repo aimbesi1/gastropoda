@@ -29,6 +29,7 @@ public class SpecialShield : MonoBehaviour
                 hasCollide = true;
                 player.SetInvincible();
                 inventory.Totemslot.SetActive(true);
+                PlayerPrefs.SetInt("HasInvinciblePower", 1);
             }
             Destroy(gameObject);
         }

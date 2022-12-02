@@ -9,9 +9,6 @@ public class Ladder : MonoBehaviour
     public bool isLadder;
     private float vertical;
 
-    private GameObject topLadder;
-    private GameObject bottomLadder;
-
     [SerializeField] private Rigidbody2D rb;
 
 

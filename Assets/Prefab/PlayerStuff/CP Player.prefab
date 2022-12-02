@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 388554655}
   - component: {fileID: 388554657}
   - component: {fileID: 388554656}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 1169044314}
   - component: {fileID: 1169044316}
   - component: {fileID: 1169044315}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -281,7 +281,7 @@ GameObject:
   - component: {fileID: 1185114134}
   - component: {fileID: 1185114136}
   - component: {fileID: 1185114135}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: InvSlot (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -356,7 +356,7 @@ GameObject:
   - component: {fileID: 1354604573}
   - component: {fileID: 1354604572}
   - component: {fileID: 1354604571}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: InvSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -431,7 +431,7 @@ GameObject:
   - component: {fileID: 1368996618}
   - component: {fileID: 1368996620}
   - component: {fileID: 1368996619}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: InvSlot (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -506,7 +506,7 @@ GameObject:
   - component: {fileID: 1904670178}
   - component: {fileID: 1904670180}
   - component: {fileID: 1904670179}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -654,7 +654,8 @@ GameObject:
   - component: {fileID: 6179761754031859352}
   - component: {fileID: 4341685706512061128}
   - component: {fileID: 5626447236683439449}
-  m_Layer: 3
+  - component: {fileID: 4336105999041028968}
+  m_Layer: 7
   m_Name: CP Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -6285,7 +6286,22 @@ MonoBehaviour:
   - {x: -0.095541, y: -1.1357952, z: 0}
   m_ShapePathHash: 1110033695
   m_Mesh: {fileID: 0}
-  m_InstanceId: 32150
+  m_InstanceId: 62718
+--- !u!114 &4336105999041028968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430055643906229074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1d8342cf9d120c49b5c66f7358de7fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isClimb: 0
+  isLadder: 0
+  rb: {fileID: 0}
 --- !u!1 &1056848482388824583
 GameObject:
   m_ObjectHideFlags: 0
@@ -6295,7 +6311,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1977092878452129627}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Handposition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6328,7 +6344,7 @@ GameObject:
   - component: {fileID: 4586413953421715949}
   - component: {fileID: 2805827589674855353}
   - component: {fileID: 7689878992907776062}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shieldbar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6433,7 +6449,7 @@ GameObject:
   - component: {fileID: 4742560196223047764}
   - component: {fileID: 7831214068218843522}
   - component: {fileID: 6775003557608430843}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerHealthText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6568,7 +6584,7 @@ GameObject:
   - component: {fileID: 104275928153310947}
   - component: {fileID: 651325200770756965}
   - component: {fileID: 3125754786318792251}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6644,7 +6660,7 @@ GameObject:
   - component: {fileID: 7298775834067065179}
   - component: {fileID: 8653907246555960956}
   - component: {fileID: 6950906518162343666}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerShieldText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6780,7 +6796,7 @@ GameObject:
   - component: {fileID: 6466906983552054392}
   - component: {fileID: 4713492802726276326}
   - component: {fileID: 4381744016597293090}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6891,7 +6907,7 @@ GameObject:
   - component: {fileID: 4077387015868400290}
   - component: {fileID: 4940566804059825116}
   - component: {fileID: 1719997702923439559}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6967,7 +6983,7 @@ GameObject:
   - component: {fileID: 7488511300391107821}
   - component: {fileID: 4223981818978759597}
   - component: {fileID: 3659766867415638067}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SwordBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7043,7 +7059,7 @@ GameObject:
   - component: {fileID: 6629134702569033749}
   - component: {fileID: 4817556141349199906}
   - component: {fileID: 1915786726137610655}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7119,7 +7135,7 @@ GameObject:
   - component: {fileID: 3143793487046113211}
   - component: {fileID: 7099637631541813675}
   - component: {fileID: 6555873506834398451}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: shieldBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7193,7 +7209,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5325712370474474387}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7226,7 +7242,7 @@ GameObject:
   - component: {fileID: 7238107208891236072}
   - component: {fileID: 3840289661332064511}
   - component: {fileID: 5053817651980833416}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Healthbar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7331,7 +7347,7 @@ GameObject:
   - component: {fileID: 1385057884414139989}
   - component: {fileID: 5446849637661891938}
   - component: {fileID: 6022744075694461058}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SaltGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7407,7 +7423,7 @@ GameObject:
   - component: {fileID: 8159756846990962532}
   - component: {fileID: 6085397816880168942}
   - component: {fileID: 256382768795605983}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SaltGunBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7483,7 +7499,7 @@ GameObject:
   - component: {fileID: 9163011490885871983}
   - component: {fileID: 9174303911527741915}
   - component: {fileID: 9223245081329633865}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Playername
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7618,7 +7634,7 @@ GameObject:
   - component: {fileID: 916807521390995401}
   - component: {fileID: 2455538209183176259}
   - component: {fileID: 541280783047671767}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7694,7 +7710,7 @@ GameObject:
   - component: {fileID: 616964387636297856}
   - component: {fileID: 713306946874094324}
   - component: {fileID: 7451588733712184532}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GunBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7768,7 +7784,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2593667482559328089}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: CenterPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7801,7 +7817,7 @@ GameObject:
   - component: {fileID: 6754617377958226281}
   - component: {fileID: 4878810667336852694}
   - component: {fileID: 4914274912382517552}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7875,7 +7891,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 480999263201716979}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CeilingCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7904,13 +7920,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1185114134}
     m_Modifications:
+    - target: {fileID: 825834078771888744, guid: 9bde883d17a206748873c38d34a697de, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1660784631807680314, guid: 9bde883d17a206748873c38d34a697de, type: 3}
       propertyPath: m_Name
       value: TimePwrButton
       objectReference: {fileID: 0}
     - target: {fileID: 1660784631807680314, guid: 9bde883d17a206748873c38d34a697de, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2042915202000608598, guid: 9bde883d17a206748873c38d34a697de, type: 3}
       propertyPath: m_Pivot.x
@@ -8002,7 +8022,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5526930645478804620, guid: 9bde883d17a206748873c38d34a697de, type: 3}
       propertyPath: m_InstanceId
-      value: -7258
+      value: -87698
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bde883d17a206748873c38d34a697de, type: 3}
@@ -8067,6 +8087,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -30
       objectReference: {fileID: 0}
+    - target: {fileID: 7415679496077066558, guid: d045deb22d3332a45bbeb0b54d6f7e4d, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7796658506531112092, guid: d045deb22d3332a45bbeb0b54d6f7e4d, type: 3}
       propertyPath: weapons
       value: 
@@ -8078,6 +8102,10 @@ PrefabInstance:
     - target: {fileID: 8908804256545030347, guid: d045deb22d3332a45bbeb0b54d6f7e4d, type: 3}
       propertyPath: m_Name
       value: Sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 8908804256545030347, guid: d045deb22d3332a45bbeb0b54d6f7e4d, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d045deb22d3332a45bbeb0b54d6f7e4d, type: 3}
@@ -8108,7 +8136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1660784631807680314, guid: 810197c79dfda8a40bc8401e6e8b59e4, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2042915202000608598, guid: 810197c79dfda8a40bc8401e6e8b59e4, type: 3}
       propertyPath: m_Pivot.x
@@ -8200,7 +8228,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3424628732483831310, guid: 810197c79dfda8a40bc8401e6e8b59e4, type: 3}
       propertyPath: m_InstanceId
-      value: -7282
+      value: -87722
+      objectReference: {fileID: 0}
+    - target: {fileID: 8099481439644646897, guid: 810197c79dfda8a40bc8401e6e8b59e4, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 810197c79dfda8a40bc8401e6e8b59e4, type: 3}
@@ -8223,11 +8255,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1134575204107701732, guid: 55cc7118a8ebb6e458f33cca3e8e80e4, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1143339351565518552, guid: 55cc7118a8ebb6e458f33cca3e8e80e4, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493413281529385222, guid: 55cc7118a8ebb6e458f33cca3e8e80e4, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1493413282969026958, guid: 55cc7118a8ebb6e458f33cca3e8e80e4, type: 3}
       propertyPath: weapons
@@ -8238,12 +8274,16 @@ PrefabInstance:
       value: Gun
       objectReference: {fileID: 0}
     - target: {fileID: 1493413282969026995, guid: 55cc7118a8ebb6e458f33cca3e8e80e4, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493413282969026995, guid: 55cc7118a8ebb6e458f33cca3e8e80e4, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2542830248241218770, guid: 55cc7118a8ebb6e458f33cca3e8e80e4, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2685686427987117168, guid: 55cc7118a8ebb6e458f33cca3e8e80e4, type: 3}
       propertyPath: m_Pivot.x
@@ -8450,7 +8490,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1660784631807680314, guid: 41dd6be2f30b18749b1129d44739db1e, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2042915202000608598, guid: 41dd6be2f30b18749b1129d44739db1e, type: 3}
       propertyPath: m_Pivot.x
@@ -8536,13 +8576,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3215571890793619878, guid: 41dd6be2f30b18749b1129d44739db1e, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8865852317764566082, guid: 41dd6be2f30b18749b1129d44739db1e, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8865852317764566082, guid: 41dd6be2f30b18749b1129d44739db1e, type: 3}
       propertyPath: m_InstanceId
-      value: -7332
+      value: -87772
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41dd6be2f30b18749b1129d44739db1e, type: 3}
@@ -8566,6 +8610,10 @@ PrefabInstance:
     - target: {fileID: 3269187196255543977, guid: 413bf8adbdeff604b9ddb1024e6165cb, type: 3}
       propertyPath: m_Name
       value: Swing_Sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 3269187196255543977, guid: 413bf8adbdeff604b9ddb1024e6165cb, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3269187196255543977, guid: 413bf8adbdeff604b9ddb1024e6165cb, type: 3}
       propertyPath: m_IsActive
@@ -8644,15 +8692,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 567053532590197490, guid: 87f5a3ea04d45bf4aaf5aa9f12d84c3f, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1369962572307578225, guid: 87f5a3ea04d45bf4aaf5aa9f12d84c3f, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4802502733445768622, guid: 87f5a3ea04d45bf4aaf5aa9f12d84c3f, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7121096577335158525, guid: 87f5a3ea04d45bf4aaf5aa9f12d84c3f, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7121096578247979650, guid: 87f5a3ea04d45bf4aaf5aa9f12d84c3f, type: 3}
       propertyPath: text
@@ -8711,12 +8763,16 @@ PrefabInstance:
       value: SaltShakerGun
       objectReference: {fileID: 0}
     - target: {fileID: 7121096578247979655, guid: 87f5a3ea04d45bf4aaf5aa9f12d84c3f, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7121096578247979655, guid: 87f5a3ea04d45bf4aaf5aa9f12d84c3f, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8615243104777773266, guid: 87f5a3ea04d45bf4aaf5aa9f12d84c3f, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87f5a3ea04d45bf4aaf5aa9f12d84c3f, type: 3}

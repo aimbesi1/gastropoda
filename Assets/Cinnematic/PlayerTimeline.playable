@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 030f85c3f73729f4f976f66ffb23b875, type: 3}
   m_Name: AnimationPlayableAsset
   m_EditorClassIdentifier: 
-  m_Clip: {fileID: 7400000, guid: 0b3b28976d6dc354295dda28e238428b, type: 2}
+  m_Clip: {fileID: 7400000, guid: 699b21ac55cccaa4c81134d99a328452, type: 2}
   m_Position: {x: 0, y: 0, z: 0}
   m_EulerAngles: {x: 0, y: 0, z: 0}
   m_UseTrackMatchFields: 1
@@ -34,7 +34,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 030f85c3f73729f4f976f66ffb23b875, type: 3}
   m_Name: AnimationPlayableAsset
   m_EditorClassIdentifier: 
-  m_Clip: {fileID: 7400000, guid: 13c5df0222c0b3f4c8dc70471238fcc2, type: 2}
+  m_Clip: {fileID: 7400000, guid: a86612a41fb168c408a56659f5fdddb1, type: 2}
   m_Position: {x: 0, y: 0, z: 0}
   m_EulerAngles: {x: 0, y: 0, z: 0}
   m_UseTrackMatchFields: 1
@@ -1163,7 +1163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 030f85c3f73729f4f976f66ffb23b875, type: 3}
   m_Name: AnimationPlayableAsset
   m_EditorClassIdentifier: 
-  m_Clip: {fileID: 7400000, guid: 0b928b5671c55134c8da6856217e5594, type: 2}
+  m_Clip: {fileID: 7400000, guid: ed1b22992fa79994c9a5114c65a99d0b, type: 2}
   m_Position: {x: 0, y: 0, z: 0}
   m_EulerAngles: {x: 0, y: 0, z: 0}
   m_UseTrackMatchFields: 1
@@ -1818,7 +1818,7 @@ MonoBehaviour:
     m_PreExtrapolationMode: 1
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: Boy_Run
+    m_DisplayName: CP_Run
   - m_Version: 1
     m_Start: 2.0833333333333335
     m_ClipIn: 0
@@ -1887,7 +1887,7 @@ MonoBehaviour:
     m_PreExtrapolationMode: 1
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: Boy_Idle
+    m_DisplayName: CP_Idle
   - m_Version: 1
     m_Start: 3.533333333333333
     m_ClipIn: 0
@@ -2007,7 +2007,7 @@ MonoBehaviour:
     m_PreExtrapolationMode: 1
     m_PostExtrapolationTime: Infinity
     m_PreExtrapolationTime: 0
-    m_DisplayName: Boy_Jump
+    m_DisplayName: CP_Jump
   m_Markers:
     m_Objects: []
   m_InfiniteClipPreExtrapolation: 1

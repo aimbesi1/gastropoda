@@ -5525,7 +5525,7 @@ MonoBehaviour:
   - {x: -12.084689, y: -9.374485, z: 0}
   m_ShapePathHash: -1892789329
   m_Mesh: {fileID: 0}
-  m_InstanceId: 34688
+  m_InstanceId: 179640
 --- !u!1 &6674318602245449223
 GameObject:
   m_ObjectHideFlags: 0
@@ -5685,7 +5685,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.3, y: 0.24}
@@ -5711,7 +5711,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.25, y: 2}

@@ -110,7 +110,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.775
-  m_Color: {r: 0.019175602, g: 0.6132076, b: 0, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.94378805, a: 1}
   m_Intensity: 0.41
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 1
@@ -188,7 +188,7 @@ GameObject:
   - component: {fileID: 991280197392425117}
   - component: {fileID: 5523691050871574679}
   m_Layer: 0
-  m_Name: EnemyBullet
+  m_Name: SpecialSnailOrbs
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -254,7 +254,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.89008427, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

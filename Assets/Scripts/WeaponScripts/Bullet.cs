@@ -29,7 +29,24 @@ public class Bullet : MonoBehaviour
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
         snailHealth snail = hitInfo.GetComponent<snailHealth>();
-        playerHealth player = hitInfo.GetComponent<playerHealth>();
+        if (friendly)
+        {
+            if (snail != null)
+            {
+                snail.takeDamage(dmg);
+                Destroy(gameObject);
+            }
+        }
+        else
+        {
+            playerHealth player = hitInfo.GetComponent<playerHealth>();
+            if (player != null)
+            {
+                Vector2 force = new Vector2(rb.velocity.x, rb.velocity.y) * knockbackMultiplier;
+                player.takeDamage(dmg, force);
+                Destroy(gameObject);
+            }
+        }
         GameObject ground = GameObject.FindWithTag("Ground");
         dummy dummy = hitInfo.GetComponent<dummy>();
         if (ground != null)
@@ -42,19 +59,15 @@ public class Bullet : MonoBehaviour
             }
             Destroy(gameObject); // Destroy if touch ground
         }
-        if(snail != null && PlayerPrefs.GetInt("IsBoss") == 1 && friendly)
+        if(snail != null && PlayerPrefs.GetInt("IsBoss") == 1)
         {
             snail.takeDamage(dmg); // Deal damage to snail
             Destroy(gameObject);
         }
-        if (dummy != null && friendly)
+        if (dummy != null)
         {
             dummy.takeDamage(dmg);
             Destroy(gameObject);
-        }
-        if(!friendly && player != null)
-        {
-            player.takeDamage(dmg);
         }
     }
     public void SetDamage(int value)

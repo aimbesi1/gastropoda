@@ -55,6 +55,7 @@ public class playerHealth : MonoBehaviour
 
     public void takeDamage(int dmg)
     {
+        rb.velocity = transform.right * 20 + transform.up * 20; // Push the player out so that the player won't continue take dmg
         currentHealth -= dmg - currentShield;  // Deal dmg to shield before deal dmg to actual health
         currentShield -= dmg;
         if(currentShield < 0 && !isInvincible) // Set current shield to 0 if shield drop below 0 (UI purposes)
@@ -67,13 +68,19 @@ public class playerHealth : MonoBehaviour
         if(currentHealth <= 0) //If health drop to or below 0, player die
         {
             Destroy(gameObject);
-            int time = PlayerPrefs.GetInt("RespawnLimit");
-            time--;
-            PlayerPrefs.SetInt("RespawnLimit", time);
             LoadLevel();
         }
     }
-    
+
+    // Deals damage and also adds a force to the player.
+    public void takeDamage(int dmg, Vector2 force)
+    {
+        Debug.Log(force);
+        GetComponent<PlayerController>().SetLadderState(false);
+        rb.AddForce(force, ForceMode2D.Impulse);
+        takeDamage(dmg);
+    }
+
     void printText()
     {
         text.text = currentHealth + "/" + maxHealth;

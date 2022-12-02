@@ -135,6 +135,37 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &2204125458948476402
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8256668800172184188}
+  m_Layer: 8
+  m_Name: mouth
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8256668800172184188
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2204125458948476402}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.43, y: 2.06, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2361498568172199349}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3550714011041773880
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,8 +660,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2062775695
-  m_SortingLayer: -1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 8
   m_Sprite: {fileID: 21300000, guid: ade8da75d07b9ad4682f3f170150be0a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5494,7 +5525,7 @@ MonoBehaviour:
   - {x: -12.084689, y: -9.374485, z: 0}
   m_ShapePathHash: -1892789329
   m_Mesh: {fileID: 0}
-  m_InstanceId: 41368
+  m_InstanceId: 34688
 --- !u!1 &6674318602245449223
 GameObject:
   m_ObjectHideFlags: 0
@@ -5617,6 +5648,7 @@ GameObject:
   - component: {fileID: 8029778131743999869}
   - component: {fileID: 6922798628484808697}
   - component: {fileID: 6636358024507462643}
+  - component: {fileID: 2073153409993432870}
   m_Layer: 8
   m_Name: Snail
   m_TagString: Snail
@@ -5639,6 +5671,7 @@ Transform:
   - {fileID: 6482941566687999358}
   - {fileID: 2128953821502686171}
   - {fileID: 772867376684546249}
+  - {fileID: 8256668800172184188}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5880,3 +5913,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2073153409993432870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7990830773186446708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 444332e8dd3cd7943beaba9610b9579c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spitball: {fileID: 5460686505802124873, guid: 45776e01b29497c40917255afd6ea77e, type: 3}
+  orbs: {fileID: 5460686505802124873, guid: 9affcf28dc28ba14497313f683782342, type: 3}
+  mouth: {fileID: 8256668800172184188}

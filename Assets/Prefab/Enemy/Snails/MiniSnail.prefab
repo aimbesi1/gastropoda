@@ -53,7 +53,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.3055508, y: -0.24378991}
+  m_Offset: {x: 0.68100417, y: 0.49416995}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -64,7 +64,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.433457, y: 0.47185946}
+  m_Size: {x: 4.893323, y: 3.0352974}
   m_EdgeRadius: 0
 --- !u!58 &1639146693758070869
 CircleCollider2D:
@@ -79,9 +79,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.48}
+  m_Offset: {x: 0.56, y: 1.17}
   serializedVersion: 2
-  m_Radius: 0.98
+  m_Radius: 2.36
 --- !u!50 &4266261370798050899
 Rigidbody2D:
   serializedVersion: 4
@@ -118,14 +118,14 @@ MonoBehaviour:
   player: {fileID: 0}
   playerLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   pHealth: {fileID: 0}
   pipeAI: {fileID: 0}
   snailVars: {fileID: 0}
   frontOffset: {fileID: 3513888910777720680}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 8
   baseSpeed: 3
   chargeSpeed: 5
   lookDistance: 35
@@ -203,7 +203,7 @@ MonoBehaviour:
   - {x: 1.2291477, y: -0.431259, z: -0.0000000022085374}
   m_ShapePathHash: -72274384
   m_Mesh: {fileID: 0}
-  m_InstanceId: 144592
+  m_InstanceId: 37170
 --- !u!1 &4138793848437228828
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,7 +312,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5654809488961360636}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.61, y: 0.21, z: 0}
+  m_LocalPosition: {x: 3.06, y: 0.21, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

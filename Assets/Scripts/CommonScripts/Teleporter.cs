@@ -10,6 +10,7 @@ public class Teleporter : MonoBehaviour
     void Awake()
     {
         PlayerPrefs.SetString("CurrentScene", SceneManager.GetActiveScene().name);
+        PlayerPrefs.SetString("NextScene", levelName);
     }
 
     public void LoadLevel()
@@ -21,10 +22,10 @@ public class Teleporter : MonoBehaviour
     {
         if(hitInfo.CompareTag("Player"))
         {
-            // if (levelName == "Level 2.1" || levelName == "Level 2.2" || levelName == "End Game Scene")
-            // {
-            //     PlayerPrefs.SetInt("IsBoss", 1); // Set the snail as a boss
-            // }
+            if (levelName == "Boss Room")
+            {
+                PlayerPrefs.SetInt("IsBoss", 1); // Set the snail as a boss
+            }
             
             if(PlayerPrefs.GetInt("IsBoss") == 0)
             {

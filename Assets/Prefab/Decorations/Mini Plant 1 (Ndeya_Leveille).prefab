@@ -42,6 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8562894192671398107}
   - component: {fileID: 4935686598556275981}
+  - component: {fileID: 941414312306751956}
   m_Layer: 0
   m_Name: Plant 1
   m_TagString: Untagged
@@ -116,3 +117,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &941414312306751956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7172412074387154344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 1
+  m_ApplyToSortingLayers: 43a25a8d
+  m_ShapePath:
+  - {x: -4.5319853, y: -4.1285334, z: 0}
+  - {x: -6.519916, y: -1.1156994, z: 0}
+  - {x: -5.475666, y: 2.5991185, z: 0}
+  - {x: 0.073903345, y: 4.9745927, z: 0}
+  - {x: 5.6503215, y: 0.5113378, z: 0}
+  - {x: 6.5820518, y: -4.6166444, z: 0}
+  m_ShapePathHash: 973200697
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -9462

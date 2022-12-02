@@ -13,6 +13,9 @@ public class EndGame : MonoBehaviour
         PlayerPrefs.SetInt("PlayerCurrentHealth", PlayerPrefs.GetInt("PlayerMaxHealth")); // set player initial health to max health
 
         PlayerPrefs.SetInt("PlayerCurrentShield", 0); // Set player initial shield to 0
+        int time = PlayerPrefs.GetInt("RespawnLimit");
+        time--;
+        PlayerPrefs.SetInt("RespawnLimit", time);
         
         SceneManager.LoadSceneAsync(PlayerPrefs.GetString("CurrentScene"), LoadSceneMode.Single);
     }

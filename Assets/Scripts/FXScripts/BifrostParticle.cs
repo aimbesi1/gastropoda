@@ -13,7 +13,7 @@ public class BifrostParticle : MonoBehaviour
     {
         mainSpawner = GameObject.FindWithTag("Spawn").GetComponent<PowerUpSpawner>();
 
-        if(isWeapon)                                                 //Spawn stuff
+        if(!isWeapon)                                                 //Spawn stuff
         {
             Invoke("PowerupSpawn", .7f);
         }

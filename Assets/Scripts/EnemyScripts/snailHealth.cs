@@ -61,6 +61,7 @@ public class snailHealth : MonoBehaviour
     {
         currentHealth -= dmg;
         healthbar.setHealth(currentHealth);
+        PlayerPrefs.SetInt("SnailCurrentHealth", currentHealth);
         printText();
         if(currentHealth <= 0)
         {
@@ -82,11 +83,9 @@ public class snailHealth : MonoBehaviour
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
         playerHealth player = hitInfo.GetComponent<playerHealth>();
-        if(player != null && !has_Collide)
+        if(player != null)
         {
-            has_Collide = !has_Collide;
             player.takeDamage(dmg);
-            has_Collide = !has_Collide;
         }
     }
 
@@ -97,16 +96,18 @@ public class snailHealth : MonoBehaviour
         {
             teleporter.SetActive(false);
 
-            if (currentHealth == maxHealth / 3 * num_fight)
+            if (currentHealth <= 0)
             {
-                num_fight = PlayerPrefs.GetInt("NumFight");
-                num_fight++;
-                PlayerPrefs.SetInt("NumFight", num_fight);
-                PlayerPrefs.SetInt("IsBoss", 0);
+                // num_fight = PlayerPrefs.GetInt("NumFight");
+                // num_fight++;
+                // PlayerPrefs.SetInt("NumFight", num_fight);
 
+                // PlayerPrefs.SetInt("IsBoss", 0);
+                
                 teleporter.SetActive(true);
-                teleporter.GetComponent<Teleporter>().levelName = PlayerPrefs.GetString("CurrentScene");
+                // teleporter.GetComponent<Teleporter>().levelName = PlayerPrefs.GetString("NextScene");
             }
+
         }
     }
 }

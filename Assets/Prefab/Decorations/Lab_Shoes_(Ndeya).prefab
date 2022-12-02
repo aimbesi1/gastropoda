@@ -42,6 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8562894192671398107}
   - component: {fileID: 4935686598556275981}
+  - component: {fileID: 5485399256654302127}
   m_Layer: 0
   m_Name: shoes
   m_TagString: Untagged
@@ -116,3 +117,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5485399256654302127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7172412074387154344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 1
+  m_ApplyToSortingLayers: 43a25a8d718a0c8500000000
+  m_ShapePath:
+  - {x: -6.429218, y: 2.3290043, z: 0}
+  - {x: -1.3303853, y: 1.3771961, z: 0}
+  - {x: 6.519065, y: 3.7806106, z: 0}
+  - {x: 7.131628, y: 0.4604673, z: 0}
+  - {x: 2.6780941, y: -1.0627303, z: 0}
+  - {x: -0.39308184, y: -3.7848163, z: 0}
+  - {x: -6.8620863, y: -1.4038637, z: 0}
+  m_ShapePathHash: 1708200220
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -6754

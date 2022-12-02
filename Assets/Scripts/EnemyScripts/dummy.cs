@@ -26,7 +26,7 @@ public class dummy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player");
+        player = GameObject.FindWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
     }
 

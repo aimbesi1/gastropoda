@@ -5,8 +5,8 @@ using UnityEngine;
 public class AutoMachine : MonoBehaviour
 {
     public bool isTop = false;
-    private int speed = 3;
-    private float timer = 6f;
+    [SerializeField]private int speed = 3;
+    [SerializeField]private float timer = 4f;
 
     void Update()
     {
@@ -19,14 +19,14 @@ public class AutoMachine : MonoBehaviour
         {
             MoveUp();
         }
-        if (timer <= 3)
+        if (timer <= 2)
         {
             isTop = true;
         }
         if (timer <= 0)
         {
             isTop = false;
-            timer = 6f;
+            timer = 4f;
         }
     }
 

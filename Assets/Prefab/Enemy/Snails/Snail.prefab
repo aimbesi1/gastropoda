@@ -5649,7 +5649,7 @@ GameObject:
   - component: {fileID: 6922798628484808697}
   - component: {fileID: 6636358024507462643}
   - component: {fileID: 2073153409993432870}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Snail
   m_TagString: Snail
   m_Icon: {fileID: 0}
@@ -5927,4 +5927,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spitball: {fileID: 5460686505802124873, guid: 45776e01b29497c40917255afd6ea77e, type: 3}
   orbs: {fileID: 5460686505802124873, guid: 9affcf28dc28ba14497313f683782342, type: 3}
+  num_orbs: 5
   mouth: {fileID: 8256668800172184188}

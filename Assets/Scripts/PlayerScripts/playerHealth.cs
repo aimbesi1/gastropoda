@@ -19,7 +19,7 @@ public class playerHealth : MonoBehaviour
     public float invisibleTimer = 3f;
     public bool isInvincible = false;
     public bool isInvisible = false;
-    public bool hasInvis = false;
+    public bool hasInvis;
 
     public TMP_Text text;
     public TMP_Text text2;
@@ -36,6 +36,14 @@ public class playerHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (PlayerPrefs.GetInt("HasInvisible") == 0)
+        {
+            hasInvis = false;
+        }
+        else
+        {
+            hasInvis = true;
+        }
         rend = GetComponent<SpriteRenderer>();
         maxHealth = PlayerPrefs.GetInt("PlayerMaxHealth");
         currentHealth = PlayerPrefs.GetInt("PlayerCurrentHealth");
@@ -63,7 +71,9 @@ public class playerHealth : MonoBehaviour
             currentShield = 0;
         }
         healthbar.setHealth(currentHealth);
+        PlayerPrefs.SetInt("PlayerCurrentHealth", currentHealth);
         shieldbar.setShield(currentShield);
+        PlayerPrefs.SetInt("PlayerCurrentShield", currentShield);
         printText();
         if(currentHealth <= 0) //If health drop to or below 0, player die
         {

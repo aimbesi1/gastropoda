@@ -28,8 +28,9 @@ public class StartGame : MonoBehaviour
         PlayerPrefs.SetInt("HasSword", 0);
         PlayerPrefs.SetInt("HasSaltGun", 0);
 
-        //PlayerPrefs.SetInt("isInvincible", 0);
-        //PlayerPrefs.SetInt("isInvisible", 0);
+        PlayerPrefs.SetInt("HasInvinciblePower", 0);
+        PlayerPrefs.SetInt("HasInvisiblePower", 0);
+        PlayerPrefs.SetInt("HasTimePower", 0);
 
         PlayerPrefs.SetInt("Clip", 3); // Store the number of clip in the normal gun
         PlayerPrefs.SetInt("Ammo", 12); //Store the number of bullet in the normal gun

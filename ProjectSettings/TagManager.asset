@@ -18,6 +18,7 @@ TagManager:
   - Gun
   - Sword
   - Bullet
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -25,9 +26,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - player
+  - ladder
+  - Ground
   - 
   - 
   - 

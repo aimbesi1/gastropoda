@@ -12,8 +12,31 @@ public class PlayerInventory : MonoBehaviour
 
     private void Start()
     {
-        Totemslot.SetActive(false);
-        Timeslot.SetActive(false);
-        Invisslot.SetActive(false);
+        if (PlayerPrefs.GetInt("HasInvinciblePower") == 0)
+        {
+            Totemslot.SetActive(false);
+        }
+        else
+        {
+            Totemslot.SetActive(true);
+        }
+
+        if (PlayerPrefs.GetInt("HasTimePower") == 0)
+        {
+            Timeslot.SetActive(false);
+        }
+        else
+        {
+            Timeslot.SetActive(true);
+        }
+
+        if (PlayerPrefs.GetInt("HasInvisiblePower") == 0)
+        {
+            Invisslot.SetActive(false);
+        }
+        else
+        {
+            Invisslot.SetActive(true);
+        }
     }
 }

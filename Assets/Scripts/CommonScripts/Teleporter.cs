@@ -37,6 +37,10 @@ public class Teleporter : MonoBehaviour
                     PlayerPrefs.SetInt("HasSword", 0);
                     PlayerPrefs.SetInt("HasSaltGun", 0);
 
+                    PlayerPrefs.SetInt("HasInvinciblePower", 0); // check if the player has the invincible power
+                    PlayerPrefs.SetInt("HasInvisiblePower", 0); // check if the player has the invisible power
+                    PlayerPrefs.SetInt("HasTimePower", 0); // check if the player has time power
+
                     PlayerPrefs.SetInt("Clip", 3); // Store the number of clip in the normal gun
                     PlayerPrefs.SetInt("Ammo", 12); //Store the number of bullet in the normal gun
                     PlayerPrefs.SetInt("Throwtime", 2); // Store the throw time for the sword

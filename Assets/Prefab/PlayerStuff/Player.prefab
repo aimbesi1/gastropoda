@@ -6130,7 +6130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_WhatIsGround:
     serializedVersion: 2
-    m_Bits: 72
+    m_Bits: 8
   m_GroundCheck: {fileID: 5325712370474474387}
   m_CeilingCheck: {fileID: 480999263201716979}
   k_GroundedSize: {x: 0.2, y: 0.35}
@@ -6285,7 +6285,7 @@ MonoBehaviour:
   - {x: 0.25013828, y: -1.8271545, z: 0}
   m_ShapePathHash: -423385400
   m_Mesh: {fileID: 0}
-  m_InstanceId: 47474
+  m_InstanceId: 113176
 --- !u!1 &1056848482388824583
 GameObject:
   m_ObjectHideFlags: 0
@@ -8002,7 +8002,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5526930645478804620, guid: 9bde883d17a206748873c38d34a697de, type: 3}
       propertyPath: m_InstanceId
-      value: -65580
+      value: -241298
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bde883d17a206748873c38d34a697de, type: 3}
@@ -8200,7 +8200,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3424628732483831310, guid: 810197c79dfda8a40bc8401e6e8b59e4, type: 3}
       propertyPath: m_InstanceId
-      value: -65604
+      value: -241322
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 810197c79dfda8a40bc8401e6e8b59e4, type: 3}
@@ -8542,7 +8542,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8865852317764566082, guid: 41dd6be2f30b18749b1129d44739db1e, type: 3}
       propertyPath: m_InstanceId
-      value: -65654
+      value: -241372
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41dd6be2f30b18749b1129d44739db1e, type: 3}

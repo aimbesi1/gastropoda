@@ -6131,7 +6131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_WhatIsGround:
     serializedVersion: 2
-    m_Bits: 72
+    m_Bits: 8
   m_GroundCheck: {fileID: 5325712370474474387}
   m_CeilingCheck: {fileID: 480999263201716979}
   k_GroundedSize: {x: 0.2, y: 0.35}
@@ -6146,7 +6146,7 @@ Animator:
   m_GameObject: {fileID: 430055643906229074}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2f0212c5f5379e44bad46eda1170eb55, type: 2}
+  m_Controller: {fileID: 9100000, guid: 70919f2e01ca3af44a96027adecee781, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -6286,7 +6286,7 @@ MonoBehaviour:
   - {x: -0.095541, y: -1.1357952, z: 0}
   m_ShapePathHash: 1110033695
   m_Mesh: {fileID: 0}
-  m_InstanceId: 62718
+  m_InstanceId: 113726
 --- !u!114 &4336105999041028968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8022,7 +8022,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5526930645478804620, guid: 9bde883d17a206748873c38d34a697de, type: 3}
       propertyPath: m_InstanceId
-      value: -87698
+      value: -242652
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bde883d17a206748873c38d34a697de, type: 3}
@@ -8228,7 +8228,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3424628732483831310, guid: 810197c79dfda8a40bc8401e6e8b59e4, type: 3}
       propertyPath: m_InstanceId
-      value: -87722
+      value: -242676
       objectReference: {fileID: 0}
     - target: {fileID: 8099481439644646897, guid: 810197c79dfda8a40bc8401e6e8b59e4, type: 3}
       propertyPath: m_Layer
@@ -8586,7 +8586,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8865852317764566082, guid: 41dd6be2f30b18749b1129d44739db1e, type: 3}
       propertyPath: m_InstanceId
-      value: -87772
+      value: -242726
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41dd6be2f30b18749b1129d44739db1e, type: 3}

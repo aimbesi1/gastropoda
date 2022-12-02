@@ -11,6 +11,10 @@ public class Ladder : MonoBehaviour
 
     [SerializeField] private Rigidbody2D rb;
 
+    void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     {

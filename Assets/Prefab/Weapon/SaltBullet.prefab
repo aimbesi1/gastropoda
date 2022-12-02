@@ -133,7 +133,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -169,7 +169,7 @@ MonoBehaviour:
   - {x: -0.002049424, y: -0.48142883, z: 0}
   m_ShapePathHash: 724250165
   m_Mesh: {fileID: 0}
-  m_InstanceId: 51156
+  m_InstanceId: 142532
 --- !u!1 &9178612362457036169
 GameObject:
   m_ObjectHideFlags: 0

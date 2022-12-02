@@ -6,7 +6,7 @@ public class Bullet : MonoBehaviour
 {
     private float speed = 20;
     private int dmg = 50;
-    public float knockbackMultiplier = 2.5f; // Multiplier for hitting the player
+    public float knockbackMultiplier = 1.5f; // Multiplier for hitting the player
     public float hitMultiplier = 7f;    // Multiplier for hitting physics blocks
 
     private float fly_time = 2f;

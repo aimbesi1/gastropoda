@@ -58,6 +58,7 @@ public class playerHealth : MonoBehaviour
         if(Input.GetKey("4") && hasInvis == true) //if player has invisible powerup in inventory
         {                                         //on key press "4", the player will be invisible
             SetInvisible();
+            PlayerPrefs.SetInt("HasInvisiblePower", 0);
         }
     }
 
@@ -66,7 +67,7 @@ public class playerHealth : MonoBehaviour
         rb.velocity = transform.right * 20 + transform.up * 20; // Push the player out so that the player won't continue take dmg
         currentHealth -= dmg - currentShield;  // Deal dmg to shield before deal dmg to actual health
         currentShield -= dmg;
-        if(currentShield < 0 && !isInvincible) // Set current shield to 0 if shield drop below 0 (UI purposes)
+        if(currentShield < 0) // Set current shield to 0 if shield drop below 0 (UI purposes)
         {
             currentShield = 0;
         }

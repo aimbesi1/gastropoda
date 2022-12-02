@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1208980719311886350}
+  - component: {fileID: -4729476567516698146}
   m_Layer: 0
   m_Name: Chemical Funnel (Ndeya) 1
   m_TagString: Untagged
@@ -32,6 +33,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-4729476567516698146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2759270747746570876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 0
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 43a25a8d718a0c8500000000
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
+  - {x: 0.20078254, y: 0.20078263, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  m_ShapePathHash: 1285563725
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -495626
 --- !u!1 &7172412074387154344
 GameObject:
   m_ObjectHideFlags: 0

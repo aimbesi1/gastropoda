@@ -11,13 +11,16 @@ public class MainSnailAttack : MonoBehaviour
     public int num_orbs = 5; //number of small orbs shoot out
 
     public Transform mouth;
-    private float cd_time = 1f;
+    private float cd_time = 3f;
     private bool can_spit = true;        // check if snail can attack
 
     private bool can_special;  // check if this is a boss room
 
     private bool special_ready = true; // check if snail can do special attack
-    private float special_cd = 3f;
+    private float special_cd = 5f;
+
+    private float time_between = 0.5f;
+    private bool can_shoot = true;
 
     void Awake()
     {
@@ -56,7 +59,7 @@ public class MainSnailAttack : MonoBehaviour
         if(cd_time <= 0)
         {
             can_spit = true;
-            cd_time = 1f;
+            cd_time = 3f;
         }
 
         if(!special_ready && special_cd > 0)
@@ -65,7 +68,7 @@ public class MainSnailAttack : MonoBehaviour
         }
         if(special_cd <= 0)
         {
-            special_cd = 3f;
+            special_cd = 5f;
         }
     }
 
@@ -74,7 +77,22 @@ public class MainSnailAttack : MonoBehaviour
     {
         for(int i = 0; i < num_orbs; i++)
         {
-            Instantiate(orbs, mouth.position, mouth.rotation);
+            if(can_shoot)
+            {
+                Instantiate(orbs, mouth.position, mouth.rotation);
+                can_shoot = false;
+            }
+                
+
+            if(!can_shoot && time_between > 0f)
+            {
+                time_between -= Time.deltaTime;
+            }
+            if(time_between <= 0f)
+            {
+                can_shoot = true;
+            }
+
         }
     }
 

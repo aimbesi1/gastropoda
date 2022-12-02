@@ -27,11 +27,11 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(SceneManager.GetActiveScene().name == "End Game Scene" || SceneManager.GetActiveScene().name == "Died Scene")
+        if(SceneManager.GetActiveScene().name == "End Game Scene")
         {
             CountTimer(PlayerPrefs.GetFloat("SpeedRunTime"), ref milsecs, ref secs, ref mins);
             CountTimer(PlayerPrefs.GetFloat("BestTime"), ref bestmilsecs, ref bestsecs, ref bestmins);
-            text.text = string.Format("Survive Time: {0:00}:{1:00}.{2:000}\nFastest time complete the game: {3:00}:{4:00}.{5:000}", mins, secs, milsecs, bestmins, bestsecs, bestmilsecs);
+            text.text = string.Format("Completed Time: {0:00}:{1:00}.{2:000}\nFastest Completed Time: {3:00}:{4:00}.{5:000}", mins, secs, milsecs, bestmins, bestsecs, bestmilsecs);
         }
 
         else

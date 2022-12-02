@@ -16,7 +16,7 @@ public class DropshipHealth : MonoBehaviour
 
     void Awake()
     {
-        if( SceneManager.GetActiveScene().name == "Level 2.4")
+        if( SceneManager.GetActiveScene().name == "Level 2.3")
         {
             canvas.SetActive(true);
         }

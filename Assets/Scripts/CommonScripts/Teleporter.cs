@@ -21,7 +21,7 @@ public class Teleporter : MonoBehaviour
     {
         if(hitInfo.CompareTag("Player"))
         {
-            if (levelName == "Level 2.1" || levelName == "Level 2.4" || levelName == "End Game Scene")
+            if (levelName == "Level 2.1" || levelName == "Level 2.2" || levelName == "End Game Scene")
             {
                 PlayerPrefs.SetInt("IsBoss", 1); // Set the snail as a boss
             }

@@ -9,17 +9,20 @@ EditorBuildSettings:
     path: Assets/Scenes/Title.unity
     guid: 322e4d7736906114798f965cc27d52be
   - enabled: 1
-    path: Assets/Scenes/PrologueScene.unity
-    guid: 7d4b40261de631548acc4b214deccf1c
+    path: Assets/Scenes/Cyberpunk Map/Level 2.1.unity
+    guid: 6587a02fcabf9d54dac078b427f0ae34
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Died Scene.unity
-    guid: c57ea9e4cc06e6b43a595baa77430a31
+    path: Assets/Scenes/Cyberpunk Map/Level 2.2.unity
+    guid: 3b5f93b9fd1081244a3571c74a2172c0
   - enabled: 1
-    path: Assets/Scenes/End Game Scene.unity
-    guid: e4dd0aae230ca364cb80700378ad18b0
+    path: Assets/Scenes/Cyberpunk Map/Level 2.3.unity
+    guid: f9a734b3e7bc9a54d9bad635b4441ec5
   - enabled: 1
-    path: Assets/Scenes/Boss Room.unity
-    guid: 1be2b93898a50964eabf9ade723711dd
+    path: Assets/Scenes/Cyberpunk Map/Level 2.4.unity
+    guid: c5b9466281df081408f34f889eac870a
   - enabled: 1
     path: Assets/Scenes/Laboratory Map/Level 1.1.unity
     guid: 9ac51b042cd9a23418f0ca344a0ceea7
@@ -30,9 +33,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Laboratory Map/Level 1.3.unity
     guid: cf3fae9b8620b85439ca4dc1e7d53f51
   - enabled: 1
-    path: Assets/Scenes/Laboratory Map/Level 1.4.unity
-    guid: 09b37552158ae3544b2a374f7ec65db8
-  - enabled: 1
     path: Assets/Scenes/Laboratory Map/Level 1.5.unity
     guid: 191d4c2a169a4964c84b23ffeb8341d4
   - enabled: 1
@@ -42,36 +42,33 @@ EditorBuildSettings:
     path: Assets/Scenes/Laboratory Map/Level 1.7.unity
     guid: 72a6310685931a94a9ed4d4e3ee9491b
   - enabled: 1
-    path: Assets/Scenes/Laboratory Map/Level 1.8.unity
-    guid: 5b9591de2c3874d4a93567e03972a1e4
+    path: Assets/Scenes/Laboratory Map/Level 1.10.unity
+    guid: c5a6d51315763064b98d0acc1a0a0de4
   - enabled: 1
     path: Assets/Scenes/Laboratory Map/Level 1.9.unity
     guid: 1af8c519f092fb94396906fe8a5b496b
   - enabled: 1
-    path: Assets/Scenes/Laboratory Map/Level 1.10.unity
-    guid: c5a6d51315763064b98d0acc1a0a0de4
+    path: Assets/Scenes/Died Scene.unity
+    guid: c57ea9e4cc06e6b43a595baa77430a31
   - enabled: 1
-    path: Assets/Scenes/Cyberpunk Map/Level 2.1.unity
-    guid: 6587a02fcabf9d54dac078b427f0ae34
+    path: Assets/Scenes/End Game Scene.unity
+    guid: e4dd0aae230ca364cb80700378ad18b0
   - enabled: 1
-    path: Assets/Scenes/Cyberpunk Map/Level 2.2.unity
-    guid: 70ebe6c2fdd9f094c95bbbfd2ff7b212
-  - enabled: 1
-    path: Assets/Scenes/Cyberpunk Map/Level 2.3 (cin).unity
-    guid: 1ba014f3102ff5b4dac5858a0022cebe
-  - enabled: 1
-    path: Assets/Scenes/Cyberpunk Map/Level 2.3.unity
-    guid: 3b5f93b9fd1081244a3571c74a2172c0
-  - enabled: 1
-    path: Assets/Scenes/Cyberpunk Map/Level 2.4.unity
-    guid: f9a734b3e7bc9a54d9bad635b4441ec5
+    path: Assets/Scenes/PrologueScene.unity
+    guid: 7d4b40261de631548acc4b214deccf1c
   - enabled: 1
     path: Assets/Scenes/Cyberpunk Map/Level 2.5.unity
-    guid: c5b9466281df081408f34f889eac870a
-  - enabled: 1
-    path: Assets/Scenes/Cyberpunk Map/Level 2.6.unity
     guid: 78867eda91b61c54ea351a0245c7aafe
   - enabled: 1
-    path: Assets/Scenes/Cyberpunk Map/Room F - bossfight.unity
-    guid: 9f4c594a01d988949b290b10ff427950
+    path: Assets/Scenes/Boss Room.unity
+    guid: 1be2b93898a50964eabf9ade723711dd
+  - enabled: 1
+    path: Assets/Scenes/Laboratory Map/Level 1.4.unity
+    guid: 09b37552158ae3544b2a374f7ec65db8
+  - enabled: 1
+    path: Assets/Scenes/Laboratory Map/Level 1.8.unity
+    guid: 5b9591de2c3874d4a93567e03972a1e4
+  - enabled: 1
+    path: Assets/Scenes/Cyberpunk Map/Level 2.2(cin).unity
+    guid: 1ba014f3102ff5b4dac5858a0022cebe
   m_configObjects: {}

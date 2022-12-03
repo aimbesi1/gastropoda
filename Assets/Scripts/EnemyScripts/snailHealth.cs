@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class snailHealth : MonoBehaviour
@@ -10,9 +11,7 @@ public class snailHealth : MonoBehaviour
     public int dmg = 100;
     public TMP_Text text;
 
-    public GameObject teleporter;
     bool is_boss;
-    int num_fight;
 
     private bool has_Collide = false;
 
@@ -20,10 +19,16 @@ public class snailHealth : MonoBehaviour
 
     public GameObject canvas;
 
+    public string levelName;
+
+    public void LoadLevel()
+    {
+        SceneManager.LoadSceneAsync(levelName, LoadSceneMode.Single);
+    }
+
     void Awake()
     {
         maxHealth = PlayerPrefs.GetInt("SnailMaxHealth");
-        num_fight = PlayerPrefs.GetInt("NumFight");
         if (PlayerPrefs.GetInt("IsBoss") == 0)
         {
             is_boss = false;
@@ -32,7 +37,6 @@ public class snailHealth : MonoBehaviour
         {
             is_boss = true;
         }
-        teleporter = GameObject.FindWithTag("Teleporter");
     }
 
     // Start is called before the first frame update
@@ -51,11 +55,6 @@ public class snailHealth : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
-    {
-        BossFight();
-    }
-
 
     public void takeDamage(int dmg)
     {
@@ -66,6 +65,7 @@ public class snailHealth : MonoBehaviour
         if(currentHealth <= 0)
         {
             Destroy(gameObject);
+            LoadLevel();
             PlayerPrefs.SetInt("GameComplete", 1);
         }
     }
@@ -89,25 +89,4 @@ public class snailHealth : MonoBehaviour
         }
     }
 
-    // BossFight
-    void BossFight()
-    {
-        if (is_boss)
-        {
-            teleporter.SetActive(false);
-
-            if (currentHealth <= 0)
-            {
-                // num_fight = PlayerPrefs.GetInt("NumFight");
-                // num_fight++;
-                // PlayerPrefs.SetInt("NumFight", num_fight);
-
-                // PlayerPrefs.SetInt("IsBoss", 0);
-                
-                teleporter.SetActive(true);
-                // teleporter.GetComponent<Teleporter>().levelName = PlayerPrefs.GetString("NextScene");
-            }
-
-        }
-    }
 }

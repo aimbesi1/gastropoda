@@ -5525,7 +5525,7 @@ MonoBehaviour:
   - {x: -12.084689, y: -9.374485, z: 0}
   m_ShapePathHash: -1892789329
   m_Mesh: {fileID: 0}
-  m_InstanceId: 259678
+  m_InstanceId: 37372
 --- !u!1 &6674318602245449223
 GameObject:
   m_ObjectHideFlags: 0
@@ -5814,9 +5814,9 @@ MonoBehaviour:
   currentHealth: 0
   dmg: 100
   text: {fileID: 2402501613852606623}
-  teleporter: {fileID: 6666754746910277891, guid: 749e59ee28a612645bfcaa270b205f73, type: 3}
   healthbar: {fileID: 3733337498933029441}
   canvas: {fileID: 6248848450981878376}
+  levelName: End Game Scene
 --- !u!82 &6636358024507462643
 AudioSource:
   m_ObjectHideFlags: 0

@@ -45,7 +45,6 @@ public class StartGame : MonoBehaviour
         }
 
         PlayerPrefs.SetString("CurrentScene", "");// Store the current scene
-        PlayerPrefs.SetString("NextScene", "");
 
         PlayerPrefs.SetInt("GameComplete", 0);
     }

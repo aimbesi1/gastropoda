@@ -71,4 +71,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cyberpunk Map/Level 2.2(cin).unity
     guid: 1ba014f3102ff5b4dac5858a0022cebe
+  - enabled: 1
+    path: Assets/Scenes/CreditsScene.unity
+    guid: 4dbd3b4b06d999744ab2059be42079c1
   m_configObjects: {}

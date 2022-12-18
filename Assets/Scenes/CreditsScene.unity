@@ -373,7 +373,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 17
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -780,7 +780,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 1073741823
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -883,7 +883,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 22, y: -615}
+  m_AnchoredPosition: {x: 32, y: -615}
   m_SizeDelta: {x: 1728, y: 980}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &642451648
@@ -1454,7 +1454,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 48, y: -792}
+  m_AnchoredPosition: {x: 53, y: -787}
   m_SizeDelta: {x: 607, y: 205}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &868334002
@@ -1869,7 +1869,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 29.6, y: -930.1}
+  m_AnchoredPosition: {x: 83.8, y: -930.1}
   m_SizeDelta: {x: 1210, y: 1343}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1348238634
@@ -1945,7 +1945,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 59, y: -221}
+  m_AnchoredPosition: {x: 79, y: -221}
   m_SizeDelta: {x: 338, y: 367}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1422706658
@@ -2098,7 +2098,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 430, y: 476.8857}
+  m_SizeDelta: {x: 500, y: 476.8857}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1505539549
 MonoBehaviour:
@@ -2130,7 +2130,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 16777215
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -2154,7 +2154,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 17
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -2233,7 +2233,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -70.6, y: -1014.9}
+  m_AnchoredPosition: {x: -59, y: -1014.9}
   m_SizeDelta: {x: 1210, y: 1343}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1532610768
@@ -2498,18 +2498,19 @@ MonoBehaviour:
 
     Sara Martinez
 
+    Ndeya Leveille
 
 
 
 
-    Hyunju Olivia Bae
+    Hyunju
+    Olivia Bae
 
     Sidney
 
 
 
-    Caleb
-    Tsai
+    Caleb Tsai
 
 
 
@@ -2519,15 +2520,9 @@ MonoBehaviour:
 
     Sagar Patel
 
-    Janice Park
+    Janice
+    Park
 
-
-
-
-    Tony Imbesi
-
-    Jimmy
-    Haboon
 
 
 
@@ -2535,18 +2530,25 @@ MonoBehaviour:
 
     Jimmy Haboon
 
-    Quang Nguyen
+
+
+    Tony Imbesi
+
+    Jimmy Haboon
+
+    Quang
+    Nguyen
 
     Sagar Patel
 
-    Avvai
-    Chandrasekaran
+    Avvai Chandrasekaran
 
     Shana Wen
 
 
 
-    Brandon Clinton
+    Brandon
+    Clinton
 
 
 
@@ -2602,7 +2604,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 17
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -2893,7 +2895,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -80.6, y: -1201.5}
+  m_AnchoredPosition: {x: -73.8, y: -1201.5}
   m_SizeDelta: {x: 1210, y: 1343}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1842777726
@@ -2995,7 +2997,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "PROUDLY CREATED BY\n\n\nCHARACTER DESIGN\n\n\n\n\nENVIRONMENT DESIGN\n\n\n\n\n\t\t\t\t 
-    PROPS\n\nSENIOR ART LEAD\n\n\n\nSOUND EFFECT DESIGNER\n\n\nSOUNDTRACK DESIGNER\n\n\nANIMATIONS
+    \n\nSENIOR ART LEAD\n\n\n\nSOUND EFFECT DESIGNER\n\n\nSOUNDTRACK DESIGNER\n\n\nANIMATIONS
     & LIGHTING EFFECTS\n\n\n\nSENIOR PROGRAMMING LEAD\n\n\n\nPROGRAMMING TEAM\n\n\n\n\n\n\n\nPRODUCT
     MANAGER\n\n\nCO-LEAD\n\n\n\t\t\t    SUPERVISORS\n\nPRESIDENT\n\n\nVICE PRESIDENT\n\n\n\n\nASSOCIATION\n"
   m_isRightToLeft: 0

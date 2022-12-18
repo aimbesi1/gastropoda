@@ -690,26 +690,26 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: With the pandemic nearing an end, money and greedy actors are determined
-    to descend the world into chaos. Massive corporations such as the World Health
+  m_text: "With the pandemic nearing an end, money and greedy actors are determined
+    to descend the world into chaos. \n\nMassive corporations such as the World Health
     Organization and other medical institutions raced to administer the first vaccine
     into the global fight against the deadly virus; the winner would be rewarded
     a fortune; unfortunately gullible citizens across the globe voluntarily took
     part in a series of test trials run by American Aid Organization A.A.O, a wealthy
     private, clinically approved institution based in Atlanta, Ga, designed by the
-    wealthy to control the distribution of vaccines. A.A.O recognized and contained
+    wealthy to control the distribution of vaccines. \n\nA.A.O recognized and contained
     a gifted volunteer equipped with a special telepathic connection to wildlife.
     In a desperate attempt to beat W.H.O of the first vaccine, A.A.O scientists conducted
     unethical biological experiments to unveil the linked powers to the vaccine.
-    During a test that goes wrong where the telepathic connection to animals takes
-    a turn as they become hostile toward everyone. The Volunteers flee to escape
-    the lab. In addition, he discovers that he has extra powers. One of the powers
+    \n\nDuring a test that goes wrong where the telepathic connection to animals
+    takes a turn as they become hostile toward everyone. The Volunteers flee to escape
+    the lab. In addition, he discovers that he has extra powers. \n\nOne of the powers
     he finds is the ability to tear open a portal across timelines leading him to
     activate strange abilities out of random; however, the Volunteer learns that
-    the power can guide him to safety. Far away from the failed mutated experiment
+    the power can guide him to safety. \n\nFar away from the failed mutated experiment
     via time-traveling channels. The Volunteer will end up in a timeline 15 years
     in the future where A.A.O bested the race appearing as a dominant force in the
-    future. At the same time, the Snail lurks not far behind
+    future. \n\nAt the same time, the Snail lurks not far behind"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 41bfd1eb09054624a97f20c54b36cb99, type: 2}
   m_sharedMaterial: {fileID: -239258080047712151, guid: 41bfd1eb09054624a97f20c54b36cb99, type: 2}
@@ -822,7 +822,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 154, y: -465}
+  m_AnchoredPosition: {x: 154, y: -1073}
   m_SizeDelta: {x: 361.4919, y: 118.56409}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2103191542

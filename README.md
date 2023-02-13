@@ -2,6 +2,9 @@
 ### Welcome to Gastropoda's 🐱GitHub page! 
 <a href="https://github.com/aimbesi1/gastropoda/stargazers"><img src="https://img.shields.io/github/stars/aimbesi1/gastropoda?color=yellow" alt="Stars Badge"/></a> <a href="https://github.com/aimbesi1/gastropoda/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors-anon/aimbesi1/gastropoda"></a> <a href="https://github.com/aimbesi1/gastropoda/pulls"><img src="https://img.shields.io/github/issues-pr/aimbesi1/gastropoda?color=blue" alt="Pull Requests Badge"/></a> <a href="https://github.com/aimbesi1/gastropoda/issues"><img src="https://img.shields.io/github/issues/aimbesi1/gastropoda?color=important" alt="Issues	 Badge"/></a> <a href="http://hits.dwyl.com/aimbesi1/gastropoda"><img src="http://hits.dwyl.com/aimbesi1/gastropoda.svg?style=flat" alt="Hits Badge"/></a> <a href="https://github.com/aimbesi1/gastropoda"><img src="https://img.shields.io/github/repo-size/aimbesi1/gastropoda?color=ff69b4" alt="Repo Size Badge"/></a> 
 
+## 🔽 Download
+To download the latest version of Gastropoda, go [here](https://github.com/aimbesi1/gastropoda/releases/latest) and unzip the folder.
+
 # 🎮 Game Description:
 Gastropoda is a 2D platform game that challenges players to overcome obstacles as the misunderstood Snail hunts the lab experiment down. Our hero will be challenged to climb up and down walls, run in dark environments, and use special abilities such as power-ups and weapons across maps. The player's goal is to outpace the Snail and other enemies while reaching for the time-traveling spears that reset the clock for the hero to return to their universe. Although the Snail is slow, it can be challenging to achieve its death.
 
